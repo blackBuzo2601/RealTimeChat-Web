@@ -1,0 +1,205 @@
+{
+  "ListaAmigos": [
+    {
+      "idUsuario": 1,
+      "nickname": "juan777",
+      "nombre": "Juan",
+      "apellido": "Lopez"
+    },
+    {
+      "idUsuario": 2,
+      "nickname": "maria123",
+      "nombre": "Maria",
+      "apellido": "Gomez"
+    },
+    {
+      "idUsuario": 3,
+      "nickname": "pedro99",
+      "nombre": "Pedro",
+      "apellido": "Hernandez"
+    },
+    {
+      "idUsuario": 4,
+      "nickname": "ana456",
+      "nombre": "Ana",
+      "apellido": "Martinez"
+    },
+    {
+      "idUsuario": 5,
+      "nickname": "luis888",
+      "nombre": "Luis",
+      "apellido": "Garcia"
+    },
+    {
+      "idUsuario": 6,
+      "nickname": "carla321",
+      "nombre": "Carla",
+      "apellido": "Diaz"
+    },
+    {
+      "idUsuario": 7,
+      "nickname": "david007",
+      "nombre": "David",
+      "apellido": "Fernandez"
+    },
+    {
+      "idUsuario": 8,
+      "nickname": "sofia2023",
+      "nombre": "Sofia",
+      "apellido": "Morales"
+    },
+    {
+      "idUsuario": 9,
+      "nickname": "andres56",
+      "nombre": "Andres",
+      "apellido": ""
+    },
+    {
+      "idUsuario": 10,
+      "nickname": "paula999",
+      "nombre": "Paula",
+      "apellido": ""
+    }
+  ],
+
+  "ListaChats": [
+    {
+      "ChatID": 100,
+      "tipo": "Grupo",
+      "miembrosID": [1, 2, 3, 100],
+      "mensajes": [
+        {
+          "MensajeID": "m101",
+          "idUsuario": 1,
+          "contenido": "Hola a todos, ¿cómo están?"
+        },
+        {
+          "MensajeID": "m102",
+          "idUsuario": 2,
+          "contenido": "¡Hola! Todo bien, gracias. ¿Y tú?"
+        },
+        {
+          "MensajeID": "m103",
+          "idUsuario": 3,
+          "contenido": "Hola, aquí trabajando como siempre."
+        },
+        {
+          "MensajeID": "m104",
+          "idUsuario": 100,
+          "contenido": "Hola a todos, ¡qué gusto verlos aquí!"
+        },
+        {
+          "MensajeID": "m105",
+          "idUsuario": 1,
+          "contenido": "Me alegra saber que están bien. ¿Qué tal sus planes para el fin de semana?"
+        },
+        {
+          "MensajeID": "m106",
+          "idUsuario": 2,
+          "contenido": "Voy a salir con mi familia al parque. ¿Y ustedes?"
+        },
+        {
+          "MensajeID": "m107",
+          "idUsuario": 3,
+          "contenido": "Yo creo que descansaré en casa, ha sido una semana pesada."
+        },
+        {
+          "MensajeID": "m108",
+          "idUsuario": 100,
+          "contenido": "Yo tengo una reunión con unos amigos, ¡pero puedo unirme más tarde si hay algo planeado!"
+        },
+        {
+          "MensajeID": "m109",
+          "idUsuario": 1,
+          "contenido": "Podríamos hacer una videollamada para ponernos al día. ¿Qué opinan?"
+        },
+        {
+          "MensajeID": "m110",
+          "idUsuario": 2,
+          "contenido": "Me parece buena idea. ¿Qué hora les viene bien?"
+        },
+        {
+          "MensajeID": "m111",
+          "idUsuario": 3,
+          "contenido": "Después de las 7 pm estaría perfecto para mí."
+        },
+        {
+          "MensajeID": "m112",
+          "idUsuario": 100,
+          "contenido": "A esa hora está bien. Avísenme por aquí cuando estén listos."
+        },
+        {
+          "MensajeID": "m113",
+          "idUsuario": 1,
+          "contenido": "Perfecto, entonces queda a las 7. ¡Nos hablamos más tarde!"
+        }
+      ]
+    },
+    {
+      "ChatID": 101,
+      "tipo": "UnoAUno",
+      "miembrosID": [1, 100],
+      "mensajes": [
+        { "MensajeID": "m002", "idUsuario": 1, "contenido": "Hola, María!" },
+        {
+          "MensajeID": "m003",
+          "idUsuario": 100,
+          "contenido": "Hola, Pedro! ¿Cómo estás?"
+        },
+        {
+          "MensajeID": "m004",
+          "idUsuario": 1,
+          "contenido": "Estoy bien, gracias. ¿Y tú?"
+        },
+        {
+          "MensajeID": "m005",
+          "idUsuario": 100,
+          "contenido": "Todo bien también, gracias. ¿Qué tal tu día?"
+        },
+        {
+          "MensajeID": "m006",
+          "idUsuario": 1,
+          "contenido": "Ha estado ocupado, pero productivo. ¿Y el tuyo?"
+        },
+        {
+          "MensajeID": "m007",
+          "idUsuario": 100,
+          "contenido": "Igual, con mucho trabajo, pero todo en orden."
+        },
+        {
+          "MensajeID": "m008",
+          "idUsuario": 1,
+          "contenido": "¿Qué tal si hacemos una videollamada más tarde?"
+        },
+        {
+          "MensajeID": "m009",
+          "idUsuario": 100,
+          "contenido": "¡Claro! Me parece perfecto. ¿A las 8 pm?"
+        },
+        {
+          "MensajeID": "m010",
+          "idUsuario": 1,
+          "contenido": "Sí, a las 8 está bien. Te mando el enlace en un rato."
+        },
+        {
+          "MensajeID": "m011",
+          "idUsuario": 100,
+          "contenido": "Genial, entonces nos hablamos más tarde. ¡Hasta luego!"
+        },
+        {
+          "MensajeID": "m012",
+          "idUsuario": 1,
+          "contenido": "¡Hasta luego, cuídate!"
+        }
+      ]
+    }
+  ],
+
+  "DatosPerfilUsuario": {
+    "idUsuario": 100,
+    "nickname": "blackBuzoSSJ",
+    "nombre": "Elian",
+    "apellido": "Buzo",
+    "telefono": 6461111111
+  }
+}

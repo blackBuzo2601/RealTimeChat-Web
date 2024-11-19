@@ -1,0 +1,46 @@
+.father {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  height: 100%;
+  width: 100%;
+  background-color: orange;
+}
+
+.conversationslist {
+  width: 22.44%;
+  background-color: #333333;
+  height: 100%;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.chatfather {
+  flex-grow: 1;
+  background-color: #282828;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.chatuserconnection {
+  width: 100%;
+  height: 11.62%;
+  box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: row;
+  background-color: orange;
+}
+
+.chatuserconnectionimg {
+  border-radius: 50%;
+  width: 9%;
+  height: 87.83%;
+}
+
+.infochat {
+  width: 23.28%;
+  background-color: #5a5e64;
+  height: 100%;
+  box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+}

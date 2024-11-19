@@ -1,0 +1,180 @@
+.father {
+  width: 100%;
+  height: 100%;
+}
+
+.infouser {
+  width: 100%;
+  height: 21.68%;
+  background-color: #333333;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  padding-left: 7.38%;
+  box-sizing: border-box; /*con esto hacemos que el padding y border se 
+  incluyan en las dimensiones de width y height*/
+  padding-right: 2.6%;
+}
+.infouserrow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 37.5%;
+  justify-content: space-between;
+}
+
+.infouserheading {
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+
+.close {
+  background-image: url("/close.png");
+
+  background-size: cover;
+  width: 10.8%;
+  height: 60%;
+}
+
+.infoname {
+  display: flex;
+  flex-direction: row;
+  padding-left: 5.14%;
+
+  box-sizing: border-box;
+}
+
+.avatarimg {
+  border-radius: 50px;
+  width: 27%;
+  height: 87.83%;
+}
+
+.namecolumn {
+  flex-grow: 1;
+
+  padding-left: 5%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding-top: 3.5%;
+}
+
+.infofullname {
+  color: #f5f5f5;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 130%;
+
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1.5%;
+}
+.infoUsername {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 90%;
+}
+
+.notificationscontainer {
+  width: 100%;
+  height: 7.57%;
+  background-color: #333333;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 9%;
+  padding-right: 9%;
+
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.notificationstext {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 100%;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+.toggleContainer {
+  position: relative;
+  width: 19%;
+  height: 68%;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  transition: 0.4s;
+  border-radius: 25%;
+}
+
+/* El círculo dentro del slider */
+.slider:before {
+  content: "";
+  position: absolute;
+  height: 80%;
+  width: 45%;
+  border-radius: 15%;
+  left: 6%;
+  bottom: 6%;
+  background-color: black;
+  transition: 0.4s;
+}
+
+.multimediainfo {
+  width: 100%;
+  height: 20.74%;
+  background-color: #333333;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.multimediasubcontainer {
+  width: 100%;
+  height: 33.3%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 11.3%;
+}
+
+.multimediasubcontainertext {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 100%;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  padding-left: 12.9%;
+}
+
+.optionssubcontainer {
+  padding-top: 0.5%;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 11.3%;
+  padding-bottom: 1%;
+}
+.optionscontainer {
+  width: 100%;
+  height: 12%;
+  background-color: #333333;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
