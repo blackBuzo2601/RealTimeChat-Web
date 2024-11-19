@@ -8,16 +8,24 @@ export default function Home() {
       <section className={styles.conversationslist}></section>
 
       <section className={styles.chatfather}>
-        <div className={styles.chatuserconnection}>
-          <Image
-            alt="imageprofile"
-            src={"/goku.jpg"}
-            width={960}
-            height={960}
-            className={styles.chatuserconnectionimg}
-          ></Image>
-          <p>Texto pa</p>
-        </div>
+        <article className={styles.chatuserconnection}>
+          <div className={styles.chatuserconnectiondivone}>
+            <Image
+              alt="imageprofile"
+              src={"/goku.jpg"}
+              width={960}
+              height={960}
+              className={styles.chatuserconnectionimg}
+            ></Image>
+            <div className={styles.chatUsernameNameStateColumn}>
+              <p className={styles.chatUsernameText}>Elian Buzo</p>
+              <p className={styles.chatStateText}>
+                Última conexión: Ayer 20:19
+              </p>
+            </div>
+          </div>
+          <div></div>
+        </article>
       </section>
 
       <section className={styles.infochat}>
