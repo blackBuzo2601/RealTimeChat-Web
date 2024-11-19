@@ -81,7 +81,7 @@ const InfoChat = () => {
           ></Image>
           <p className={styles.multimediasubcontainertext}>Bloquear usuario</p>
         </article>
-        <article className={styles.multimediasubcontainer}>
+        <article className={styles.optionssubcontainer}>
           <Image
             alt="iconoNotifications"
             src={"/trash.png"}
