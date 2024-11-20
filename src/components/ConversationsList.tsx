@@ -21,7 +21,12 @@ const ConversationsList = () => {
           onChange={() => console.log("hola texto cambiando: ")}
         />
       </section>
-      <section className={styles.allChatsList}></section>
+      <section className={styles.allChatsList}>
+        <SingleChat></SingleChat>
+        <SingleChat></SingleChat>
+        <SingleChat></SingleChat>
+        <SingleChat></SingleChat>
+      </section>
     </div>
   );
 };

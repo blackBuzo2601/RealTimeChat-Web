@@ -19,8 +19,14 @@
 }
 
 .allChatsList {
-  flex-grow: 1;
-  background-color: green;
+  padding-top: 2.3%;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
 }
 
 .conversationMenuIcon {
@@ -30,14 +36,14 @@
 
 .conversationMenuIcon:hover {
   border-radius: 40%;
-  background-color: #113a70;
+  background-color: #484848;
 }
 
 .conversationsSearchInput {
   padding: 0;
   margin: 0;
   width: 74.94%;
-  height: 38%;
+  height: 60%;
   padding-left: 5.26%;
   margin-left: 3.01%;
   border-radius: 15px;
@@ -45,11 +51,25 @@
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 100%;
-  background-color: #656565;
-  box-shadow: 0px 4px 1px rgba(0, 0, 0, 0.25);
+  background-color: #333333;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.75);
   border: none;
 }
 
 .conversationsSearchInput:hover {
-  background-color: #113a70;
+  background-color: #484848;
+}
+
+.allChatsList::-webkit-scrollbar {
+  width: 8px;
+}
+
+.allChatsList::-webkit-scrollbar-track {
+  background: #333333; /* Color de fondo de la pista */
+  border-radius: 4px;
+}
+
+.allChatsList::-webkit-scrollbar-thumb {
+  background: #c1bbbb; /* Color del scroll */
+  border-radius: 4px;
 }
