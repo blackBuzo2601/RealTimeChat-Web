@@ -10,6 +10,7 @@
   padding-bottom: 0.9%;
   padding-left: 2.29%;
   margin-bottom: 2.92%;
+  flex-shrink: 0;
 }
 
 .fatherDiv:hover {

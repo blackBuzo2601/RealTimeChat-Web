@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./ConversationsList.module.css";
+import styles from "../styles/components styles/ConversationsList.module.css";
 import Image from "next/image";
 import SingleChat from "./SingleChat";
 const ConversationsList = () => {
@@ -12,19 +12,14 @@ const ConversationsList = () => {
           width={960}
           height={960}
           className={styles.conversationMenuIcon}
-          onClick={() => console.log("Se está presionando un elemento")}
         ></Image>
         <input
           type="text"
           placeholder="Buscar..."
           className={styles.conversationsSearchInput}
-          onChange={() => console.log("hola texto cambiando: ")}
         />
       </section>
       <section className={styles.allChatsList}>
-        <SingleChat></SingleChat>
-        <SingleChat></SingleChat>
-        <SingleChat></SingleChat>
         <SingleChat></SingleChat>
       </section>
     </div>

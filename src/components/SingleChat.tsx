@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./SingleChat.module.css";
+import styles from "../styles/components styles/SingleChat.module.css";
 import Image from "next/image";
 const SingleChat = () => {
   return (

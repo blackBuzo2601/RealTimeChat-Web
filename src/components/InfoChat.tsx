@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./InfoChat.module.css";
+import styles from "../styles/components styles/InfoChat.module.css";
 import Image from "next/image";
 
 const InfoChat = () => {

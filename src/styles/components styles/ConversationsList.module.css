@@ -61,15 +61,10 @@
 }
 
 .allChatsList::-webkit-scrollbar {
-  width: 8px;
-}
-
-.allChatsList::-webkit-scrollbar-track {
-  background: #333333; /* Color de fondo de la pista */
-  border-radius: 4px;
+  width: 6px;
 }
 
 .allChatsList::-webkit-scrollbar-thumb {
-  background: #c1bbbb; /* Color del scroll */
+  background: #c1bbbb;
   border-radius: 4px;
 }

@@ -22,6 +22,7 @@ export default function Home() {
   }, []);
 
   return (
+    //ESTE FATHER ES EL COMPONENTE DE TOODO PAGE.tsx
     <div className={styles.father}>
       <section className={styles.conversationslist}>
         <ConversationsList></ConversationsList>
@@ -60,11 +61,14 @@ export default function Home() {
             ></Image>
           </div>
         </article>
+
+        <article className={styles.chatAllMessages}></article>
+        <article className={styles.inputContainerSend}></article>
       </section>
 
       <section className={styles.infochat}>
-        <InfoChat />
+        <InfoChat></InfoChat>
       </section>
-    </div>
+    </div> //CONCLUYE father
   );
 }
