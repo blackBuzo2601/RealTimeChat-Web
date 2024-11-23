@@ -8,7 +8,7 @@ body {
   height: 100%;
   margin: 0; /*eliminamos paddng y marginq q los navegadores aplican por defecto.*/
   padding: 0;
-  background-color: #000000;
+  background-color: #333333;
 }
 #__next {
   height: 100%;

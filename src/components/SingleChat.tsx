@@ -21,12 +21,14 @@ interface SingleChatProps {
 
   miembros: miembrosProps[];
   mensajes: mensajesProps[];
+  onHandleChatView: () => void;
 }
 
 const SingleChat: React.FC<SingleChatProps> = ({
   ChatID,
   miembros,
   mensajes,
+  onHandleChatView,
 }) => {
   let grupo = false;
   let nombreChatIndividual = "";
@@ -44,14 +46,13 @@ const SingleChat: React.FC<SingleChatProps> = ({
   }
 
   return (
-    <div className={styles.fatherDiv}>
+    <div onClick={onHandleChatView} className={styles.fatherDiv}>
       <Image
         alt="imageprofile"
         src={"/blackgoku.jpg"}
         width={736}
         height={736}
         className={styles.chatAvatarImage}
-        onClick={() => console.log("Se está presionando un elemento")}
       ></Image>
       <section className={styles.chatMessageColumn}>
         <section className={styles.chatMessageRow}>

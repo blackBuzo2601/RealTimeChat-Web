@@ -5,9 +5,13 @@ import SingleChat from "./SingleChat";
 
 interface conversationslistProps {
   jsonData: { key: string; info: any }[];
+  onHandleChatView: () => void;
 }
 
-const ConversationsList: React.FC<conversationslistProps> = ({ jsonData }) => {
+const ConversationsList: React.FC<conversationslistProps> = ({
+  jsonData,
+  onHandleChatView,
+}) => {
   const listaChats =
     jsonData.find((item) => item.key === "ListaChats")?.info || [];
   return (
@@ -33,6 +37,7 @@ const ConversationsList: React.FC<conversationslistProps> = ({ jsonData }) => {
             ChatID={elemento.ChatID}
             mensajes={elemento.mensajes}
             miembros={elemento.miembros}
+            onHandleChatView={onHandleChatView}
           ></SingleChat>
         ))}
       </section>
