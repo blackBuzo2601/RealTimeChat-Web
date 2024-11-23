@@ -64,132 +64,379 @@
 
   "ListaChats": [
     {
-      "ChatID": 100,
-      "tipo": "Grupo",
-      "miembrosID": [1, 2, 3, 100],
+      "ChatID": 1000,
+      "miembros": [
+        {
+          "Nombre": "Diego Lopez",
+          "IDMiembro": 1
+        },
+        {
+          "Nombre": "Roberto Gonzalez",
+          "IDMiembro": 2
+        },
+        {
+          "Nombre": "Chantel Rodriguez",
+          "IDMiembro": 3
+        },
+        {
+          "Nombre": "Elian Buzo",
+          "IDMiembro": 100
+        }
+      ],
       "mensajes": [
         {
-          "MensajeID": "m101",
+          "IDMensaje": "mensaje000001",
+          "Usuario": "Diego Lopez",
           "idUsuario": 1,
-          "contenido": "Hola a todos, ¿cómo están?"
+          "contenido": "Hola a todos, ¿cómo están?",
+          "hora": "01:31",
+          "fecha": "23-11-24"
         },
         {
-          "MensajeID": "m102",
+          "IDMensaje": "mensaje000002",
+          "Usuario": "Roberto Gonzalez",
           "idUsuario": 2,
-          "contenido": "¡Hola! Todo bien, gracias. ¿Y tú?"
+          "contenido": "¡Hola! Todo bien, gracias. ¿Y tú?",
+          "hora": "01:31",
+          "fecha": "23-11-24"
         },
         {
-          "MensajeID": "m103",
+          "IDMensaje": "mensaje000003",
+          "Usuario": "Chantel Rodriguez",
           "idUsuario": 3,
-          "contenido": "Hola, aquí trabajando como siempre."
+          "contenido": "Hola, aquí trabajando como siempre.",
+          "hora": "01:31",
+          "fecha": "23-11-24"
         },
         {
-          "MensajeID": "m104",
+          "IDMensaje": "mensaje000004",
+          "Usuario": "Elian Buzo",
           "idUsuario": 100,
-          "contenido": "Hola a todos, ¡qué gusto verlos aquí!"
+          "contenido": "Hola a todos, ¡qué gusto verlos aquí!",
+          "hora": "01:31",
+          "fecha": "23-11-24"
         },
         {
-          "MensajeID": "m105",
-          "idUsuario": 1,
-          "contenido": "Me alegra saber que están bien. ¿Qué tal sus planes para el fin de semana?"
-        },
-        {
-          "MensajeID": "m106",
+          "IDMensaje": "mensaje000005",
+          "Usuario": "Roberto Gonzalez",
           "idUsuario": 2,
-          "contenido": "Voy a salir con mi familia al parque. ¿Y ustedes?"
+          "contenido": "Me alegra saber que están bien. ¿Qué tal sus planes para el fin de semana?",
+          "hora": "01:31",
+          "fecha": "23-11-24"
         },
         {
-          "MensajeID": "m107",
-          "idUsuario": 3,
-          "contenido": "Yo creo que descansaré en casa, ha sido una semana pesada."
-        },
-        {
-          "MensajeID": "m108",
-          "idUsuario": 100,
-          "contenido": "Yo tengo una reunión con unos amigos, ¡pero puedo unirme más tarde si hay algo planeado!"
-        },
-        {
-          "MensajeID": "m109",
-          "idUsuario": 1,
-          "contenido": "Podríamos hacer una videollamada para ponernos al día. ¿Qué opinan?"
-        },
-        {
-          "MensajeID": "m110",
+          "IDMensaje": "mensaje000006",
+          "Usuario": "Roberto Gonzalez",
           "idUsuario": 2,
-          "contenido": "Me parece buena idea. ¿Qué hora les viene bien?"
+          "contenido": "Voy a salir con mi familia al parque. ¿Y ustedes?",
+          "hora": "01:31",
+          "fecha": "23-11-24"
         },
         {
-          "MensajeID": "m111",
+          "IDMensaje": "mensaje000007",
+          "Usuario": "Chantel Rodriguez",
           "idUsuario": 3,
-          "contenido": "Después de las 7 pm estaría perfecto para mí."
+          "contenido": "Yo creo que descansaré en casa, ha sido una semana pesada.",
+          "hora": "01:31",
+          "fecha": "23-11-24"
         },
         {
-          "MensajeID": "m112",
+          "IDMensaje": "mensaje000008",
+          "Usuario": "Elian Buzo",
           "idUsuario": 100,
-          "contenido": "A esa hora está bien. Avísenme por aquí cuando estén listos."
+          "contenido": "Yo tengo una reunión con unos amigos, ¡pero puedo unirme más tarde si hay algo planeado!",
+          "hora": "01:31",
+          "fecha": "23-11-24"
         },
         {
-          "MensajeID": "m113",
+          "IDMensaje": "mensaje000009",
+          "Usuario": "Diego Lopez",
           "idUsuario": 1,
-          "contenido": "Perfecto, entonces queda a las 7. ¡Nos hablamos más tarde!"
+          "contenido": "Podríamos hacer una videollamada para ponernos al día. ¿Qué opinan?",
+          "hora": "01:31",
+          "fecha": "23-11-24"
+        },
+        {
+          "IDMensaje": "mensaje000010",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "Me parece buena idea. ¿Qué hora les viene bien?",
+          "hora": "01:31",
+          "fecha": "23-11-24"
+        },
+        {
+          "IDMensaje": "mensaje000011",
+          "Usuario": "Roberto Gonzalez",
+          "idUsuario": 2,
+          "contenido": "Después de las 7 pm estaría perfecto para mí.",
+          "hora": "01:31",
+          "fecha": "23-11-24"
+        },
+        {
+          "IDMensaje": "mensaje000012",
+          "Usuario": "Diego Lopez",
+          "idUsuario": 1,
+          "contenido": "A esa hora está bien. Avísenme por aquí cuando estén listos.",
+          "hora": "01:31",
+          "fecha": "23-11-24"
+        },
+        {
+          "IDMensaje": "mensaje0000013",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "Perfecto, entonces queda a las 7. ¡Nos hablamos más tarde!",
+          "hora": "01:31",
+          "fecha": "23-11-24"
         }
       ]
     },
     {
-      "ChatID": 101,
-      "tipo": "UnoAUno",
-      "miembrosID": [1, 100],
+      "ChatID": 1001,
+
+      "miembros": [
+        {
+          "Nombre": "Chantel Rodriguez",
+          "IDMiembro": 3
+        },
+        {
+          "Nombre": "Elian Buzo",
+          "IDMiembro": 100
+        }
+      ],
       "mensajes": [
-        { "MensajeID": "m002", "idUsuario": 1, "contenido": "Hola, María!" },
         {
-          "MensajeID": "m003",
+          "IDMensaje": "mensaje0000014",
+          "Usuario": "Elian Buzo",
           "idUsuario": 100,
-          "contenido": "Hola, Pedro! ¿Cómo estás?"
+          "contenido": "Hola",
+          "hora": "01:31",
+          "fecha": "23-11-24"
         },
         {
-          "MensajeID": "m004",
-          "idUsuario": 1,
-          "contenido": "Estoy bien, gracias. ¿Y tú?"
+          "IDMensaje": "mensaje0000015",
+          "Usuario": "Chantel Rodriguez",
+          "idUsuario": 3,
+          "contenido": "Hola mijo que tal",
+          "hora": "01:31",
+          "fecha": "23-11-24"
         },
         {
-          "MensajeID": "m005",
+          "IDMensaje": "mensaje0000016",
+          "Usuario": "Elian Buzo",
           "idUsuario": 100,
-          "contenido": "Todo bien también, gracias. ¿Qué tal tu día?"
+          "contenido": "Aqui trabajando",
+          "hora": "01:31",
+          "fecha": "23-11-24"
         },
         {
-          "MensajeID": "m006",
-          "idUsuario": 1,
-          "contenido": "Ha estado ocupado, pero productivo. ¿Y el tuyo?"
-        },
-        {
-          "MensajeID": "m007",
+          "IDMensaje": "mensaje0000017",
+          "Usuario": "Chantel Rodriguez",
           "idUsuario": 100,
-          "contenido": "Igual, con mucho trabajo, pero todo en orden."
+          "contenido": "Que bueno niño",
+          "hora": "01:31",
+          "fecha": "23-11-24"
+        }
+      ]
+    },
+    {
+      "ChatID": 1002,
+      "miembros": [
+        {
+          "Nombre": "Sofia Morales",
+          "IDMiembro": 5
         },
         {
-          "MensajeID": "m008",
-          "idUsuario": 1,
-          "contenido": "¿Qué tal si hacemos una videollamada más tarde?"
-        },
+          "Nombre": "Elian Buzo",
+          "IDMiembro": 100
+        }
+      ],
+      "mensajes": [
         {
-          "MensajeID": "m009",
+          "IDMensaje": "mensaje0000018",
+          "Usuario": "Elian Buzo",
           "idUsuario": 100,
-          "contenido": "¡Claro! Me parece perfecto. ¿A las 8 pm?"
+          "contenido": "Hola Sofia, ¿cómo estás?",
+          "hora": "08:15",
+          "fecha": "23-11-24"
         },
         {
-          "MensajeID": "m010",
-          "idUsuario": 1,
-          "contenido": "Sí, a las 8 está bien. Te mando el enlace en un rato."
+          "IDMensaje": "mensaje0000019",
+          "Usuario": "Sofia Morales",
+          "idUsuario": 5,
+          "contenido": "¡Hola Elian! Estoy bien, gracias. ¿Y tú?",
+          "hora": "08:16",
+          "fecha": "23-11-24"
         },
         {
-          "MensajeID": "m011",
+          "IDMensaje": "mensaje0000020",
+          "Usuario": "Elian Buzo",
           "idUsuario": 100,
-          "contenido": "Genial, entonces nos hablamos más tarde. ¡Hasta luego!"
+          "contenido": "Bien también, un poco ocupado con el trabajo.",
+          "hora": "08:17",
+          "fecha": "23-11-24"
         },
         {
-          "MensajeID": "m012",
-          "idUsuario": 1,
-          "contenido": "¡Hasta luego, cuídate!"
+          "IDMensaje": "mensaje0000021",
+          "Usuario": "Sofia Morales",
+          "idUsuario": 5,
+          "contenido": "Entiendo, espero que puedas descansar pronto.",
+          "hora": "08:18",
+          "fecha": "23-11-24"
+        },
+        {
+          "IDMensaje": "mensaje0000022",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "Gracias, ¡eso espero! ¿Y tú, cómo va tu día?",
+          "hora": "08:19",
+          "fecha": "23-11-24"
+        },
+        {
+          "IDMensaje": "mensaje0000023",
+          "Usuario": "Sofia Morales",
+          "idUsuario": 5,
+          "contenido": "Bien, estoy preparando algunas cosas para una reunión.",
+          "hora": "08:20",
+          "fecha": "23-11-24"
+        },
+        {
+          "IDMensaje": "mensaje0000024",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "¡Qué bien! Suerte con eso, Sofia.",
+          "hora": "08:21",
+          "fecha": "23-11-24"
+        }
+      ]
+    },
+    {
+      "ChatID": 1003,
+      "miembros": [
+        {
+          "Nombre": "Carlos Fernandez",
+          "IDMiembro": 4
+        },
+        {
+          "Nombre": "Ana Martinez",
+          "IDMiembro": 5
+        },
+        {
+          "Nombre": "Luis Gonzalez",
+          "IDMiembro": 6
+        },
+        {
+          "Nombre": "Maria Lopez",
+          "IDMiembro": 7
+        },
+        {
+          "Nombre": "Elian Buzo",
+          "IDMiembro": 100
+        }
+      ],
+      "mensajes": [
+        {
+          "IDMensaje": "mensaje0000014",
+          "Usuario": "Carlos Fernandez",
+          "idUsuario": 4,
+          "contenido": "Hola a todos, ¿cómo están?",
+          "hora": "02:00",
+          "fecha": "23-11-24"
+        },
+        {
+          "IDMensaje": "mensaje0000015",
+          "Usuario": "Ana Martinez",
+          "idUsuario": 5,
+          "contenido": "¡Hola! Estoy bien, ¿y ustedes?",
+          "hora": "02:01",
+          "fecha": "23-11-24"
+        },
+        {
+          "IDMensaje": "mensaje0000016",
+          "Usuario": "Luis Gonzalez",
+          "idUsuario": 6,
+          "contenido": "Hola, aquí todo tranquilo. ¿Qué cuentan?",
+          "hora": "02:02",
+          "fecha": "23-11-24"
+        },
+        {
+          "IDMensaje": "mensaje0000017",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "Hola a todos, ¡qué gusto verlos conectados!",
+          "hora": "02:03",
+          "fecha": "23-11-24"
+        },
+        {
+          "IDMensaje": "mensaje0000018",
+          "Usuario": "Maria Lopez",
+          "idUsuario": 7,
+          "contenido": "Hola, Elian. ¿Cómo te va?",
+          "hora": "02:04",
+          "fecha": "23-11-24"
+        },
+        {
+          "IDMensaje": "mensaje0000019",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "Todo bien, gracias. Estoy trabajando mucho últimamente.",
+          "hora": "02:05",
+          "fecha": "23-11-24"
+        },
+        {
+          "IDMensaje": "mensaje0000020",
+          "Usuario": "Luis Gonzalez",
+          "idUsuario": 6,
+          "contenido": "¿Qué tal si organizamos algo este fin de semana?",
+          "hora": "02:06",
+          "fecha": "23-11-24"
+        },
+        {
+          "IDMensaje": "mensaje0000021",
+          "Usuario": "Ana Martinez",
+          "idUsuario": 5,
+          "contenido": "¡Eso suena genial! Yo puedo el sábado por la tarde.",
+          "hora": "02:07",
+          "fecha": "23-11-24"
+        },
+        {
+          "IDMensaje": "mensaje0000022",
+          "Usuario": "Carlos Fernandez",
+          "idUsuario": 4,
+          "contenido": "Perfecto, yo también puedo el sábado.",
+          "hora": "02:08",
+          "fecha": "23-11-24"
+        },
+        {
+          "IDMensaje": "mensaje0000023",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "¡Cuenta conmigo! ¿Dónde nos reunimos?",
+          "hora": "02:09",
+          "fecha": "23-11-24"
+        },
+        {
+          "IDMensaje": "mensaje0000024",
+          "Usuario": "Maria Lopez",
+          "idUsuario": 7,
+          "contenido": "Podemos ir al parque central. ¿Qué opinan?",
+          "hora": "02:10",
+          "fecha": "23-11-24"
+        },
+        {
+          "IDMensaje": "mensaje0000025",
+          "Usuario": "Luis Gonzalez",
+          "idUsuario": 6,
+          "contenido": "¡Perfecto! Entonces quedamos para el sábado a las 4 pm.",
+          "hora": "02:11",
+          "fecha": "23-11-24"
+        },
+        {
+          "IDMensaje": "mensaje0000026",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "¡Nos vemos entonces! ¡Hasta luego!",
+          "hora": "02:12",
+          "fecha": "23-11-24"
         }
       ]
     }

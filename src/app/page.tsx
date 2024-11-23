@@ -8,6 +8,17 @@ import ChatView from "@/components/ChatView";
 
 export default function Home() {
   const [isInfoChatVisible, setIsInfoChatVisible] = useState(false);
+  const [jsonData, setJsonData] = useState<{ key: string; info: any }[]>([]);
+
+  useEffect(() => {
+    const fetchData = () => {
+      const dataJSON = require("@/data/chat.json");
+      setJsonData(
+        Object.keys(dataJSON).map((key) => ({ key: key, info: dataJSON[key] }))
+      );
+    };
+    fetchData();
+  }, []);
 
   const handleInfoChatVisible = () => {
     setIsInfoChatVisible(!isInfoChatVisible);
@@ -17,7 +28,7 @@ export default function Home() {
     //Father es el componente padre de todo el index
     <div className={styles.father}>
       <section className={styles.conversationslist}>
-        <ConversationsList></ConversationsList>
+        <ConversationsList jsonData={jsonData}></ConversationsList>
       </section>
       <section className={styles.chatContainer}>
         <ChatView onhandleInfoChatVisible={handleInfoChatVisible}></ChatView>

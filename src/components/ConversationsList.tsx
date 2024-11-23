@@ -2,7 +2,14 @@ import React from "react";
 import styles from "../styles/components styles/ConversationsList.module.css";
 import Image from "next/image";
 import SingleChat from "./SingleChat";
-const ConversationsList = () => {
+
+interface conversationslistProps {
+  jsonData: { key: string; info: any }[];
+}
+
+const ConversationsList: React.FC<conversationslistProps> = ({ jsonData }) => {
+  const listaChats =
+    jsonData.find((item) => item.key === "ListaChats")?.info || [];
   return (
     <div className={styles.father}>
       <section className={styles.chatBar}>
@@ -20,7 +27,14 @@ const ConversationsList = () => {
         />
       </section>
       <section className={styles.allChatsList}>
-        <SingleChat></SingleChat>
+        {listaChats.map((elemento: any) => (
+          <SingleChat
+            key={elemento.ChatID}
+            ChatID={elemento.ChatID}
+            mensajes={elemento.mensajes}
+            miembros={elemento.miembros}
+          ></SingleChat>
+        ))}
       </section>
     </div>
   );
