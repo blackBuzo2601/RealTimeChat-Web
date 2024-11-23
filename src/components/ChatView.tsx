@@ -1,6 +1,8 @@
 import React from "react";
 import styles from "../styles/components styles/ChatView.module.css";
 import Image from "next/image";
+import OutgoingMessage from "./OutgoingMessage";
+import IncomingMessage from "./IncomingMessage";
 
 interface ChatViewProps {
   onhandleInfoChatVisible: () => void;
@@ -42,7 +44,12 @@ const ChatView: React.FC<ChatViewProps> = ({ onhandleInfoChatVisible }) => {
         </div>
       </article>
 
-      <article className={styles.chatAllMessages}></article>
+      <article className={styles.chatAllMessages}>
+        <OutgoingMessage outGoingText="Hola como estás ? Bien bien bien bien bien bien bien bien asdnfnasdofasdbfjoabdsjfbasdofbaodsfnajsdfajsdbsafnkjdnf"></OutgoingMessage>
+        <IncomingMessage incomingText="Hola bien y tu"></IncomingMessage>
+        <OutgoingMessage outGoingText="Bien gracias"></OutgoingMessage>
+        <IncomingMessage incomingText="Es todo pa"></IncomingMessage>
+      </article>
       <article className={styles.sendMessageContainer}>
         <Image
           alt="icon"

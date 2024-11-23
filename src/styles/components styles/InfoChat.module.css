@@ -31,6 +31,7 @@
 
 .close {
   background-image: url("/close.png");
+
   background-size: cover;
   width: 10.8%;
   height: 60%;
@@ -113,34 +114,26 @@
   margin: 0;
   padding: 0;
 }
-.toggleContainer {
-  position: relative;
-  width: 19%;
-  height: 68%;
-}
+.switchContainer {
+  display: flex;
 
-.slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ffffff;
-  transition: 0.4s;
-  border-radius: 25%;
+  width: 75px;
+  height: 32px;
+  border-radius: 15px;
 }
-
-.slider:before {
-  content: "";
-  position: absolute;
-  height: 80%;
-  width: 45%;
-  border-radius: 15%;
-  left: 6%;
-  bottom: 6%;
-  background-color: black;
-  transition: 0.4s;
+.switchContainerDivOne {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  width: 50%;
+  height: 100%;
+  background-color: #251f1f;
+}
+.switchContainerDivTwo {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 50%;
+  height: 100%;
+  background-color: #d9d9d9;
 }
 
 .multimediainfo {

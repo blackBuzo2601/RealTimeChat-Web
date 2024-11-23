@@ -90,6 +90,16 @@
 .chatAllMessages {
   display: flex;
   flex-grow: 1;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+.chatAllMessages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chatAllMessages::-webkit-scrollbar-thumb {
+  background: #c1bbbb;
+  border-radius: 4px;
 }
 
 .sendMessageContainer {

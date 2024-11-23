@@ -38,13 +38,9 @@ const InfoChat: React.FC<InfoChatProps> = ({ onhandleInfoChatVisible }) => {
           height={50}
         ></Image>
         <p className={styles.notificationstext}>Notificaciones</p>
-        <div className={styles.toggleContainer}>
-          <input
-            type="checkbox"
-            className={styles.toggleCheckbox}
-            id="toggle"
-          />
-          <span className={styles.slider}></span>
+        <div className={styles.switchContainer}>
+          <div className={styles.switchContainerDivOne}></div>
+          <div className={styles.switchContainerDivTwo}></div>
         </div>
       </section>
       <section className={styles.multimediainfo}>
