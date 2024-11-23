@@ -1,7 +1,7 @@
 .father {
   display: flex;
   flex-direction: row;
-  margin: 5px;
+
   height: 100%;
   width: 100%;
 }
@@ -13,7 +13,7 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.75);
 }
 
-.chatfather {
+.chatContainer {
   flex-grow: 1; /*este grow corresponde al espacio que ocupará con respecto a los otros dos hijos
   que en este caso, los dos hijos son el de la barra izquierda y el de la barra derecha. Como
   estos ultimos dos ya tienen un espacio definido, este ultimo crecerá*/
@@ -22,94 +22,6 @@
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-}
-
-.chatuserconnection {
-  width: 100%;
-  height: 11.62%;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  box-sizing: border-box;
-  padding-top: 0.73%;
-  padding-left: 2.06%;
-  background-color: #333333;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
-.chatuserconnectiondivone {
-  display: flex;
-  flex-direction: row;
-  height: 100%;
-  width: 88%;
-}
-
-.chatuserconnectionimg {
-  border-radius: 50%;
-  width: 8.84%;
-  height: 85.83%;
-}
-
-.chatUsernameNameStateColumn {
-  width: 40%;
-  display: flex;
-  flex-direction: column;
-
-  padding-left: 2%;
-  padding-top: 1%;
-}
-
-.chatUsernameText {
-  margin: 0;
-  padding: 0;
-
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 130%;
-  color: #f5f5f5;
-}
-
-.chatStateText {
-  margin: 0;
-  padding: 0;
-  padding-top: 1%;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  font-size: 100%;
-  color: #9e9696;
-}
-
-.chatuserconnectiondivtwo {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-
-  padding-top: 2.8%;
-  height: 100%;
-  width: 12%;
-}
-.chatUserSearchIcon {
-  border-radius: 50%;
-  width: 30%;
-  height: 55%;
-}
-.chatUserSearchIcon:hover {
-  background-color: #484848;
-}
-
-/*Como los contenedores .chatuserconnection y .inputContainerSend contienen altura
-definida, el tamaño de chatAllMessages crecerá y ocupará el espacio restante.*/
-.chatAllMessages {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-
-.inputContainerSend {
-  width: 100%;
-  height: 9.56%;
-  background-color: #333333;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
 .infochat {

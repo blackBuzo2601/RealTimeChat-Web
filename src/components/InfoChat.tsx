@@ -1,14 +1,19 @@
 import React from "react";
 import styles from "../styles/components styles/InfoChat.module.css";
 import Image from "next/image";
+import { useState, useEffect } from "react";
 
-const InfoChat = () => {
+interface InfoChatProps {
+  onhandleInfoChatVisible: () => void;
+}
+
+const InfoChat: React.FC<InfoChatProps> = ({ onhandleInfoChatVisible }) => {
   return (
     <div className={styles.father}>
       <section className={styles.infouser}>
         <article className={styles.infouserrow}>
           <p className={styles.infouserheading}>Información de usuario</p>
-          <div className={styles.close}></div>
+          <div className={styles.close} onClick={onhandleInfoChatVisible}></div>
         </article>
         <article className={styles.infoname}>
           <Image
