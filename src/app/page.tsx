@@ -35,15 +35,18 @@ export default function Home() {
       <section className={styles.conversationslist}>
         <ConversationsList
           onHandleChatView={handleChatViewVisible}
-          jsonData={jsonData}
         ></ConversationsList>
       </section>
+
+      {/*///////////////////////////////////////////////////////////*/}
       <section className={styles.chatContainer}>
         <ChatView
+          jsonData={jsonData}
           isChatViewVisible={isChatViewVisible}
           onhandleInfoChatVisible={handleInfoChatVisible}
         ></ChatView>
       </section>
+      {/*///////////////////////////////////////////////////////////////*/}
       {isInfoChatVisible && (
         <section className={styles.infochat}>
           <InfoChat onhandleInfoChatVisible={handleInfoChatVisible}></InfoChat>

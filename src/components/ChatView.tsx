@@ -7,12 +7,16 @@ import IncomingMessage from "./IncomingMessage";
 interface ChatViewProps {
   onhandleInfoChatVisible: () => void;
   isChatViewVisible: boolean;
+  jsonData: { key: string; info: any }[];
 }
 
 const ChatView: React.FC<ChatViewProps> = ({
   onhandleInfoChatVisible,
   isChatViewVisible,
+  jsonData,
 }) => {
+  const listaChats =
+    jsonData.find((item) => item.key === "ListaChats")?.info || [];
   return (
     <>
       {isChatViewVisible && (

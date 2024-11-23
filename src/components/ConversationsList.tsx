@@ -4,18 +4,14 @@ import Image from "next/image";
 import SingleChat from "./SingleChat";
 
 interface conversationslistProps {
-  jsonData: { key: string; info: any }[];
   onHandleChatView: () => void;
 }
 
 const ConversationsList: React.FC<conversationslistProps> = ({
-  jsonData,
   onHandleChatView,
 }) => {
-  const listaChats =
-    jsonData.find((item) => item.key === "ListaChats")?.info || [];
   return (
-    <div className={styles.father}>
+    <div onClick={onHandleChatView} className={styles.father}>
       <section className={styles.chatBar}>
         <Image
           alt="imageprofile"
@@ -31,15 +27,7 @@ const ConversationsList: React.FC<conversationslistProps> = ({
         />
       </section>
       <section className={styles.allChatsList}>
-        {listaChats.map((elemento: any) => (
-          <SingleChat
-            key={elemento.ChatID}
-            ChatID={elemento.ChatID}
-            mensajes={elemento.mensajes}
-            miembros={elemento.miembros}
-            onHandleChatView={onHandleChatView}
-          ></SingleChat>
-        ))}
+        <SingleChat></SingleChat>
       </section>
     </div>
   );

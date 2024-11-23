@@ -2,51 +2,9 @@ import React from "react";
 import styles from "../styles/components styles/SingleChat.module.css";
 import Image from "next/image";
 
-interface mensajesProps {
-  IDMensaje: string;
-  Usuario: string;
-  idUsuario: number;
-  contenido: string;
-  hora: string;
-  fecha: string;
-}
-
-interface miembrosProps {
-  Nombre: string;
-  IDMiembro: number;
-}
-
-interface SingleChatProps {
-  ChatID: number;
-
-  miembros: miembrosProps[];
-  mensajes: mensajesProps[];
-  onHandleChatView: () => void;
-}
-
-const SingleChat: React.FC<SingleChatProps> = ({
-  ChatID,
-  miembros,
-  mensajes,
-  onHandleChatView,
-}) => {
-  let grupo = false;
-  let nombreChatIndividual = "";
-  const idUsuarioRegistrado = 100;
-
-  if (miembros.length > 2) {
-    grupo = true;
-  } else {
-    for (let i = 0; i < miembros.length; i++) {
-      if (miembros[i].IDMiembro !== idUsuarioRegistrado) {
-        nombreChatIndividual = miembros[i].Nombre;
-        break;
-      }
-    }
-  }
-
+const SingleChat = () => {
   return (
-    <div onClick={onHandleChatView} className={styles.fatherDiv}>
+    <div className={styles.fatherDiv}>
       <Image
         alt="imageprofile"
         src={"/blackgoku.jpg"}
@@ -56,19 +14,11 @@ const SingleChat: React.FC<SingleChatProps> = ({
       ></Image>
       <section className={styles.chatMessageColumn}>
         <section className={styles.chatMessageRow}>
-          {grupo ? ( //evaluamos que sea un grupo
-            <p className={styles.chatName}>Grupo de {miembros[0].Nombre}</p>
-          ) : (
-            <p className={styles.chatName}>{nombreChatIndividual}</p>
-          )}
+          <p className={styles.chatName}>Diego</p>
 
-          <p className={styles.lastMessageHour}>
-            {mensajes[mensajes.length - 1].hora}
-          </p>
+          <p className={styles.lastMessageHour}>14:10</p>
         </section>
-        <p className={styles.chatMessageContent}>
-          {mensajes[mensajes.length - 1].contenido}
-        </p>
+        <p className={styles.chatMessageContent}>Que onda perrillo</p>
       </section>
     </div>
   );
