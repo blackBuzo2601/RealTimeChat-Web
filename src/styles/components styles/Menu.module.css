@@ -5,9 +5,9 @@
   position: absolute;
   top: 0; /*para que se posicione en el la parte de hasta arriba del contenedor padre*/
   left: 0; /*para qeu se posicione en la parte de hasta la izquierda del contenedor padre*/
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 1);
 }
 .nameAndPicture {
   width: 100%;

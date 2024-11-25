@@ -51,7 +51,7 @@ export default function Home() {
       </section>
 
       {/*///////////////////////////////////////////////////////////*/}
-      <section className={styles.chatContainer}>
+      <section onClick={handleHideMenuVisible} className={styles.chatContainer}>
         <ChatView
           onHandleHideMenuVisible={handleHideMenuVisible}
           jsonData={jsonData}
@@ -62,7 +62,10 @@ export default function Home() {
       {/*///////////////////////////////////////////////////////////////*/}
       {isInfoChatVisible && (
         <section className={styles.infochat}>
-          <InfoChat onhandleInfoChatVisible={handleInfoChatVisible}></InfoChat>
+          <InfoChat
+            onHandleHideMenuVisible={handleHideMenuVisible}
+            onhandleInfoChatVisible={handleInfoChatVisible}
+          ></InfoChat>
         </section>
       )}
     </div> //CONCLUYE father

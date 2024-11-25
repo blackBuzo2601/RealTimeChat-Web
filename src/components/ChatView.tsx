@@ -63,6 +63,15 @@ const ChatView: React.FC<ChatViewProps> = ({
             <IncomingMessage incomingText="Hola bien y tu"></IncomingMessage>
             <OutgoingMessage outGoingText="Bien gracias"></OutgoingMessage>
             <IncomingMessage incomingText="Es todo pa"></IncomingMessage>
+            <OutgoingMessage outGoingText="quiers jugar warzone?"></OutgoingMessage>
+            <IncomingMessage incomingText="Ahuevo me parece un plan perfecto"></IncomingMessage>
+            <OutgoingMessage outGoingText="Duos o escuadras?"></OutgoingMessage>
+            <IncomingMessage incomingText="Escuadras pa agarrar cura tirando hate por el chat de proximidad"></IncomingMessage>
+            <OutgoingMessage outGoingText="jajaja ahuevo"></OutgoingMessage>
+            <IncomingMessage incomingText="siii"></IncomingMessage>
+            <OutgoingMessage outGoingText="dame 5 minutos entonces"></OutgoingMessage>
+            <IncomingMessage incomingText="arre"></IncomingMessage>
+            <IncomingMessage incomingText="Yo ya estoy conectadi"></IncomingMessage>
           </article>
 
           <article className={styles.sendMessageContainer}>

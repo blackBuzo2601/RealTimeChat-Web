@@ -5,11 +5,25 @@ import { useState, useEffect } from "react";
 
 interface InfoChatProps {
   onhandleInfoChatVisible: () => void;
+  onHandleHideMenuVisible: () => void;
 }
 
-const InfoChat: React.FC<InfoChatProps> = ({ onhandleInfoChatVisible }) => {
+const InfoChat: React.FC<InfoChatProps> = ({
+  onhandleInfoChatVisible,
+  onHandleHideMenuVisible,
+}) => {
+  const [isMultimediaVisible, setIsMultimediaVisible] = useState(false);
+
+  const handleShowMultimedia = () => {
+    setIsMultimediaVisible(true);
+  };
+
+  const handleHideMultimedia = () => {
+    setIsMultimediaVisible(false);
+  };
+
   return (
-    <div className={styles.father}>
+    <div onClick={onHandleHideMenuVisible} className={styles.father}>
       <section className={styles.infouser}>
         <article className={styles.infouserrow}>
           <p className={styles.infouserheading}>Información de usuario</p>
@@ -44,7 +58,10 @@ const InfoChat: React.FC<InfoChatProps> = ({ onhandleInfoChatVisible }) => {
         </div>
       </section>
       <section className={styles.multimediainfo}>
-        <article className={styles.multimediasubcontainer}>
+        <article
+          onClick={handleShowMultimedia}
+          className={styles.multimediasubcontainer}
+        >
           <Image
             alt="iconoNotifications"
             src={"/photos.png"}
@@ -94,6 +111,205 @@ const InfoChat: React.FC<InfoChatProps> = ({ onhandleInfoChatVisible }) => {
           </p>
         </article>
       </section>
+      {isMultimediaVisible && (
+        <div className={styles.multimediaPhotosContainer}>
+          <section className={styles.infoTabName}>
+            <Image
+              onClick={handleHideMultimedia}
+              alt="iconoReturn"
+              src={"/return.png"}
+              width={800}
+              height={800}
+              className={styles.returnIconContainer}
+            ></Image>
+            <p>Fotos</p>
+          </section>
+          <section className={styles.allPhotos}>
+            <div className={styles.photosRow}>
+              <Image
+                onClick={handleHideMultimedia}
+                alt="iconoReturn"
+                src={"/burguer.jpg"}
+                width={600}
+                height={600}
+                className={styles.singleMultimediaPhoto}
+              ></Image>
+              <Image
+                onClick={handleHideMultimedia}
+                alt="iconoReturn"
+                src={"/burguer.jpg"}
+                width={600}
+                height={600}
+                className={styles.singleMultimediaPhoto}
+              ></Image>
+              <Image
+                onClick={handleHideMultimedia}
+                alt="iconoReturn"
+                src={"/burguer.jpg"}
+                width={600}
+                height={600}
+                className={styles.singleMultimediaPhoto}
+              ></Image>
+            </div>
+            <div className={styles.photosRow}>
+              <Image
+                onClick={handleHideMultimedia}
+                alt="iconoReturn"
+                src={"/burguer.jpg"}
+                width={600}
+                height={600}
+                className={styles.singleMultimediaPhoto}
+              ></Image>
+              <Image
+                onClick={handleHideMultimedia}
+                alt="iconoReturn"
+                src={"/burguer.jpg"}
+                width={600}
+                height={600}
+                className={styles.singleMultimediaPhoto}
+              ></Image>
+              <Image
+                onClick={handleHideMultimedia}
+                alt="iconoReturn"
+                src={"/burguer.jpg"}
+                width={600}
+                height={600}
+                className={styles.singleMultimediaPhoto}
+              ></Image>
+            </div>
+            <div className={styles.photosRow}>
+              <Image
+                onClick={handleHideMultimedia}
+                alt="iconoReturn"
+                src={"/burguer.jpg"}
+                width={600}
+                height={600}
+                className={styles.singleMultimediaPhoto}
+              ></Image>
+              <Image
+                onClick={handleHideMultimedia}
+                alt="iconoReturn"
+                src={"/burguer.jpg"}
+                width={600}
+                height={600}
+                className={styles.singleMultimediaPhoto}
+              ></Image>
+              <Image
+                onClick={handleHideMultimedia}
+                alt="iconoReturn"
+                src={"/burguer.jpg"}
+                width={600}
+                height={600}
+                className={styles.singleMultimediaPhoto}
+              ></Image>
+            </div>
+            <div className={styles.photosRow}>
+              <Image
+                onClick={handleHideMultimedia}
+                alt="iconoReturn"
+                src={"/burguer.jpg"}
+                width={600}
+                height={600}
+                className={styles.singleMultimediaPhoto}
+              ></Image>
+              <Image
+                onClick={handleHideMultimedia}
+                alt="iconoReturn"
+                src={"/burguer.jpg"}
+                width={600}
+                height={600}
+                className={styles.singleMultimediaPhoto}
+              ></Image>
+              <Image
+                onClick={handleHideMultimedia}
+                alt="iconoReturn"
+                src={"/burguer.jpg"}
+                width={600}
+                height={600}
+                className={styles.singleMultimediaPhoto}
+              ></Image>
+            </div>
+            <div className={styles.photosRow}>
+              <Image
+                onClick={handleHideMultimedia}
+                alt="iconoReturn"
+                src={"/burguer.jpg"}
+                width={600}
+                height={600}
+                className={styles.singleMultimediaPhoto}
+              ></Image>
+              <Image
+                onClick={handleHideMultimedia}
+                alt="iconoReturn"
+                src={"/burguer.jpg"}
+                width={600}
+                height={600}
+                className={styles.singleMultimediaPhoto}
+              ></Image>
+              <Image
+                onClick={handleHideMultimedia}
+                alt="iconoReturn"
+                src={"/burguer.jpg"}
+                width={600}
+                height={600}
+                className={styles.singleMultimediaPhoto}
+              ></Image>
+            </div>
+            <div className={styles.photosRow}>
+              <Image
+                onClick={handleHideMultimedia}
+                alt="iconoReturn"
+                src={"/burguer.jpg"}
+                width={600}
+                height={600}
+                className={styles.singleMultimediaPhoto}
+              ></Image>
+              <Image
+                onClick={handleHideMultimedia}
+                alt="iconoReturn"
+                src={"/burguer.jpg"}
+                width={600}
+                height={600}
+                className={styles.singleMultimediaPhoto}
+              ></Image>
+              <Image
+                onClick={handleHideMultimedia}
+                alt="iconoReturn"
+                src={"/burguer.jpg"}
+                width={600}
+                height={600}
+                className={styles.singleMultimediaPhoto}
+              ></Image>
+            </div>
+            <div className={styles.photosRow}>
+              <Image
+                onClick={handleHideMultimedia}
+                alt="iconoReturn"
+                src={"/burguer.jpg"}
+                width={600}
+                height={600}
+                className={styles.singleMultimediaPhoto}
+              ></Image>
+              <Image
+                onClick={handleHideMultimedia}
+                alt="iconoReturn"
+                src={"/burguer.jpg"}
+                width={600}
+                height={600}
+                className={styles.singleMultimediaPhoto}
+              ></Image>
+              <Image
+                onClick={handleHideMultimedia}
+                alt="iconoReturn"
+                src={"/burguer.jpg"}
+                width={600}
+                height={600}
+                className={styles.singleMultimediaPhoto}
+              ></Image>
+            </div>
+          </section>
+        </div>
+      )}
     </div>
   );
 };
