@@ -10,6 +10,7 @@
   border-bottom-right-radius: 15px;
 }
 .nameAndPicture {
+  padding-top: 3.5%;
   width: 100%;
   height: 17.22%;
 
@@ -20,9 +21,9 @@
   align-items: center;
 }
 .profilePicture {
-  width: 80px;
+  width: 70px;
   border-radius: 50%;
-  height: 80px;
+  height: 70px;
 }
 .profileName {
   margin: 0;

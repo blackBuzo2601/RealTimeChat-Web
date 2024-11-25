@@ -13,6 +13,7 @@ const InfoChat: React.FC<InfoChatProps> = ({
   onHandleHideMenuVisible,
 }) => {
   const [isMultimediaVisible, setIsMultimediaVisible] = useState(false);
+  const [isFilesVisible, setIsFilesVisible] = useState(false);
 
   const handleShowMultimedia = () => {
     setIsMultimediaVisible(true);
@@ -20,6 +21,14 @@ const InfoChat: React.FC<InfoChatProps> = ({
 
   const handleHideMultimedia = () => {
     setIsMultimediaVisible(false);
+  };
+
+  const handleShowFiles = () => {
+    setIsFilesVisible(true);
+  };
+
+  const handleHideFiles = () => {
+    setIsFilesVisible(false);
   };
 
   return (
@@ -70,7 +79,10 @@ const InfoChat: React.FC<InfoChatProps> = ({
           ></Image>
           <p className={styles.multimediasubcontainertext}>50 fotos</p>
         </article>
-        <article className={styles.multimediasubcontainer}>
+        <article
+          onClick={handleShowFiles}
+          className={styles.multimediasubcontainer}
+        >
           <Image
             alt="iconoNotifications"
             src={"/files.png"}
@@ -127,7 +139,6 @@ const InfoChat: React.FC<InfoChatProps> = ({
           <section className={styles.allPhotos}>
             <div className={styles.photosRow}>
               <Image
-                onClick={handleHideMultimedia}
                 alt="iconoReturn"
                 src={"/burguer.jpg"}
                 width={600}
@@ -135,7 +146,6 @@ const InfoChat: React.FC<InfoChatProps> = ({
                 className={styles.singleMultimediaPhoto}
               ></Image>
               <Image
-                onClick={handleHideMultimedia}
                 alt="iconoReturn"
                 src={"/burguer.jpg"}
                 width={600}
@@ -143,7 +153,6 @@ const InfoChat: React.FC<InfoChatProps> = ({
                 className={styles.singleMultimediaPhoto}
               ></Image>
               <Image
-                onClick={handleHideMultimedia}
                 alt="iconoReturn"
                 src={"/burguer.jpg"}
                 width={600}
@@ -153,7 +162,6 @@ const InfoChat: React.FC<InfoChatProps> = ({
             </div>
             <div className={styles.photosRow}>
               <Image
-                onClick={handleHideMultimedia}
                 alt="iconoReturn"
                 src={"/burguer.jpg"}
                 width={600}
@@ -161,7 +169,6 @@ const InfoChat: React.FC<InfoChatProps> = ({
                 className={styles.singleMultimediaPhoto}
               ></Image>
               <Image
-                onClick={handleHideMultimedia}
                 alt="iconoReturn"
                 src={"/burguer.jpg"}
                 width={600}
@@ -169,7 +176,6 @@ const InfoChat: React.FC<InfoChatProps> = ({
                 className={styles.singleMultimediaPhoto}
               ></Image>
               <Image
-                onClick={handleHideMultimedia}
                 alt="iconoReturn"
                 src={"/burguer.jpg"}
                 width={600}
@@ -179,7 +185,6 @@ const InfoChat: React.FC<InfoChatProps> = ({
             </div>
             <div className={styles.photosRow}>
               <Image
-                onClick={handleHideMultimedia}
                 alt="iconoReturn"
                 src={"/burguer.jpg"}
                 width={600}
@@ -187,7 +192,6 @@ const InfoChat: React.FC<InfoChatProps> = ({
                 className={styles.singleMultimediaPhoto}
               ></Image>
               <Image
-                onClick={handleHideMultimedia}
                 alt="iconoReturn"
                 src={"/burguer.jpg"}
                 width={600}
@@ -195,7 +199,6 @@ const InfoChat: React.FC<InfoChatProps> = ({
                 className={styles.singleMultimediaPhoto}
               ></Image>
               <Image
-                onClick={handleHideMultimedia}
                 alt="iconoReturn"
                 src={"/burguer.jpg"}
                 width={600}
@@ -205,7 +208,6 @@ const InfoChat: React.FC<InfoChatProps> = ({
             </div>
             <div className={styles.photosRow}>
               <Image
-                onClick={handleHideMultimedia}
                 alt="iconoReturn"
                 src={"/burguer.jpg"}
                 width={600}
@@ -213,7 +215,6 @@ const InfoChat: React.FC<InfoChatProps> = ({
                 className={styles.singleMultimediaPhoto}
               ></Image>
               <Image
-                onClick={handleHideMultimedia}
                 alt="iconoReturn"
                 src={"/burguer.jpg"}
                 width={600}
@@ -221,7 +222,6 @@ const InfoChat: React.FC<InfoChatProps> = ({
                 className={styles.singleMultimediaPhoto}
               ></Image>
               <Image
-                onClick={handleHideMultimedia}
                 alt="iconoReturn"
                 src={"/burguer.jpg"}
                 width={600}
@@ -231,7 +231,6 @@ const InfoChat: React.FC<InfoChatProps> = ({
             </div>
             <div className={styles.photosRow}>
               <Image
-                onClick={handleHideMultimedia}
                 alt="iconoReturn"
                 src={"/burguer.jpg"}
                 width={600}
@@ -239,7 +238,6 @@ const InfoChat: React.FC<InfoChatProps> = ({
                 className={styles.singleMultimediaPhoto}
               ></Image>
               <Image
-                onClick={handleHideMultimedia}
                 alt="iconoReturn"
                 src={"/burguer.jpg"}
                 width={600}
@@ -247,7 +245,6 @@ const InfoChat: React.FC<InfoChatProps> = ({
                 className={styles.singleMultimediaPhoto}
               ></Image>
               <Image
-                onClick={handleHideMultimedia}
                 alt="iconoReturn"
                 src={"/burguer.jpg"}
                 width={600}
@@ -257,7 +254,6 @@ const InfoChat: React.FC<InfoChatProps> = ({
             </div>
             <div className={styles.photosRow}>
               <Image
-                onClick={handleHideMultimedia}
                 alt="iconoReturn"
                 src={"/burguer.jpg"}
                 width={600}
@@ -265,7 +261,6 @@ const InfoChat: React.FC<InfoChatProps> = ({
                 className={styles.singleMultimediaPhoto}
               ></Image>
               <Image
-                onClick={handleHideMultimedia}
                 alt="iconoReturn"
                 src={"/burguer.jpg"}
                 width={600}
@@ -273,7 +268,6 @@ const InfoChat: React.FC<InfoChatProps> = ({
                 className={styles.singleMultimediaPhoto}
               ></Image>
               <Image
-                onClick={handleHideMultimedia}
                 alt="iconoReturn"
                 src={"/burguer.jpg"}
                 width={600}
@@ -283,7 +277,6 @@ const InfoChat: React.FC<InfoChatProps> = ({
             </div>
             <div className={styles.photosRow}>
               <Image
-                onClick={handleHideMultimedia}
                 alt="iconoReturn"
                 src={"/burguer.jpg"}
                 width={600}
@@ -291,7 +284,6 @@ const InfoChat: React.FC<InfoChatProps> = ({
                 className={styles.singleMultimediaPhoto}
               ></Image>
               <Image
-                onClick={handleHideMultimedia}
                 alt="iconoReturn"
                 src={"/burguer.jpg"}
                 width={600}
@@ -299,13 +291,79 @@ const InfoChat: React.FC<InfoChatProps> = ({
                 className={styles.singleMultimediaPhoto}
               ></Image>
               <Image
-                onClick={handleHideMultimedia}
                 alt="iconoReturn"
                 src={"/burguer.jpg"}
                 width={600}
                 height={600}
                 className={styles.singleMultimediaPhoto}
               ></Image>
+            </div>
+          </section>
+        </div>
+      )}
+      {isFilesVisible && (
+        <div className={styles.multimediaPhotosContainer}>
+          <section className={styles.infoTabName}>
+            <Image
+              onClick={handleHideFiles}
+              alt="iconoReturn"
+              src={"/return.png"}
+              width={800}
+              height={800}
+              className={styles.returnIconContainer}
+            ></Image>
+            <p>Archivos</p>
+          </section>
+          <section className={styles.allPhotos}>
+            <div className={styles.fileContainer}>
+              <p className={styles.fileContainerFileName}>ChatEjemplo.json</p>
+              <p className={styles.fileContainerFileSize}>434 B</p>
+              <p className={styles.fileContainerFileDate}>Nov 13 10:10</p>
+            </div>
+            <div className={styles.fileContainer}>
+              <p className={styles.fileContainerFileName}>ChatEjemplo.json</p>
+              <p className={styles.fileContainerFileSize}>434 B</p>
+              <p className={styles.fileContainerFileDate}>Nov 13 10:10</p>
+            </div>
+            <div className={styles.fileContainer}>
+              <p className={styles.fileContainerFileName}>ChatEjemplo.json</p>
+              <p className={styles.fileContainerFileSize}>434 B</p>
+              <p className={styles.fileContainerFileDate}>Nov 13 10:10</p>
+            </div>
+            <div className={styles.fileContainer}>
+              <p className={styles.fileContainerFileName}>ChatEjemplo.json</p>
+              <p className={styles.fileContainerFileSize}>434 B</p>
+              <p className={styles.fileContainerFileDate}>Nov 13 10:10</p>
+            </div>
+            <div className={styles.fileContainer}>
+              <p className={styles.fileContainerFileName}>ChatEjemplo.json</p>
+              <p className={styles.fileContainerFileSize}>434 B</p>
+              <p className={styles.fileContainerFileDate}>Nov 13 10:10</p>
+            </div>
+            <div className={styles.fileContainer}>
+              <p className={styles.fileContainerFileName}>ChatEjemplo.json</p>
+              <p className={styles.fileContainerFileSize}>434 B</p>
+              <p className={styles.fileContainerFileDate}>Nov 13 10:10</p>
+            </div>
+            <div className={styles.fileContainer}>
+              <p className={styles.fileContainerFileName}>ChatEjemplo.json</p>
+              <p className={styles.fileContainerFileSize}>434 B</p>
+              <p className={styles.fileContainerFileDate}>Nov 13 10:10</p>
+            </div>
+            <div className={styles.fileContainer}>
+              <p className={styles.fileContainerFileName}>ChatEjemplo.json</p>
+              <p className={styles.fileContainerFileSize}>434 B</p>
+              <p className={styles.fileContainerFileDate}>Nov 13 10:10</p>
+            </div>
+            <div className={styles.fileContainer}>
+              <p className={styles.fileContainerFileName}>ChatEjemplo.json</p>
+              <p className={styles.fileContainerFileSize}>434 B</p>
+              <p className={styles.fileContainerFileDate}>Nov 13 10:10</p>
+            </div>
+            <div className={styles.fileContainer}>
+              <p className={styles.fileContainerFileName}>ChatEjemplo.json</p>
+              <p className={styles.fileContainerFileSize}>434 B</p>
+              <p className={styles.fileContainerFileDate}>Nov 13 10:10</p>
             </div>
           </section>
         </div>
