@@ -2,9 +2,13 @@ import React from "react";
 import styles from "../styles/components styles/SingleChat.module.css";
 import Image from "next/image";
 
-const SingleChat = () => {
+interface SingleChatProps {
+  onHandleChatView: () => void;
+}
+
+const SingleChat: React.FC<SingleChatProps> = ({ onHandleChatView }) => {
   return (
-    <div className={styles.fatherDiv}>
+    <div onClick={onHandleChatView} className={styles.fatherDiv}>
       <Image
         alt="imageprofile"
         src={"/blackgoku.jpg"}

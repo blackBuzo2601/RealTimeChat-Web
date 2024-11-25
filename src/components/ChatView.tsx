@@ -8,19 +8,21 @@ interface ChatViewProps {
   onhandleInfoChatVisible: () => void;
   isChatViewVisible: boolean;
   jsonData: { key: string; info: any }[];
+  onHandleHideMenuVisible: () => void;
 }
 
 const ChatView: React.FC<ChatViewProps> = ({
   onhandleInfoChatVisible,
   isChatViewVisible,
   jsonData,
+  onHandleHideMenuVisible,
 }) => {
   const listaChats =
     jsonData.find((item) => item.key === "ListaChats")?.info || [];
   return (
     <>
       {isChatViewVisible && (
-        <div className={styles.father}>
+        <div onClick={onHandleHideMenuVisible} className={styles.father}>
           <article className={styles.chatuserconnection}>
             <div className={styles.chatuserconnectiondivone}>
               <Image

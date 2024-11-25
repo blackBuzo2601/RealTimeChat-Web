@@ -7,6 +7,7 @@
 }
 
 .conversationslist {
+  position: relative;
   flex-shrink: 0;
   width: 22.44%;
   background-color: #333333;

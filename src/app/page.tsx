@@ -5,10 +5,12 @@ import InfoChat from "@/components/InfoChat";
 import { useState, useEffect } from "react";
 import ConversationsList from "@/components/ConversationsList";
 import ChatView from "@/components/ChatView";
+import Menu from "@/components/Menu";
 
 export default function Home() {
   const [isInfoChatVisible, setIsInfoChatVisible] = useState(false);
   const [isChatViewVisible, setIsChatViewVisible] = useState(false);
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [jsonData, setJsonData] = useState<{ key: string; info: any }[]>([]);
 
   useEffect(() => {
@@ -29,18 +31,29 @@ export default function Home() {
     setIsChatViewVisible(true);
   };
 
+  const handleMenuVisible = () => {
+    setIsMenuVisible(true);
+  };
+
+  const handleHideMenuVisible = () => {
+    setIsMenuVisible(false);
+  };
+
   return (
     //Father es el componente padre de todo el index
     <div className={styles.father}>
       <section className={styles.conversationslist}>
         <ConversationsList
-          onHandleChatView={handleChatViewVisible}
+          onHandleChatView={handleChatViewVisible} //ConversationsList renderiza los SingleChats
+          onHandleMenuVisible={handleMenuVisible}
         ></ConversationsList>
+        <Menu isMenuVisible={isMenuVisible}></Menu>
       </section>
 
       {/*///////////////////////////////////////////////////////////*/}
       <section className={styles.chatContainer}>
         <ChatView
+          onHandleHideMenuVisible={handleHideMenuVisible}
           jsonData={jsonData}
           isChatViewVisible={isChatViewVisible}
           onhandleInfoChatVisible={handleInfoChatVisible}

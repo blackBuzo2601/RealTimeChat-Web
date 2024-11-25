@@ -5,20 +5,23 @@ import SingleChat from "./SingleChat";
 
 interface conversationslistProps {
   onHandleChatView: () => void;
+  onHandleMenuVisible: () => void;
 }
 
 const ConversationsList: React.FC<conversationslistProps> = ({
   onHandleChatView,
+  onHandleMenuVisible,
 }) => {
   return (
-    <div onClick={onHandleChatView} className={styles.father}>
+    <div className={styles.father}>
       <section className={styles.chatBar}>
         <Image
-          alt="imageprofile"
+          alt="menuicono"
           src={"/menu.png"}
           width={960}
           height={960}
           className={styles.conversationMenuIcon}
+          onClick={onHandleMenuVisible}
         ></Image>
         <input
           type="text"
@@ -27,7 +30,9 @@ const ConversationsList: React.FC<conversationslistProps> = ({
         />
       </section>
       <section className={styles.allChatsList}>
-        <SingleChat></SingleChat>
+        <SingleChat onHandleChatView={onHandleChatView}></SingleChat>
+        <SingleChat onHandleChatView={onHandleChatView}></SingleChat>
+        <SingleChat onHandleChatView={onHandleChatView}></SingleChat>
       </section>
     </div>
   );
