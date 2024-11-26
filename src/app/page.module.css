@@ -233,3 +233,136 @@
 .MenuOptionClose:hover {
   background-color: #484848;
 }
+
+.contactsListContainer {
+  padding-top: 1%;
+  width: 40.93%;
+  height: 93.05%;
+  background-color: #333333;
+  position: absolute;
+  top: 3.47%;
+  left: 29.53%;
+  right: 29.53%;
+  bottom: 3.47%;
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menuContactsHeader {
+  text-align: center;
+  padding-top: 4.05%;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 160%;
+  color: #ffffff;
+}
+
+.menuContactsSearchInput {
+  padding: 0;
+  margin: 0;
+  margin-top: 1.8%;
+  width: 91.73%;
+  height: 6.14%;
+  padding-left: 5.14%;
+  border-radius: 15px;
+  color: #9c9898;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 100%;
+  background-color: #333333;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.75);
+  border: none;
+  margin-bottom: 3.5%;
+}
+
+.menuContactsSearchInput:hover {
+  background-color: #484848;
+}
+
+.allContactsList {
+  width: 100%;
+  height: 76.5%;
+
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+  border-bottom: 1px solid black;
+}
+
+.allContactsList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.allContactsList::-webkit-scrollbar-thumb {
+  background: #c1bbbb;
+  border-radius: 4px;
+}
+
+.singleContactContainer {
+  width: 100%;
+  height: 14.88%;
+
+  display: flex;
+  flex-direction: row;
+  flex-shrink: 0;
+  align-items: center;
+}
+.singleContactContainer:hover {
+  background-color: #484848;
+}
+.singleContactAvatar {
+  margin-left: 5.14%;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+}
+.singleContactColumn {
+  margin-left: 3%;
+  display: flex;
+  flex-direction: column;
+}
+.singleContactFullname {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 100%;
+  color: #ffffff;
+  margin-bottom: 3%;
+}
+.singleContactLastSeen {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 100%;
+  color: #dadfe0;
+}
+
+.contactsAddCloseRow {
+  padding-left: 5.14%;
+  padding-right: 5.14%;
+  width: 100%;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contactsAddCloseRow p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 100%;
+
+  color: #ffffff;
+}
+.contactsAddCloseRow p:hover {
+  background-color: #484848;
+}

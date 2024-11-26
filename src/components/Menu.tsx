@@ -7,12 +7,14 @@ interface MenuProps {
   isMenuVisible: boolean;
   onhandleHideMenuVisible: () => void;
   onhandleShowOptionsVisible: () => void;
+  onHandleShowContactsVisible: () => void;
 }
 
 const Menu: React.FC<MenuProps> = ({
   isMenuVisible,
   onhandleHideMenuVisible,
   onhandleShowOptionsVisible,
+  onHandleShowContactsVisible,
 }) => {
   return (
     <>
@@ -39,7 +41,13 @@ const Menu: React.FC<MenuProps> = ({
               ></Image>
               <p>Nuevo Grupo</p>
             </div>
-            <div className={styles.optionContainer}>
+            <div
+              onClick={() => {
+                onhandleHideMenuVisible();
+                onHandleShowContactsVisible();
+              }}
+              className={styles.optionContainer}
+            >
               <Image
                 alt="iconocontactos"
                 src={"/contacts.png"}

@@ -12,6 +12,7 @@ export default function Home() {
   const [isChatViewVisible, setIsChatViewVisible] = useState(false);
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isOptionsVisible, setIsOptionsVisible] = useState(false);
+  const [isContactsVisible, setIsContactsVisible] = useState(false);
 
   const [jsonData, setJsonData] = useState<{ key: string; info: any }[]>([]);
 
@@ -47,6 +48,12 @@ export default function Home() {
   const handleHideOptionsVisible = () => {
     setIsOptionsVisible(false);
   };
+  const handleShowContactsVisible = () => {
+    setIsContactsVisible(true);
+  };
+  const handleHideContactsVisible = () => {
+    setIsContactsVisible(false);
+  };
 
   return (
     //Father es el componente padre de todo el index
@@ -67,6 +74,7 @@ export default function Home() {
           onhandleHideMenuVisible={handleHideMenuVisible}
           isMenuVisible={isMenuVisible}
           onhandleShowOptionsVisible={handleShowOptionsVisible}
+          onHandleShowContactsVisible={handleShowContactsVisible}
         ></Menu>
       </section>
 
@@ -179,6 +187,67 @@ export default function Home() {
                 Cerrar
               </p>
             </div>
+          </article>
+        </section>
+      )}
+      {isContactsVisible && (
+        <section className={styles.contactsListContainer}>
+          <p className={styles.menuContactsHeader}>Tus contactos</p>
+          <input
+            type="text"
+            placeholder="Buscar..."
+            className={styles.menuContactsSearchInput}
+          />
+          <article className={styles.allContactsList}>
+            <div className={styles.singleContactContainer}>
+              <Image
+                alt="fotoContacto"
+                src={"/blackgoku.jpg"}
+                width={800}
+                height={800}
+                className={styles.singleContactAvatar}
+              ></Image>
+              <div className={styles.singleContactColumn}>
+                <p className={styles.singleContactFullname}>Diego Lopez</p>
+                <p className={styles.singleContactLastSeen}>
+                  Ultima conexión: Hoy 18:40
+                </p>
+              </div>
+            </div>
+            <div className={styles.singleContactContainer}>
+              <Image
+                alt="fotoContacto"
+                src={"/blackgoku.jpg"}
+                width={800}
+                height={800}
+                className={styles.singleContactAvatar}
+              ></Image>
+              <div className={styles.singleContactColumn}>
+                <p className={styles.singleContactFullname}>Diego Lopez</p>
+                <p className={styles.singleContactLastSeen}>
+                  Ultima conexión: Hoy 18:40
+                </p>
+              </div>
+            </div>
+            <div className={styles.singleContactContainer}>
+              <Image
+                alt="fotoContacto"
+                src={"/blackgoku.jpg"}
+                width={800}
+                height={800}
+                className={styles.singleContactAvatar}
+              ></Image>
+              <div className={styles.singleContactColumn}>
+                <p className={styles.singleContactFullname}>Diego Lopez</p>
+                <p className={styles.singleContactLastSeen}>
+                  Ultima conexión: Hoy 18:40
+                </p>
+              </div>
+            </div>
+          </article>
+          <article className={styles.contactsAddCloseRow}>
+            <p>Agregar contacto</p>
+            <p onClick={handleHideContactsVisible}>Cerrar</p>
           </article>
         </section>
       )}
