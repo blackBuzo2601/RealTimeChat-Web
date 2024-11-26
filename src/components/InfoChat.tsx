@@ -14,6 +14,7 @@ const InfoChat: React.FC<InfoChatProps> = ({
 }) => {
   const [isMultimediaVisible, setIsMultimediaVisible] = useState(false);
   const [isFilesVisible, setIsFilesVisible] = useState(false);
+  const [isAudiosVisible, setIsAudiosVisible] = useState(false);
 
   const handleShowMultimedia = () => {
     setIsMultimediaVisible(true);
@@ -29,6 +30,14 @@ const InfoChat: React.FC<InfoChatProps> = ({
 
   const handleHideFiles = () => {
     setIsFilesVisible(false);
+  };
+
+  const handleShowAudiosVisible = () => {
+    setIsAudiosVisible(true);
+  };
+
+  const handleHideAudiosVisible = () => {
+    setIsAudiosVisible(false);
   };
 
   return (
@@ -91,7 +100,10 @@ const InfoChat: React.FC<InfoChatProps> = ({
           ></Image>
           <p className={styles.multimediasubcontainertext}>4 archivos</p>
         </article>
-        <article className={styles.multimediasubcontainer}>
+        <article
+          onClick={handleShowAudiosVisible}
+          className={styles.multimediasubcontainer}
+        >
           <Image
             alt="iconoNotifications"
             src={"/microphone.png"}

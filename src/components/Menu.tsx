@@ -1,12 +1,19 @@
 import React from "react";
 import Image from "next/image";
 import styles from "../styles/components styles/Menu.module.css";
+import { useState } from "react";
 
 interface MenuProps {
   isMenuVisible: boolean;
+  onhandleHideMenuVisible: () => void;
+  onhandleShowOptionsVisible: () => void;
 }
 
-const Menu: React.FC<MenuProps> = ({ isMenuVisible }) => {
+const Menu: React.FC<MenuProps> = ({
+  isMenuVisible,
+  onhandleHideMenuVisible,
+  onhandleShowOptionsVisible,
+}) => {
   return (
     <>
       {isMenuVisible && (
@@ -52,7 +59,14 @@ const Menu: React.FC<MenuProps> = ({ isMenuVisible }) => {
               ></Image>
               <p>Mensajes guardados</p>
             </div>
-            <div className={styles.optionContainer}>
+            <div
+              onClick={(e) => {
+                e.stopPropagation();
+                onhandleHideMenuVisible();
+                onhandleShowOptionsVisible();
+              }}
+              className={styles.optionContainer}
+            >
               <Image
                 alt="iconoOpciones"
                 src={"/options.png"}
