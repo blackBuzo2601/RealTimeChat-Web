@@ -60,8 +60,9 @@ export default function Home() {
     <div className={styles.father}>
       <section
         onClick={() => {
-          if (isOptionsVisible) {
-            handleHideOptionsVisible();
+          handleHideOptionsVisible();
+          if (isContactsVisible == true) {
+            handleHideContactsVisible();
           }
         }}
         className={styles.conversationslist}
