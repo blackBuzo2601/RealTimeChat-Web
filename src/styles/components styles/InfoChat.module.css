@@ -167,12 +167,12 @@
   padding-left: 12.9%;
 }
 
-.optionssubcontainer:hover {
+.optionscontainer:hover {
   background-color: #484848;
 }
 
 .optionssubcontainer {
-  padding-top: 0.5%;
+  padding-top: 5.5%;
   width: 100%;
   height: 50%;
 
@@ -184,7 +184,7 @@
 }
 .optionscontainer {
   width: 100%;
-  height: 12%;
+  height: 6%;
   background-color: #333333;
   margin-bottom: 12px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 1);
@@ -296,4 +296,98 @@
   margin: 0;
   margin-top: 3.3%;
   padding: 0;
+}
+
+.allMembersContainer {
+  width: 100%;
+  height: 35%;
+  background-color: #333333;
+
+  margin-bottom: 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  box-sizing: border-box;
+  justify-content: space-between;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+}
+.allMembersContainerRow {
+  width: 100%;
+  height: 27%;
+  background-color: #333333;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 3%;
+  padding-right: 3%;
+
+  box-sizing: border-box;
+  justify-content: space-evenly;
+}
+
+.membersListContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.membersListContainer::-webkit-scrollbar {
+  width: 6px;
+}
+
+.membersListContainer::-webkit-scrollbar-thumb {
+  background: #c1bbbb;
+  border-radius: 4px;
+}
+
+.singleMember {
+  padding-left: 8.5%;
+  height: 30.31%;
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.singleMember:hover {
+  background-color: #484848;
+}
+
+.singleMember img {
+  margin-left: 4.5%;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+.singleMemberInfo {
+  margin-left: 7%;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  padding-top: 2.7%;
+}
+.singleMemberFullname {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 100%;
+  color: #ffffff;
+  margin-bottom: 1.7%;
+}
+
+.singleMemberLastSeen {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 80%;
+  color: #dadfe0;
 }

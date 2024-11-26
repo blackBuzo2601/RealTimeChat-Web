@@ -13,6 +13,7 @@ export default function Home() {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isOptionsVisible, setIsOptionsVisible] = useState(false);
   const [isContactsVisible, setIsContactsVisible] = useState(false);
+  const [isAddContactVisible, setIsAddContactVisible] = useState(false);
 
   const [jsonData, setJsonData] = useState<{ key: string; info: any }[]>([]);
 
@@ -53,6 +54,13 @@ export default function Home() {
   };
   const handleHideContactsVisible = () => {
     setIsContactsVisible(false);
+  };
+
+  const handleShowContactVisible = () => {
+    setIsAddContactVisible(true);
+  };
+  const handleHideContactVisible = () => {
+    setIsAddContactVisible(false);
   };
 
   return (

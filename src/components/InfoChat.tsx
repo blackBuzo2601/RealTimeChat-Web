@@ -117,15 +117,6 @@ const InfoChat: React.FC<InfoChatProps> = ({
         <article className={styles.optionssubcontainer}>
           <Image
             alt="iconoNotifications"
-            src={"/block.png"}
-            width={40}
-            height={35}
-          ></Image>
-          <p className={styles.multimediasubcontainertext}>Bloquear usuario</p>
-        </article>
-        <article className={styles.optionssubcontainer}>
-          <Image
-            alt="iconoNotifications"
             src={"/trash.png"}
             width={40}
             height={35}
@@ -133,6 +124,96 @@ const InfoChat: React.FC<InfoChatProps> = ({
           <p className={styles.multimediasubcontainertext}>
             Borrar conversación
           </p>
+        </article>
+      </section>
+      {/**/}
+      <section className={styles.allMembersContainer}>
+        <article className={styles.allMembersContainerRow}>
+          <Image
+            alt="iconoMiembros"
+            src={"/newgroup.png"}
+            width={50}
+            height={50}
+          ></Image>
+          <p className={styles.notificationstext}>5 Miembros</p>
+          <Image
+            alt="iconoAgregarMiembros"
+            src={"/addcontactscreen.png"}
+            width={40}
+            height={40}
+          ></Image>
+        </article>
+        <article className={styles.membersListContainer}>
+          <div className={styles.singleMember}>
+            <Image
+              alt="fotoDeMiembro"
+              src={"/blackgoku.jpg"}
+              width={50}
+              height={50}
+            ></Image>
+            <div className={styles.singleMemberInfo}>
+              <p className={styles.singleMemberFullname}>Elian Buzo</p>
+              <p className={styles.singleMemberLastSeen}>
+                Ultima Conexión: Hoy 18:40
+              </p>
+            </div>
+          </div>
+          <div className={styles.singleMember}>
+            <Image
+              alt="fotoDeMiembro"
+              src={"/blackgoku.jpg"}
+              width={50}
+              height={50}
+            ></Image>
+            <div className={styles.singleMemberInfo}>
+              <p className={styles.singleMemberFullname}>Elian Buzo</p>
+              <p className={styles.singleMemberLastSeen}>
+                Ultima Conexión: Hoy 18:40
+              </p>
+            </div>
+          </div>
+          <div className={styles.singleMember}>
+            <Image
+              alt="fotoDeMiembro"
+              src={"/blackgoku.jpg"}
+              width={50}
+              height={50}
+            ></Image>
+            <div className={styles.singleMemberInfo}>
+              <p className={styles.singleMemberFullname}>Elian Buzo</p>
+              <p className={styles.singleMemberLastSeen}>
+                Ultima Conexión: Hoy 18:40
+              </p>
+            </div>
+          </div>
+          <div className={styles.singleMember}>
+            <Image
+              alt="fotoDeMiembro"
+              src={"/blackgoku.jpg"}
+              width={50}
+              height={50}
+            ></Image>
+            <div className={styles.singleMemberInfo}>
+              <p className={styles.singleMemberFullname}>Elian Buzo</p>
+              <p className={styles.singleMemberLastSeen}>
+                Ultima Conexión: Hoy 18:40
+              </p>
+            </div>
+          </div>
+          <div className={styles.singleMember}>
+            <Image
+              alt="fotoDeMiembro"
+              src={"/blackgoku.jpg"}
+              width={50}
+              height={50}
+            ></Image>
+            <div className={styles.singleMemberInfo}>
+              <p className={styles.singleMemberFullname}>Elian Buzo</p>
+              <p className={styles.singleMemberLastSeen}>
+                Ultima Conexión: Hoy 18:40
+              </p>
+            </div>
+          </div>
         </article>
       </section>
       {isMultimediaVisible && (
