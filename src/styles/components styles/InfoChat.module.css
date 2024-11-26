@@ -391,3 +391,44 @@
   font-size: 80%;
   color: #dadfe0;
 }
+
+.imageViewer {
+  position: fixed; /*el container s fijado en la pantalla, a su vez que se empieza a 
+  dibujar desde el borde superior izquierdo.*/
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999; /*esto para que este contenedor se sobreponga sobre todo.*/
+}
+
+.imageViewerOverlay {
+  /*este contenedor es transparente y con esto, permitimos que al hacer clic en 
+  cualquier parte de dicho contenedor sin contar la imagen, se haga el evento
+  onclick para dejar de ver la imagen*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.imageViewerContent {
+  position: relative;
+  z-index: 10000; /*para que se ponga encima del fondo transparente*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imageViewerImage {
+  max-width: 90%;
+  max-height: 100%;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}

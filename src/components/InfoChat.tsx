@@ -15,6 +15,16 @@ const InfoChat: React.FC<InfoChatProps> = ({
   const [isMultimediaVisible, setIsMultimediaVisible] = useState(false);
   const [isFilesVisible, setIsFilesVisible] = useState(false);
   const [isAudiosVisible, setIsAudiosVisible] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null); //definimos que el estado
+  //puede ser tanto un string, como un nulo y asignamos nulo inucialmente como el estado.
+
+  const handleShowImage = (src: string) => {
+    setSelectedImage(src);
+  };
+
+  const handleCloseImage = () => {
+    setSelectedImage(null);
+  };
 
   const handleShowMultimedia = () => {
     setIsMultimediaVisible(true);
@@ -237,6 +247,7 @@ const InfoChat: React.FC<InfoChatProps> = ({
                 width={600}
                 height={600}
                 className={styles.singleMultimediaPhoto}
+                onClick={() => handleShowImage("/burguer.jpg")}
               ></Image>
               <Image
                 alt="iconoReturn"
@@ -244,45 +255,33 @@ const InfoChat: React.FC<InfoChatProps> = ({
                 width={600}
                 height={600}
                 className={styles.singleMultimediaPhoto}
+                onClick={() => handleShowImage("/burguer.jpg")}
               ></Image>
               <Image
                 alt="iconoReturn"
-                src={"/burguer.jpg"}
+                src={"/goku.jpg"}
                 width={600}
                 height={600}
                 className={styles.singleMultimediaPhoto}
-              ></Image>
-            </div>
-            <div className={styles.photosRow}>
-              <Image
-                alt="iconoReturn"
-                src={"/burguer.jpg"}
-                width={600}
-                height={600}
-                className={styles.singleMultimediaPhoto}
-              ></Image>
-              <Image
-                alt="iconoReturn"
-                src={"/burguer.jpg"}
-                width={600}
-                height={600}
-                className={styles.singleMultimediaPhoto}
-              ></Image>
-              <Image
-                alt="iconoReturn"
-                src={"/burguer.jpg"}
-                width={600}
-                height={600}
-                className={styles.singleMultimediaPhoto}
+                onClick={() => handleShowImage("/goku.jpg")}
               ></Image>
             </div>
             <div className={styles.photosRow}>
               <Image
                 alt="iconoReturn"
-                src={"/burguer.jpg"}
+                src={"/blackgoku.jpg"}
                 width={600}
                 height={600}
                 className={styles.singleMultimediaPhoto}
+                onClick={() => handleShowImage("/blackgoku.jpg")}
+              ></Image>
+              <Image
+                alt="iconoReturn"
+                src={"/zelda.jpg"}
+                width={600}
+                height={600}
+                className={styles.singleMultimediaPhoto}
+                onClick={() => handleShowImage("/zelda.jpg")}
               ></Image>
               <Image
                 alt="iconoReturn"
@@ -290,110 +289,31 @@ const InfoChat: React.FC<InfoChatProps> = ({
                 width={600}
                 height={600}
                 className={styles.singleMultimediaPhoto}
-              ></Image>
-              <Image
-                alt="iconoReturn"
-                src={"/burguer.jpg"}
-                width={600}
-                height={600}
-                className={styles.singleMultimediaPhoto}
-              ></Image>
-            </div>
-            <div className={styles.photosRow}>
-              <Image
-                alt="iconoReturn"
-                src={"/burguer.jpg"}
-                width={600}
-                height={600}
-                className={styles.singleMultimediaPhoto}
-              ></Image>
-              <Image
-                alt="iconoReturn"
-                src={"/burguer.jpg"}
-                width={600}
-                height={600}
-                className={styles.singleMultimediaPhoto}
-              ></Image>
-              <Image
-                alt="iconoReturn"
-                src={"/burguer.jpg"}
-                width={600}
-                height={600}
-                className={styles.singleMultimediaPhoto}
-              ></Image>
-            </div>
-            <div className={styles.photosRow}>
-              <Image
-                alt="iconoReturn"
-                src={"/burguer.jpg"}
-                width={600}
-                height={600}
-                className={styles.singleMultimediaPhoto}
-              ></Image>
-              <Image
-                alt="iconoReturn"
-                src={"/burguer.jpg"}
-                width={600}
-                height={600}
-                className={styles.singleMultimediaPhoto}
-              ></Image>
-              <Image
-                alt="iconoReturn"
-                src={"/burguer.jpg"}
-                width={600}
-                height={600}
-                className={styles.singleMultimediaPhoto}
-              ></Image>
-            </div>
-            <div className={styles.photosRow}>
-              <Image
-                alt="iconoReturn"
-                src={"/burguer.jpg"}
-                width={600}
-                height={600}
-                className={styles.singleMultimediaPhoto}
-              ></Image>
-              <Image
-                alt="iconoReturn"
-                src={"/burguer.jpg"}
-                width={600}
-                height={600}
-                className={styles.singleMultimediaPhoto}
-              ></Image>
-              <Image
-                alt="iconoReturn"
-                src={"/burguer.jpg"}
-                width={600}
-                height={600}
-                className={styles.singleMultimediaPhoto}
-              ></Image>
-            </div>
-            <div className={styles.photosRow}>
-              <Image
-                alt="iconoReturn"
-                src={"/burguer.jpg"}
-                width={600}
-                height={600}
-                className={styles.singleMultimediaPhoto}
-              ></Image>
-              <Image
-                alt="iconoReturn"
-                src={"/burguer.jpg"}
-                width={600}
-                height={600}
-                className={styles.singleMultimediaPhoto}
-              ></Image>
-              <Image
-                alt="iconoReturn"
-                src={"/burguer.jpg"}
-                width={600}
-                height={600}
-                className={styles.singleMultimediaPhoto}
+                onClick={() => handleShowImage("/burguer.jpg")}
               ></Image>
             </div>
           </section>
         </div>
       )}
+
+      {selectedImage && (
+        <div className={styles.imageViewer}>
+          <div
+            className={styles.imageViewerOverlay}
+            onClick={handleCloseImage}
+          ></div>
+          <div className={styles.imageViewerContent}>
+            <Image
+              alt="Imagen ampliada"
+              src={selectedImage}
+              width={800}
+              height={800}
+              className={styles.imageViewerImage}
+            />
+          </div>
+        </div>
+      )}
+
       {isFilesVisible && (
         <div className={styles.multimediaPhotosContainer}>
           <section className={styles.infoTabName}>
