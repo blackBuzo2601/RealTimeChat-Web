@@ -4,61 +4,81 @@
       "idUsuario": 1,
       "nickname": "juan777",
       "nombre": "Juan",
-      "apellido": "Lopez"
+      "apellido": "Lopez",
+      "estadoConexion": "En linea",
+      "ultimaConexion": null
     },
     {
       "idUsuario": 2,
       "nickname": "maria123",
       "nombre": "Maria",
-      "apellido": "Gomez"
+      "apellido": "Gomez",
+      "estadoConexion": "En linea",
+      "ultimaConexion": null
     },
     {
       "idUsuario": 3,
       "nickname": "pedro99",
       "nombre": "Pedro",
-      "apellido": "Hernandez"
+      "apellido": "Hernandez",
+      "estadoConexion": "En linea",
+      "ultimaConexion": null
     },
     {
       "idUsuario": 4,
       "nickname": "ana456",
       "nombre": "Ana",
-      "apellido": "Martinez"
+      "apellido": "Martinez",
+      "estadoConexion": "Desconectado",
+      "ultimaConexion": "2024-11-23T18:30:00Z"
     },
     {
       "idUsuario": 5,
       "nickname": "luis888",
       "nombre": "Luis",
-      "apellido": "Garcia"
+      "apellido": "Garcia",
+      "estadoConexion": "Desconectado",
+      "ultimaConexion": "2024-11-23T14:00:00Z"
     },
     {
       "idUsuario": 6,
       "nickname": "carla321",
       "nombre": "Carla",
-      "apellido": "Diaz"
+      "apellido": "Diaz",
+      "estadoConexion": "En linea",
+      "ultimaConexion": null
     },
     {
       "idUsuario": 7,
       "nickname": "david007",
       "nombre": "David",
-      "apellido": "Fernandez"
+      "apellido": "Fernandez",
+      "estadoConexion": "En linea",
+      "ultimaConexion": null
     },
     {
       "idUsuario": 8,
       "nickname": "sofia2023",
       "nombre": "Sofia",
-      "apellido": "Morales"
+      "apellido": "Morales",
+      "estadoConexion": "Desconectado",
+      "ultimaConexion": "2024-11-23T14:00:00Z"
     },
     {
       "idUsuario": 9,
       "nickname": "andres56",
       "nombre": "Andres",
-      "apellido": ""
+      "apellido": "",
+      "estadoConexion": "Desconectado",
+      "ultimaConexion": "2024-11-23T14:00:00Z"
     },
     {
       "idUsuario": 10,
       "nickname": "paula999",
       "nombre": "Paula",
-      "apellido": ""
+      "apellido": "",
+      "estadoConexion": "En linea",
+      "ultimaConexion": null
     }
   ],
 
@@ -67,16 +87,22 @@
       "ChatID": 1000,
       "miembros": [
         {
-          "Nombre": "Diego Lopez",
-          "IDMiembro": 1
+          "Nombre": "Juan Lopez",
+          "IDMiembro": 1,
+          "estadoConexion": "En linea",
+          "ultimaConexion": null
         },
         {
-          "Nombre": "Roberto Gonzalez",
-          "IDMiembro": 2
+          "Nombre": "Maria Gomez",
+          "IDMiembro": 2,
+          "estadoConexion": "En linea",
+          "ultimaConexion": null
         },
         {
-          "Nombre": "Chantel Rodriguez",
-          "IDMiembro": 3
+          "Nombre": "Pedro Hernandez",
+          "IDMiembro": 3,
+          "estadoConexion": "En linea",
+          "ultimaConexion": null
         },
         {
           "Nombre": "Elian Buzo",
@@ -86,7 +112,7 @@
       "mensajes": [
         {
           "IDMensaje": "mensaje000001",
-          "Usuario": "Diego Lopez",
+          "Usuario": "Juan Lopez",
           "idUsuario": 1,
           "contenido": "Hola a todos, ¿cómo están?",
           "hora": "01:31",
@@ -94,7 +120,7 @@
         },
         {
           "IDMensaje": "mensaje000002",
-          "Usuario": "Roberto Gonzalez",
+          "Usuario": "Maria Gomez",
           "idUsuario": 2,
           "contenido": "¡Hola! Todo bien, gracias. ¿Y tú?",
           "hora": "01:31",
@@ -102,7 +128,7 @@
         },
         {
           "IDMensaje": "mensaje000003",
-          "Usuario": "Chantel Rodriguez",
+          "Usuario": "Pedro Hernandez",
           "idUsuario": 3,
           "contenido": "Hola, aquí trabajando como siempre.",
           "hora": "01:31",
@@ -118,7 +144,7 @@
         },
         {
           "IDMensaje": "mensaje000005",
-          "Usuario": "Roberto Gonzalez",
+          "Usuario": "Maria Gomez",
           "idUsuario": 2,
           "contenido": "Me alegra saber que están bien. ¿Qué tal sus planes para el fin de semana?",
           "hora": "01:31",
@@ -126,7 +152,7 @@
         },
         {
           "IDMensaje": "mensaje000006",
-          "Usuario": "Roberto Gonzalez",
+          "Usuario": "Maria Gomez",
           "idUsuario": 2,
           "contenido": "Voy a salir con mi familia al parque. ¿Y ustedes?",
           "hora": "01:31",
@@ -134,7 +160,7 @@
         },
         {
           "IDMensaje": "mensaje000007",
-          "Usuario": "Chantel Rodriguez",
+          "Usuario": "Pedro Hernandez",
           "idUsuario": 3,
           "contenido": "Yo creo que descansaré en casa, ha sido una semana pesada.",
           "hora": "01:31",
@@ -150,7 +176,7 @@
         },
         {
           "IDMensaje": "mensaje000009",
-          "Usuario": "Diego Lopez",
+          "Usuario": "Juan Lopez",
           "idUsuario": 1,
           "contenido": "Podríamos hacer una videollamada para ponernos al día. ¿Qué opinan?",
           "hora": "01:31",
@@ -166,7 +192,7 @@
         },
         {
           "IDMensaje": "mensaje000011",
-          "Usuario": "Roberto Gonzalez",
+          "Usuario": "Maria Gomez",
           "idUsuario": 2,
           "contenido": "Después de las 7 pm estaría perfecto para mí.",
           "hora": "01:31",
@@ -174,14 +200,14 @@
         },
         {
           "IDMensaje": "mensaje000012",
-          "Usuario": "Diego Lopez",
+          "Usuario": "Juan Lopez",
           "idUsuario": 1,
           "contenido": "A esa hora está bien. Avísenme por aquí cuando estén listos.",
           "hora": "01:31",
           "fecha": "23-11-24"
         },
         {
-          "IDMensaje": "mensaje0000013",
+          "IDMensaje": "mensaje000013",
           "Usuario": "Elian Buzo",
           "idUsuario": 100,
           "contenido": "Perfecto, entonces queda a las 7. ¡Nos hablamos más tarde!",
@@ -192,11 +218,12 @@
     },
     {
       "ChatID": 1001,
-
       "miembros": [
         {
-          "Nombre": "Chantel Rodriguez",
-          "IDMiembro": 3
+          "Nombre": "Pedro Hernandez",
+          "IDMiembro": 3,
+          "estadoConexion": "En linea",
+          "ultimaConexion": null
         },
         {
           "Nombre": "Elian Buzo",
@@ -205,7 +232,7 @@
       ],
       "mensajes": [
         {
-          "IDMensaje": "mensaje0000014",
+          "IDMensaje": "mensaje000014",
           "Usuario": "Elian Buzo",
           "idUsuario": 100,
           "contenido": "Hola",
@@ -213,15 +240,15 @@
           "fecha": "23-11-24"
         },
         {
-          "IDMensaje": "mensaje0000015",
-          "Usuario": "Chantel Rodriguez",
+          "IDMensaje": "mensaje000015",
+          "Usuario": "Pedro Hernandez",
           "idUsuario": 3,
           "contenido": "Hola mijo que tal",
           "hora": "01:31",
           "fecha": "23-11-24"
         },
         {
-          "IDMensaje": "mensaje0000016",
+          "IDMensaje": "mensaje000016",
           "Usuario": "Elian Buzo",
           "idUsuario": 100,
           "contenido": "Aqui trabajando",
@@ -229,9 +256,9 @@
           "fecha": "23-11-24"
         },
         {
-          "IDMensaje": "mensaje0000017",
-          "Usuario": "Chantel Rodriguez",
-          "idUsuario": 100,
+          "IDMensaje": "mensaje000017",
+          "Usuario": "Pedro Hernandez",
+          "idUsuario": 3,
           "contenido": "Que bueno niño",
           "hora": "01:31",
           "fecha": "23-11-24"
@@ -243,7 +270,9 @@
       "miembros": [
         {
           "Nombre": "Sofia Morales",
-          "IDMiembro": 5
+          "IDMiembro": 8,
+          "estadoConexion": "Desconectado",
+          "ultimaConexion": "2024-11-23T14:00:00Z"
         },
         {
           "Nombre": "Elian Buzo",
@@ -252,7 +281,7 @@
       ],
       "mensajes": [
         {
-          "IDMensaje": "mensaje0000018",
+          "IDMensaje": "mensaje000018",
           "Usuario": "Elian Buzo",
           "idUsuario": 100,
           "contenido": "Hola Sofia, ¿cómo estás?",
@@ -260,15 +289,15 @@
           "fecha": "23-11-24"
         },
         {
-          "IDMensaje": "mensaje0000019",
+          "IDMensaje": "mensaje000019",
           "Usuario": "Sofia Morales",
-          "idUsuario": 5,
+          "idUsuario": 8,
           "contenido": "¡Hola Elian! Estoy bien, gracias. ¿Y tú?",
           "hora": "08:16",
           "fecha": "23-11-24"
         },
         {
-          "IDMensaje": "mensaje0000020",
+          "IDMensaje": "mensaje000020",
           "Usuario": "Elian Buzo",
           "idUsuario": 100,
           "contenido": "Bien también, un poco ocupado con el trabajo.",
@@ -276,15 +305,15 @@
           "fecha": "23-11-24"
         },
         {
-          "IDMensaje": "mensaje0000021",
+          "IDMensaje": "mensaje000021",
           "Usuario": "Sofia Morales",
-          "idUsuario": 5,
+          "idUsuario": 8,
           "contenido": "Entiendo, espero que puedas descansar pronto.",
           "hora": "08:18",
           "fecha": "23-11-24"
         },
         {
-          "IDMensaje": "mensaje0000022",
+          "IDMensaje": "mensaje000022",
           "Usuario": "Elian Buzo",
           "idUsuario": 100,
           "contenido": "Gracias, ¡eso espero! ¿Y tú, cómo va tu día?",
@@ -292,15 +321,15 @@
           "fecha": "23-11-24"
         },
         {
-          "IDMensaje": "mensaje0000023",
+          "IDMensaje": "mensaje000023",
           "Usuario": "Sofia Morales",
-          "idUsuario": 5,
+          "idUsuario": 8,
           "contenido": "Bien, estoy preparando algunas cosas para una reunión.",
           "hora": "08:20",
           "fecha": "23-11-24"
         },
         {
-          "IDMensaje": "mensaje0000024",
+          "IDMensaje": "mensaje000024",
           "Usuario": "Elian Buzo",
           "idUsuario": 100,
           "contenido": "¡Qué bien! Suerte con eso, Sofia.",
@@ -308,25 +337,33 @@
           "fecha": "23-11-24"
         }
       ]
-    },
+    }, 
     {
       "ChatID": 1003,
       "miembros": [
         {
-          "Nombre": "Carlos Fernandez",
-          "IDMiembro": 4
-        },
-        {
           "Nombre": "Ana Martinez",
-          "IDMiembro": 5
+          "IDMiembro": 4,
+          "estadoConexion": "Desconectado",
+          "ultimaConexion": "2024-11-23T18:30:00Z"
         },
         {
-          "Nombre": "Luis Gonzalez",
-          "IDMiembro": 6
+          "Nombre": "Luis Garcia",
+          "IDMiembro": 5,
+          "estadoConexion": "Desconectado",
+          "ultimaConexion": "2024-11-23T14:00:00Z"
         },
         {
-          "Nombre": "Maria Lopez",
-          "IDMiembro": 7
+          "Nombre": "Carla Diaz",
+          "IDMiembro": 6,
+          "estadoConexion": "En linea",
+          "ultimaConexion": null
+        },
+        {
+          "Nombre": "David Fernandez",
+          "IDMiembro": 7,
+          "estadoConexion": "En linea",
+          "ultimaConexion": null
         },
         {
           "Nombre": "Elian Buzo",
@@ -335,112 +372,42 @@
       ],
       "mensajes": [
         {
-          "IDMensaje": "mensaje0000014",
-          "Usuario": "Carlos Fernandez",
+          "IDMensaje": "mensaje000025",
+          "Usuario": "Ana Martinez",
           "idUsuario": 4,
           "contenido": "Hola a todos, ¿cómo están?",
           "hora": "02:00",
           "fecha": "23-11-24"
         },
         {
-          "IDMensaje": "mensaje0000015",
-          "Usuario": "Ana Martinez",
+          "IDMensaje": "mensaje000026",
+          "Usuario": "Luis Garcia",
           "idUsuario": 5,
           "contenido": "¡Hola! Estoy bien, ¿y ustedes?",
           "hora": "02:01",
           "fecha": "23-11-24"
         },
         {
-          "IDMensaje": "mensaje0000016",
-          "Usuario": "Luis Gonzalez",
+          "IDMensaje": "mensaje000027",
+          "Usuario": "Carla Diaz",
           "idUsuario": 6,
           "contenido": "Hola, aquí todo tranquilo. ¿Qué cuentan?",
           "hora": "02:02",
           "fecha": "23-11-24"
         },
         {
-          "IDMensaje": "mensaje0000017",
-          "Usuario": "Elian Buzo",
-          "idUsuario": 100,
+          "IDMensaje": "mensaje000028",
+          "Usuario": "David Fernandez",
+          "idUsuario": 7,
           "contenido": "Hola a todos, ¡qué gusto verlos conectados!",
           "hora": "02:03",
-          "fecha": "23-11-24"
-        },
-        {
-          "IDMensaje": "mensaje0000018",
-          "Usuario": "Maria Lopez",
-          "idUsuario": 7,
-          "contenido": "Hola, Elian. ¿Cómo te va?",
-          "hora": "02:04",
-          "fecha": "23-11-24"
-        },
-        {
-          "IDMensaje": "mensaje0000019",
-          "Usuario": "Elian Buzo",
-          "idUsuario": 100,
-          "contenido": "Todo bien, gracias. Estoy trabajando mucho últimamente.",
-          "hora": "02:05",
-          "fecha": "23-11-24"
-        },
-        {
-          "IDMensaje": "mensaje0000020",
-          "Usuario": "Luis Gonzalez",
-          "idUsuario": 6,
-          "contenido": "¿Qué tal si organizamos algo este fin de semana?",
-          "hora": "02:06",
-          "fecha": "23-11-24"
-        },
-        {
-          "IDMensaje": "mensaje0000021",
-          "Usuario": "Ana Martinez",
-          "idUsuario": 5,
-          "contenido": "¡Eso suena genial! Yo puedo el sábado por la tarde.",
-          "hora": "02:07",
-          "fecha": "23-11-24"
-        },
-        {
-          "IDMensaje": "mensaje0000022",
-          "Usuario": "Carlos Fernandez",
-          "idUsuario": 4,
-          "contenido": "Perfecto, yo también puedo el sábado.",
-          "hora": "02:08",
-          "fecha": "23-11-24"
-        },
-        {
-          "IDMensaje": "mensaje0000023",
-          "Usuario": "Elian Buzo",
-          "idUsuario": 100,
-          "contenido": "¡Cuenta conmigo! ¿Dónde nos reunimos?",
-          "hora": "02:09",
-          "fecha": "23-11-24"
-        },
-        {
-          "IDMensaje": "mensaje0000024",
-          "Usuario": "Maria Lopez",
-          "idUsuario": 7,
-          "contenido": "Podemos ir al parque central. ¿Qué opinan?",
-          "hora": "02:10",
-          "fecha": "23-11-24"
-        },
-        {
-          "IDMensaje": "mensaje0000025",
-          "Usuario": "Luis Gonzalez",
-          "idUsuario": 6,
-          "contenido": "¡Perfecto! Entonces quedamos para el sábado a las 4 pm.",
-          "hora": "02:11",
-          "fecha": "23-11-24"
-        },
-        {
-          "IDMensaje": "mensaje0000026",
-          "Usuario": "Elian Buzo",
-          "idUsuario": 100,
-          "contenido": "¡Nos vemos entonces! ¡Hasta luego!",
-          "hora": "02:12",
           "fecha": "23-11-24"
         }
       ]
     }
   ],
+  
+    
 
   "DatosPerfilUsuario": {
     "idUsuario": 100,

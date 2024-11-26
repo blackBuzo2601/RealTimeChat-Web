@@ -74,7 +74,7 @@ export default function Home() {
   };
 
   const handleHideWriteContact = () => {
-    console.log("Ejecutando handleWriteContact");
+    console.log("Ejecutando handleWriteCContact");
     setIsWriteContactVisible(false);
   };
 
