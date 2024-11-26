@@ -283,14 +283,6 @@ const InfoChat: React.FC<InfoChatProps> = ({
                 className={styles.singleMultimediaPhoto}
                 onClick={() => handleShowImage("/zelda.jpg")}
               ></Image>
-              <Image
-                alt="iconoReturn"
-                src={"/burguer.jpg"}
-                width={600}
-                height={600}
-                className={styles.singleMultimediaPhoto}
-                onClick={() => handleShowImage("/burguer.jpg")}
-              ></Image>
             </div>
           </section>
         </div>

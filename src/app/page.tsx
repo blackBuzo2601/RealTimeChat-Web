@@ -2,7 +2,7 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import InfoChat from "@/components/InfoChat";
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 import ConversationsList from "@/components/ConversationsList";
 import ChatView from "@/components/ChatView";
 import Menu from "@/components/Menu";
@@ -13,6 +13,7 @@ export default function Home() {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
   const [isOptionsVisible, setIsOptionsVisible] = useState(false);
   const [isContactsVisible, setIsContactsVisible] = useState(false);
+  const [isWriteContactVisible, setIsWriteContactVisible] = useState(false);
   const [isAddContactVisible, setIsAddContactVisible] = useState(false);
 
   const [jsonData, setJsonData] = useState<{ key: string; info: any }[]>([]);
@@ -57,10 +58,24 @@ export default function Home() {
   };
 
   const handleShowContactVisible = () => {
-    setIsAddContactVisible(true);
+    if (isAddContactVisible == false) {
+      setIsAddContactVisible(true);
+    }
   };
   const handleHideContactVisible = () => {
     setIsAddContactVisible(false);
+  };
+
+  const handleShowWriteContact = () => {
+    if (isWriteContactVisible == false) {
+      //por si acaso xd para evitar lo que paso ayer.
+      setIsWriteContactVisible(true);
+    }
+  };
+
+  const handleHideWriteContact = () => {
+    console.log("Ejecutando handleWriteContact");
+    setIsWriteContactVisible(false);
   };
 
   return (
@@ -105,6 +120,7 @@ export default function Home() {
           ></InfoChat>
         </section>
       )}
+      {/*aqui empiezan los condicionales para secciones aparte del index*/}
       {isOptionsVisible && (
         <section
           className={styles.MenuOptionsContainer}
@@ -255,9 +271,66 @@ export default function Home() {
             </div>
           </article>
           <article className={styles.contactsAddCloseRow}>
-            <p>Agregar contacto</p>
-            <p onClick={handleHideContactsVisible}>Cerrar</p>
+            <p
+              onClick={() => {
+                console.log("presionando agregar");
+                handleHideContactsVisible();
+                handleShowWriteContact();
+              }}
+            >
+              Agregar contacto
+            </p>
+            <p
+              onClick={() => {
+                console.log("presionando cerrar");
+                handleHideContactsVisible();
+              }}
+            >
+              Cerrar
+            </p>
           </article>
+        </section>
+      )}
+      {isWriteContactVisible && (
+        <section className={styles.NewContactContainer}>
+          <article className={styles.NewContactHeader}>
+            <Image
+              alt="iconoCrearContaccto"
+              src={"/addcontactscreen.png"}
+              width={800}
+              height={800}
+              className={styles.NewContactIcon}
+            ></Image>
+            <p>Agregar contacto</p>
+          </article>
+
+          <p className={styles.NewContactsInputLabel}>Nombre</p>
+          <input type="text" className={styles.NewContainerInput} />
+          <p className={styles.NewContactsInputLabel}>Apellido</p>
+          <input type="text" className={styles.NewContainerInput} />
+          <p className={styles.NewContactsInputLabel}>Nombre de usuario</p>
+          <input type="text" className={styles.NewContainerInput} />
+
+          <div className={styles.NewContactAddContainer}>
+            <p
+              onClick={() => {
+                console.log("se esta pulsando cancelar de agregar contactoi");
+                handleHideWriteContact();
+              }}
+            >
+              Cancelar
+            </p>
+            <p
+              onClick={() => {
+                console.log(
+                  "Se esta pulsando crear contacto de agregar contacto"
+                );
+                handleHideWriteContact();
+              }}
+            >
+              Crear contacto
+            </p>
+          </div>
         </section>
       )}
     </div> //CONCLUYE father
