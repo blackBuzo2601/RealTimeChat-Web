@@ -21,10 +21,21 @@ export default function Home() {
 
   useEffect(() => {
     const fetchData = () => {
-      const dataJSON = require("@/data/chat.json");
+      const dataJSON = require("@/data/chat.json"); //cargamos json local
       setJsonData(
+        //asignamos la informacion del json en jsonData.
+        //Recordemos que map crea un NUEVO ARREGLO con el resultado de aplicar una función
+        //A cada elemento de un arreglo.
         Object.keys(dataJSON).map((key) => ({ key: key, info: dataJSON[key] }))
       );
+
+      /*asi es como se ve jsonData (recordando que es un arreglo de objetos como definimos arriba)
+      jsonData=[
+        {key: ListaAmigos, info: información de la key ListaAmigos},
+        {key: ListaChats, info: informacion de la key ListaChats},
+        {key: DatosPerfilUsuario, info: informacion de la key DatosPerfilUsuario}
+      ]
+      */
     };
     fetchData();
   }, []);
