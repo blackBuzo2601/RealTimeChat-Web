@@ -4,13 +4,15 @@ import Image from "next/image";
 import SingleChat from "./SingleChat";
 
 interface conversationslistProps {
-  onHandleChatView: () => void;
+  onHandleChatView: (chatId: number) => void;
   onHandleMenuVisible: () => void;
+  listaChats: any[];
 }
 
 const ConversationsList: React.FC<conversationslistProps> = ({
   onHandleChatView,
   onHandleMenuVisible,
+  listaChats,
 }) => {
   return (
     <div className={styles.father}>
@@ -30,9 +32,13 @@ const ConversationsList: React.FC<conversationslistProps> = ({
         />
       </section>
       <section className={styles.allChatsList}>
-        <SingleChat onHandleChatView={onHandleChatView}></SingleChat>
-        <SingleChat onHandleChatView={onHandleChatView}></SingleChat>
-        <SingleChat onHandleChatView={onHandleChatView}></SingleChat>
+        {listaChats.map((chat) => (
+          <SingleChat
+            key={chat.ChatID}
+            chat={chat}
+            onHandleChatView={() => onHandleChatView(chat.ChatID)}
+          />
+        ))}
       </section>
     </div>
   );

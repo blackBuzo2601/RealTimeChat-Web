@@ -5,23 +5,20 @@ import OutgoingMessage from "./OutgoingMessage";
 import IncomingMessage from "./IncomingMessage";
 
 interface ChatViewProps {
+  chat: any;
   onhandleInfoChatVisible: () => void;
-  isChatViewVisible: boolean;
-  jsonData: { key: string; info: any }[];
   onHandleHideMenuVisible: () => void;
 }
 
 const ChatView: React.FC<ChatViewProps> = ({
   onhandleInfoChatVisible,
-  isChatViewVisible,
-  jsonData,
+
+  chat,
   onHandleHideMenuVisible,
 }) => {
-  const listaChats =
-    jsonData.find((item) => item.key === "ListaChats")?.info || [];
   return (
     <>
-      {isChatViewVisible && (
+      {chat && (
         <div onClick={onHandleHideMenuVisible} className={styles.father}>
           <article className={styles.chatuserconnection}>
             <div className={styles.chatuserconnectiondivone}>
@@ -33,9 +30,16 @@ const ChatView: React.FC<ChatViewProps> = ({
                 className={styles.chatuserconnectionimg}
               ></Image>
               <div className={styles.chatUsernameNameStateColumn}>
-                <p className={styles.chatUsernameText}>Elian Buzo</p>
+                <p className={styles.chatUsernameText}>
+                  {chat.miembros.length > 2
+                    ? `Grupo de ${chat.miembros[0].Nombre.split(" ")[0]}`
+                    : chat.miembros
+                        .find((m: any) => m.IDMiembro !== 100)
+                        ?.Nombre.split(" ")[0]}
+                </p>
                 <p className={styles.chatStateText}>
-                  Última conexión: Ayer 20:19
+                  Última conexión:{" "}
+                  {chat.miembros[0].ultimaConexion || "Desconocida"}
                 </p>
               </div>
             </div>
@@ -59,21 +63,18 @@ const ChatView: React.FC<ChatViewProps> = ({
           </article>
 
           <article className={styles.chatAllMessages}>
-            <OutgoingMessage outGoingText="Hola como estás ? Bien bien bien bien bien bien bien bien asdnfnasdofasdbfjoabdsjfbasdofbaodsfnajsdfajsdbsafnkjdnf"></OutgoingMessage>
-            <IncomingMessage incomingText="Hola bien y tu"></IncomingMessage>
-            <OutgoingMessage outGoingText="Bien gracias"></OutgoingMessage>
-            <IncomingMessage incomingText="Es todo pa"></IncomingMessage>
-            <OutgoingMessage outGoingText="quiers jugar warzone?"></OutgoingMessage>
-            <IncomingMessage incomingText="Ahuevo me parece un plan perfecto"></IncomingMessage>
-            <OutgoingMessage outGoingText="Duos o escuadras?"></OutgoingMessage>
-            <IncomingMessage incomingText="Escuadras pa agarrar cura tirando hate por el chat de proximidad"></IncomingMessage>
-            <OutgoingMessage outGoingText="jajaja ahuevo"></OutgoingMessage>
-            <IncomingMessage incomingText="siii"></IncomingMessage>
-            <OutgoingMessage outGoingText="dame 5 minutos entonces"></OutgoingMessage>
-            <IncomingMessage incomingText="arre"></IncomingMessage>
-            <IncomingMessage incomingText="Yo ya estoy conectadi"></IncomingMessage>
+            <IncomingMessage incomingText="Hola que tal?"></IncomingMessage>
+            <OutgoingMessage outGoingText="Que onda morro"></OutgoingMessage>
+            <IncomingMessage incomingText="Quiers jugar?"></IncomingMessage>
+            <OutgoingMessage outGoingText="Tengo tarea we"></OutgoingMessage>
+            <IncomingMessage incomingText="un warzone"></IncomingMessage>
+            <IncomingMessage incomingText="un warzone"></IncomingMessage>
+            <IncomingMessage incomingText="un warzone"></IncomingMessage>
+            <IncomingMessage incomingText="un warzone"></IncomingMessage>
+            <IncomingMessage incomingText="un warzone"></IncomingMessage>
+            <IncomingMessage incomingText="un warzone"></IncomingMessage>
+            <IncomingMessage incomingText="un warzone"></IncomingMessage>
           </article>
-
           <article className={styles.sendMessageContainer}>
             <Image
               alt="icon"

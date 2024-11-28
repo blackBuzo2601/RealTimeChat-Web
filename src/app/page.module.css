@@ -1,462 +1,98 @@
 .father {
-  display: flex;
-  flex-direction: row;
-  position: relative;
   height: 100%;
   width: 100%;
-}
-
-.conversationslist {
-  position: relative;
-  flex-shrink: 0;
-  width: 22.44%;
-  background-color: #333333;
-  height: 100%;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.75);
-}
-
-.chatContainer {
-  flex-grow: 1; /*este grow corresponde al espacio que ocupará con respecto a los otros dos hijos
-  que en este caso, los dos hijos son el de la barra izquierda y el de la barra derecha. Como
-  estos ultimos dos ya tienen un espacio definido, este ultimo crecerá*/
-  background-color: #333333;
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../public/loginbackground.jpg);
 }
 
-.infochat {
-  flex-shrink: 0;
-  width: 23.28%;
+.formContainer {
   background-color: #333333;
-  height: 100%;
-  box-shadow: inset 0 0 1px #000000;
-}
-.MenuOptionsContainer {
-  width: 40.93%;
-  height: 93.05%;
-  background-color: #333333;
-  position: absolute;
-  top: 3.47%;
-  left: 29.53%;
-  right: 29.53%;
-  bottom: 3.47%;
-  border-radius: 30px;
+  width: 40.46%;
+  height: 91.01%;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 1);
+  border-radius: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-.MenuOptionsDivOne {
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
-  width: 100%;
-  height: 24.77%;
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.6);
-  background-color: #333333;
-}
-.MenuOptionsDivOneRow {
   align-items: center;
-  display: flex;
-  flex-direction: row;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.iteConnectLogo {
+  margin-top: 1%;
+  width: 40%;
+  height: 30%;
+  border-radius: 30px;
+  margin-bottom: 2.5%;
+}
 
-  width: 100%;
-  height: 36.54%;
-  border-top-right-radius: 30px;
-  border-top-left-radius: 30px;
-}
-.MenuOptionsDivOneRow img {
-  width: 35px;
-  height: 35px;
-  margin-left: 24.01%;
-  margin-right: 4.07%;
-}
-.MenuOptionsDivOneRow p {
+.primaryText {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
-  font-size: 170%;
+  font-size: 175%;
   color: #ffffff;
+  margin-bottom: 10%;
 }
+.formLabel {
+  width: 90%;
 
-.MenuOptionsDivOneUserInfo {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 63.46%;
-
-  align-items: center;
-}
-.MenuOptionsDivOneUserInfo img {
-  margin-left: 2.92%;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-}
-.MenuOptionsDivOneUserInfoColumn {
-  display: flex;
-  flex-direction: column;
-  margin-left: 4.2%;
-}
-.MenuOptionsDivOneUserInfoFullName {
   margin: 0;
   padding: 0;
   font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  font-weight: 300;
   font-size: 130%;
-  color: #f5f5f5;
-}
-.MenuOptionsDivOneUserPhonenumber {
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 500;
-  font-size: 100%;
-  color: #ffffff;
-  margin-top: 2.8%;
-  margin-bottom: 2.8%;
-}
-.MenuOptionsDivOneUserNickname {
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 100%;
-  color: #9c9898;
-}
-
-.MenuOptionsDivTwo {
-  width: 100%;
-  height: 73.53%;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 0.5%;
-}
-.MenuOptionSingleOptionInput {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-
-  padding-left: 5.26%;
-
-  border-radius: 15px;
-  color: #9c9898;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 115%;
-  background-color: #333333;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  border: none;
-}
-.MenuOptionSingleOptionInput:hover {
-  background-color: #484848;
-}
-
-.MenuOptionsSingleOptionContainer {
-  width: 62.08%;
-  height: 15.23%;
-
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2.46%;
-}
-.MenuOptionsSingleOptionContainer p {
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 115%;
-  color: #9c9898;
-}
-.MenuOptionUploadPhotoInput {
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-
-  border-radius: 15px;
-  color: #9c9898;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 115%;
-  background-color: #333333;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  border: none;
-}
-.MenuOptionUploadPhotoInput:hover {
-  background-color: #484848;
-}
-
-.MenuOptionUploadPhotoInputDeleteAccount {
-  margin: 0;
-  width: 62.08%;
-  height: 12.23%;
-  text-align: center;
-
-  border-radius: 15px;
-  color: #9c9898;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 900;
-  font-size: 115%;
-  background-color: #333333;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  border: none;
-  margin-top: 0.3%;
-  margin-bottom: 1%;
-}
-
-.MenuOptionUploadPhotoInputDeleteAccount:hover {
-  background-color: #484848;
-}
-
-.MenuOptionsCloseContainer {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-}
-.MenuOptionClose {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-  font-size: 100%;
-  background-color: #333333;
-  color: #ffffff;
-  margin-right: 10.01%;
-}
-
-.MenuOptionClose:hover {
-  background-color: #484848;
-}
-
-.contactsListContainer {
-  padding-top: 1%;
-  width: 40.93%;
-  height: 93.05%;
-  background-color: #333333;
-  position: absolute;
-  top: 3.47%;
-  left: 29.53%;
-  right: 29.53%;
-  bottom: 3.47%;
-  border-radius: 30px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.menuContactsHeader {
-  text-align: center;
-  padding-top: 4.05%;
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 160%;
-  color: #ffffff;
-}
-
-.menuContactsSearchInput {
-  padding: 0;
-  margin: 0;
-  margin-top: 1.8%;
-  width: 91.73%;
-  height: 6.14%;
-  padding-left: 5.14%;
-  border-radius: 15px;
-  color: #9c9898;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 100%;
-  background-color: #333333;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.75);
-  border: none;
-  margin-bottom: 3.5%;
-}
-
-.menuContactsSearchInput:hover {
-  background-color: #484848;
-}
-
-.allContactsList {
-  width: 100%;
-  height: 76.5%;
-
-  display: flex;
-  flex-direction: column;
-  overflow-y: scroll;
-  border-bottom: 1px solid black;
-}
-
-.allContactsList::-webkit-scrollbar {
-  width: 6px;
-}
-
-.allContactsList::-webkit-scrollbar-thumb {
-  background: #c1bbbb;
-  border-radius: 4px;
-}
-
-.singleContactContainer {
-  width: 100%;
-  height: 14.88%;
-
-  display: flex;
-  flex-direction: row;
-  flex-shrink: 0;
-  align-items: center;
-}
-.singleContactContainer:hover {
-  background-color: #484848;
-}
-.singleContactAvatar {
-  margin-left: 5.14%;
-  width: 55px;
-  height: 55px;
-  border-radius: 50%;
-}
-.singleContactColumn {
-  margin-left: 3%;
-  display: flex;
-  flex-direction: column;
-}
-.singleContactFullname {
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 100%;
   color: #ffffff;
   margin-bottom: 3%;
 }
-.singleContactLastSeen {
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 100%;
-  color: #dadfe0;
-}
 
-.contactsAddCloseRow {
-  padding-left: 5.14%;
-  padding-right: 5.14%;
+.phoneForm {
   width: 100%;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
+  height: 100%;
 
-.contactsAddCloseRow p {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-  font-size: 100%;
-
-  color: #ffffff;
-}
-.contactsAddCloseRow p:hover {
-  background-color: #484848;
-}
-
-.NewContactContainer {
-  padding-top: 1%;
-  width: 30.52%;
-  height: 59.35%;
-  background-color: #333333;
-  position: absolute;
-  top: 20.32%;
-  left: 34.73%;
-  right: 34.73%;
-  bottom: 20.32%;
-  border-radius: 30px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 1);
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.NewContactHeader {
-  align-items: center;
-  margin-left: 18%;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 10%;
-  margin-bottom: 5.5%;
-}
-
-.NewContactIcon {
-  width: 40px;
-  height: 40px;
-}
-.NewContactHeader p {
-  margin-left: 8%;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 135%;
-
-  color: #ffffff;
-}
-
-.NewContactsInputLabel {
-  width: 83.72%;
-  margin: 0;
-  padding: 0;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  color: #9c9898;
-  margin-bottom: 2%;
-}
-
-.NewContainerInput {
-  width: 83.72%;
-  height: 10%;
-  margin-left: 8%;
-  margin-right: 8%;
-  padding-left: 5.14%;
+.numberInput {
+  width: 85%;
+  height: 17%;
+  background-color: #333333;
+  margin-bottom: 8%;
   border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border: none;
   color: #9c9898;
+  font-size: 120%;
+  padding-left: 5%;
   font-family: "Montserrat", sans-serif;
-  font-weight: 400;
-  font-size: 100%;
+  font-weight: 300;
+}
+.numberInput::-webkit-inner-spin-button, /*para quitar esas flechas molestas que estorban*/
+.inputNumber::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.numberInput:hover {
+  background-color: #484848;
+}
+.getCodeButton {
+  width: 85%;
+  height: 17%;
+  border-radius: 15px;
   background-color: #333333;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   border: none;
-  margin-bottom: 5%;
-}
-.NewContainerInput:hover {
-  background-color: #484848;
-}
-
-.NewContactAddContainer {
-  display: flex;
-  flex-direction: row;
-  margin-top: 5%;
-  width: 100%;
-  height: 10%;
-  align-items: center;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  border-top: 1px solid black;
-  justify-content: space-evenly;
-}
-.NewContactAddContainer p {
-  margin-left: 10%;
   font-family: "Montserrat", sans-serif;
-  font-weight: 800;
-  font-size: 100%;
-
+  font-weight: 700;
   color: #ffffff;
+  font-size: 120%;
 }
 
-.NewContactAddContainer p:hover {
+.getCodeButton:hover {
   background-color: #484848;
 }
