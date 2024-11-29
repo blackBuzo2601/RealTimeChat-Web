@@ -14,6 +14,70 @@
   height: 100%;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.75);
 }
+.conversationMenuIcon {
+  width: 14.38%;
+  height: 70%;
+}
+
+.conversationMenuIcon:hover {
+  border-radius: 40%;
+  background-color: #484848;
+}
+
+.chatBar {
+  width: 100%;
+  height: 10.39%;
+
+  display: flex;
+  flex-direction: row;
+
+  align-items: center;
+  padding-bottom: 1%;
+  padding-left: 4.5%;
+}
+
+.conversationsSearchInput {
+  padding: 0;
+  margin: 0;
+  width: 74.94%;
+  height: 60%;
+  padding-left: 5.26%;
+  margin-left: 3.01%;
+  border-radius: 15px;
+  color: #9c9898;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 100%;
+  background-color: #333333;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.75);
+  border: none;
+}
+
+.conversationsSearchInput:hover {
+  background-color: #484848;
+}
+
+.allChatsList {
+  padding-top: 2.3%;
+  width: 100%;
+  height: 89.61%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+
+  box-sizing: border-box;
+}
+
+.allChatsList::-webkit-scrollbar {
+  width: 6px;
+}
+
+.allChatsList::-webkit-scrollbar-thumb {
+  background: #c1bbbb;
+  border-radius: 4px;
+}
 
 .chatContainer {
   flex-grow: 1; /*este grow corresponde al espacio que ocupará con respecto a los otros dos hijos

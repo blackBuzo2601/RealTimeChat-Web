@@ -3,9 +3,10 @@ import Image from "next/image";
 import styles from "./chat.module.css";
 import InfoChat from "@/components/InfoChat";
 import { useState, useEffect, use } from "react";
-import ConversationsList from "@/components/ConversationsList";
+
 import ChatView from "@/components/ChatView";
 import Menu from "@/components/Menu";
+import SingleChat from "@/components/SingleChat";
 
 export default function Home() {
   const [isInfoChatVisible, setIsInfoChatVisible] = useState(false);
@@ -93,46 +94,48 @@ export default function Home() {
   return (
     //Father es el componente padre de todo el index
     <div className={styles.father}>
+      {/*Inicia section izquierdo*/}
       <section
+        className={styles.conversationslist}
         onClick={() => {
           handleHideOptionsVisible();
           if (isContactsVisible == true) {
             handleHideContactsVisible();
           }
         }}
-        className={styles.conversationslist}
       >
-        <ConversationsList
-          onHandleChatView={(chatId) => {
-            const chats =
-              jsonData.find((item) => item.key === "ListaChats")?.info || [];
-            const chatSeleccionado = chats.find(
-              (chat: any) => chat.ChatID === chatId
-            );
-
-            // Establecemos el chat seleccionado
-            setSelectedChat(chatSeleccionado);
-
-            // Mostramos la vista del chat
-            handleChatViewVisible();
-          }}
-          onHandleMenuVisible={handleMenuVisible}
-          listaChats={
-            jsonData.find((item) => item.key === "ListaChats")?.info || []
-          }
-        ></ConversationsList>
+        <article className={styles.chatBar}>
+          <Image
+            alt="menuicono"
+            src={"/menu.png"}
+            width={960}
+            height={960}
+            className={styles.conversationMenuIcon}
+            onClick={handleMenuVisible}
+          ></Image>
+          <input
+            type="text"
+            placeholder="Buscar..."
+            className={styles.conversationsSearchInput}
+          />
+        </article>
+        <article className={styles.allChatsList}>
+          <SingleChat onHandleChatView={handleChatViewVisible}></SingleChat>
+          <SingleChat onHandleChatView={handleChatViewVisible}></SingleChat>
+          <SingleChat onHandleChatView={handleChatViewVisible}></SingleChat>
+        </article>
         <Menu
           onhandleHideMenuVisible={handleHideMenuVisible}
           isMenuVisible={isMenuVisible}
           onhandleShowOptionsVisible={handleShowOptionsVisible}
           onHandleShowContactsVisible={handleShowContactsVisible}
         ></Menu>
+        {/*concluye section izquierdo*/}
       </section>
 
       {/*///////////////////////////////////////////////////////////*/}
       <section onClick={handleHideMenuVisible} className={styles.chatContainer}>
         <ChatView
-          chat={selectedChat} // Pasamos el chat seleccionado
           onHandleHideMenuVisible={handleHideMenuVisible}
           onhandleInfoChatVisible={handleInfoChatVisible}
         ></ChatView>
