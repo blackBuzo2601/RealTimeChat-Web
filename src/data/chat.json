@@ -76,7 +76,7 @@
       "idUsuario": 10,
       "nickname": "paula999",
       "nombre": "Paula",
-      "apellido": "",
+      "apellido": "Rodriguez",
       "estadoConexion": "En linea",
       "ultimaConexion": null
     }
@@ -337,7 +337,7 @@
           "fecha": "23-11-24"
         }
       ]
-    }, 
+    },
     {
       "ChatID": 1003,
       "miembros": [
@@ -406,8 +406,6 @@
       ]
     }
   ],
-  
-    
 
   "DatosPerfilUsuario": {
     "idUsuario": 100,

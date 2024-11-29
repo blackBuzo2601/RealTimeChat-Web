@@ -32,9 +32,9 @@ export default function Home() {
 
       /*asi es como se ve jsonData (recordando que es un arreglo de objetos como definimos arriba)
       jsonData=[
-        {key: ListaAmigos, info: información de la key ListaAmigos},
-        {key: ListaChats, info: informacion de la key ListaChats},
-        {key: DatosPerfilUsuario, info: informacion de la key DatosPerfilUsuario}
+        0 {key: ListaAmigos, info: información de la key ListaAmigos},
+        1 {key: ListaChats, info: informacion de la key ListaChats},
+        2 {key: DatosPerfilUsuario, info: informacion de la key DatosPerfilUsuario}
       ]
       */
     };
@@ -91,6 +91,12 @@ export default function Home() {
     setIsWriteContactVisible(false);
   };
 
+  //CODIGO ADICIONAL 28/11/24
+  const listaAmigos = jsonData[0]?.info || [];
+  const informacionPersonal = jsonData[2].info;
+  //nota: informacionPersonal es un objeto, aqui ya podemos acceder usando
+  //por ejemplo informacionPersonal.idUsuario, informacionPersonal.nickname etc
+
   return (
     //Father es el componente padre de todo el index
     <div className={styles.father}>
@@ -102,6 +108,9 @@ export default function Home() {
           if (isContactsVisible == true) {
             handleHideContactsVisible();
           }
+          console.log(
+            "imprimiendo info personal: " + informacionPersonal.idUsuario
+          );
         }}
       >
         <article className={styles.chatBar}>
@@ -176,13 +185,13 @@ export default function Home() {
               ></Image>
               <div className={styles.MenuOptionsDivOneUserInfoColumn}>
                 <p className={styles.MenuOptionsDivOneUserInfoFullName}>
-                  Elian Buzo
+                  {informacionPersonal.nombre} {informacionPersonal.apellido}
                 </p>
                 <p className={styles.MenuOptionsDivOneUserPhonenumber}>
-                  +52 6462570931
+                  {informacionPersonal.telefono}
                 </p>
                 <p className={styles.MenuOptionsDivOneUserNickname}>
-                  @buzopro2002
+                  @{informacionPersonal.nickname}
                 </p>
               </div>
             </div>
@@ -253,51 +262,32 @@ export default function Home() {
             className={styles.menuContactsSearchInput}
           />
           <article className={styles.allContactsList}>
-            <div className={styles.singleContactContainer}>
-              <Image
-                alt="fotoContacto"
-                src={"/blackgoku.jpg"}
-                width={800}
-                height={800}
-                className={styles.singleContactAvatar}
-              ></Image>
-              <div className={styles.singleContactColumn}>
-                <p className={styles.singleContactFullname}>Diego Lopez</p>
-                <p className={styles.singleContactLastSeen}>
-                  Ultima conexión: Hoy 18:40
-                </p>
-              </div>
-            </div>
-            <div className={styles.singleContactContainer}>
-              <Image
-                alt="fotoContacto"
-                src={"/blackgoku.jpg"}
-                width={800}
-                height={800}
-                className={styles.singleContactAvatar}
-              ></Image>
-              <div className={styles.singleContactColumn}>
-                <p className={styles.singleContactFullname}>Diego Lopez</p>
-                <p className={styles.singleContactLastSeen}>
-                  Ultima conexión: Hoy 18:40
-                </p>
-              </div>
-            </div>
-            <div className={styles.singleContactContainer}>
-              <Image
-                alt="fotoContacto"
-                src={"/blackgoku.jpg"}
-                width={800}
-                height={800}
-                className={styles.singleContactAvatar}
-              ></Image>
-              <div className={styles.singleContactColumn}>
-                <p className={styles.singleContactFullname}>Diego Lopez</p>
-                <p className={styles.singleContactLastSeen}>
-                  Ultima conexión: Hoy 18:40
-                </p>
-              </div>
-            </div>
+            {listaAmigos.map((objetoAmigo: any) => {
+              return (
+                <div
+                  key={objetoAmigo.idUsuario}
+                  className={styles.singleContactContainer}
+                >
+                  <Image
+                    alt="fotoContacto"
+                    src={"/blackgoku.jpg"}
+                    width={800}
+                    height={800}
+                    className={styles.singleContactAvatar}
+                  ></Image>
+                  <div className={styles.singleContactColumn}>
+                    <p className={styles.singleContactFullname}>
+                      {objetoAmigo.nombre} {objetoAmigo.apellido}
+                    </p>
+                    <p className={styles.singleContactLastSeen}>
+                      {objetoAmigo.ultimaConexion === null
+                        ? objetoAmigo.estadoConexion
+                        : `Última conexión: ${objetoAmigo.ultimaConexion}`}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
           </article>
           <article className={styles.contactsAddCloseRow}>
             <p
