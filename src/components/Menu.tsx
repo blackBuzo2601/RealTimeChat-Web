@@ -8,6 +8,8 @@ interface MenuProps {
   onhandleHideMenuVisible: () => void;
   onhandleShowOptionsVisible: () => void;
   onHandleShowContactsVisible: () => void;
+  personalVisibleNombre: string;
+  personalVisibleApellido: string;
 }
 
 const Menu: React.FC<MenuProps> = ({
@@ -15,6 +17,8 @@ const Menu: React.FC<MenuProps> = ({
   onhandleHideMenuVisible,
   onhandleShowOptionsVisible,
   onHandleShowContactsVisible,
+  personalVisibleNombre,
+  personalVisibleApellido,
 }) => {
   return (
     <>
@@ -28,7 +32,9 @@ const Menu: React.FC<MenuProps> = ({
               height={960}
               className={styles.profilePicture}
             ></Image>
-            <p className={styles.profileName}>Guillermo Chavez</p>
+            <p className={styles.profileName}>
+              {personalVisibleNombre} {personalVisibleApellido}
+            </p>
           </section>
           <section className={styles.menuOptions}>
             <div className={styles.optionContainer}>

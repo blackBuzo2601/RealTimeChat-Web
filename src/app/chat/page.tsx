@@ -93,7 +93,13 @@ export default function Home() {
 
   //CODIGO ADICIONAL 28/11/24
   const listaAmigos = jsonData[0]?.info || [];
-  const informacionPersonal = jsonData[2].info;
+  const informacionPersonal = jsonData[2]?.info || {
+    nombre: "",
+    apellido: "",
+    telefono: "",
+    nickname: "",
+    idUsuario: "",
+  };
   //nota: informacionPersonal es un objeto, aqui ya podemos acceder usando
   //por ejemplo informacionPersonal.idUsuario, informacionPersonal.nickname etc
 
@@ -108,9 +114,6 @@ export default function Home() {
           if (isContactsVisible == true) {
             handleHideContactsVisible();
           }
-          console.log(
-            "imprimiendo info personal: " + informacionPersonal.idUsuario
-          );
         }}
       >
         <article className={styles.chatBar}>
@@ -134,6 +137,8 @@ export default function Home() {
           <SingleChat onHandleChatView={handleChatViewVisible}></SingleChat>
         </article>
         <Menu
+          personalVisibleNombre={informacionPersonal.nombre}
+          personalVisibleApellido={informacionPersonal.apellido}
           onhandleHideMenuVisible={handleHideMenuVisible}
           isMenuVisible={isMenuVisible}
           onhandleShowOptionsVisible={handleShowOptionsVisible}
@@ -341,9 +346,6 @@ export default function Home() {
             </p>
             <p
               onClick={() => {
-                console.log(
-                  "Se esta pulsando crear contacto de agregar contacto"
-                );
                 handleHideWriteContact();
               }}
             >
