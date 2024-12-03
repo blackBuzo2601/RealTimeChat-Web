@@ -3,13 +3,14 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import { useRouter } from "next/navigation"; //este hook nos permitirá navegar hacia otra ruta
 //de forma programada.
+import { useState } from "react";
 
 export default function Home() {
   const router = useRouter();
-
+  const [phone, setPhone] = useState("");
   const handleGetCodeButton = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    router.push("/verification"); //redirijimos a la ruta verification
+    router.push(`/verification?phone=${phone}`); //redirijimos a la ruta verification y tambien pasamos la propiedad de teléfono como parámetro.
   };
 
   return (
@@ -27,7 +28,13 @@ export default function Home() {
         </p>
         <form className={styles.phoneForm} onSubmit={handleGetCodeButton}>
           <p className={styles.formLabel}>Teléfono:</p>
-          <input required type="number" className={styles.numberInput} />
+          <input
+            required
+            type="number"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            className={styles.numberInput}
+          />
           <button type="submit" className={styles.getCodeButton}>
             Obtener código de verificación
           </button>

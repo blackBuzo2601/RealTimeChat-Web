@@ -3,21 +3,21 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import InfoChat from "@/components/InfoChat";
 import React, { useState, useEffect, use } from "react";
-import ConversationsList from "@/components/ConversationsList";
 import ChatView from "@/components/ChatView";
 import Menu from "@/components/Menu";
 import Link from "next/link";
-import { useRouter } from "next/navigation"; //este hook nos permitirá navegar hacia otra ruta
+import { useRouter, useSearchParams } from "next/navigation"; //este hook nos permitirá navegar hacia otra ruta
 //de forma programada.
 
 const page = () => {
   const router = useRouter();
-
+  const searchParams = useSearchParams();
+  const phone = searchParams.get("phone") || "";
   const handleGetCodeButton = (e: React.FormEvent<HTMLFormElement>) => {
     //MouseEvent lo
     //usamos cuando el evento proviene de form.
     e.preventDefault();
-    router.push("/createaccount"); //hacemos que redirija hacia la ruta "/chat"
+    router.push(`/createaccount?phone=${phone}`);
   };
   const handleSendAgainCode = () => {
     //MouseEvent lo

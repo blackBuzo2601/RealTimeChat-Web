@@ -2,13 +2,36 @@
 import Image from "next/image";
 import styles from "./chat.module.css";
 import InfoChat from "@/components/InfoChat";
-import { useState, useEffect, use } from "react";
-
+import { useState, useEffect } from "react";
 import ChatView from "@/components/ChatView";
 import Menu from "@/components/Menu";
 import SingleChat from "@/components/SingleChat";
+import { useRouter, useSearchParams } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  // Parámetros de la URL
+  const phoneFromUrl = searchParams.get("phone") || "";
+  const nameFromUrl = searchParams.get("name") || "";
+  const surnameFromUrl = searchParams.get("surname") || "";
+  const usernameFromUrl = searchParams.get("username") || "";
+
+  // Estados iniciales
+  const [initialPhone, setInitialPhone] = useState(phoneFromUrl);
+  const [initialNombre, setInitialNombre] = useState(nameFromUrl);
+  const [initialApellido, setInitialApellido] = useState(surnameFromUrl);
+  const [initialNickname, setInitialNickname] = useState(usernameFromUrl);
+  const [initialProfileImage, setInitialProfileImage] = useState("/goku.jpg");
+
+  // Estados temporales para edición
+  const [tempNombre, setTempNombre] = useState(initialNombre);
+  const [tempApellido, setTempApellido] = useState(initialApellido);
+  const [tempNickname, setTempNickname] = useState(initialNickname);
+  const [tempProfileImage, setTempProfileImage] = useState(initialProfileImage);
+
+  // Otros estados relacionados con el chat
   const [isInfoChatVisible, setIsInfoChatVisible] = useState(false);
   const [isChatViewVisible, setIsChatViewVisible] = useState(false);
   const [isMenuVisible, setIsMenuVisible] = useState(false);
@@ -18,106 +41,12 @@ export default function Home() {
   const [isAddContactVisible, setIsAddContactVisible] = useState(false);
   const [selectedChat, setSelectedChat] = useState<any>(null);
 
+  // Carga inicial desde el JSON local
   const [jsonData, setJsonData] = useState<{ key: string; info: any }[]>([]);
 
   useEffect(() => {
     const fetchData = () => {
-      const dataJSON = require("@/data/chat.json"); //cargamos json local
-      setJsonData(
-        //asignamos la informacion del json en jsonData.
-        //Recordemos que map crea un NUEVO ARREGLO con el resultado de aplicar una función
-        //A cada elemento de un arreglo.
-        Object.keys(dataJSON).map((key) => ({ key: key, info: dataJSON[key] }))
-      );
-
-      /*asi es como se ve jsonData (recordando que es un arreglo de objetos como definimos arriba)
-      jsonData=[
-        0 {key: ListaAmigos, info: información de la key ListaAmigos},
-        1 {key: ListaChats, info: informacion de la key ListaChats},
-        2 {key: DatosPerfilUsuario, info: informacion de la key DatosPerfilUsuario}
-      ]
-      */
-    };
-    fetchData();
-  }, []);
-
-  const handleInfoChatVisible = () => {
-    setIsInfoChatVisible(!isInfoChatVisible);
-  };
-
-  const handleChatViewVisible = () => {
-    setIsChatViewVisible(true);
-  };
-
-  const handleMenuVisible = () => {
-    setIsMenuVisible(true);
-  };
-
-  const handleHideMenuVisible = () => {
-    setIsMenuVisible(false);
-  };
-
-  const handleShowOptionsVisible = () => {
-    setIsOptionsVisible(true);
-  };
-  const handleHideOptionsVisible = () => {
-    setIsOptionsVisible(false);
-  };
-  const handleShowContactsVisible = () => {
-    setIsContactsVisible(true);
-  };
-  const handleHideContactsVisible = () => {
-    setIsContactsVisible(false);
-  };
-
-  const handleShowContactVisible = () => {
-    if (isAddContactVisible == false) {
-      setIsAddContactVisible(true);
-    }
-  };
-  const handleHideContactVisible = () => {
-    setIsAddContactVisible(false);
-  };
-
-  const handleShowWriteContact = () => {
-    if (isWriteContactVisible == false) {
-      //por si acaso xd para evitar lo que paso ayer.
-      setIsWriteContactVisible(true);
-    }
-  };
-
-  const handleHideWriteContact = () => {
-    console.log("Ejecutando handleWriteCContact");
-    setIsWriteContactVisible(false);
-  };
-
-  //CODIGO ADICIONAL 28/11/24
-  const listaAmigos = jsonData[0]?.info || [];
-  const informacionPersonal = jsonData[2]?.info || {
-    nombre: "",
-    apellido: "",
-    telefono: "",
-    nickname: "",
-    idUsuario: "",
-  };
-  const [initialNombre, setInitialNombre] = useState(
-    informacionPersonal.nombre
-  );
-  const [initialApellido, setInitialApellido] = useState(
-    informacionPersonal.apellido
-  );
-  const [initialNickname, setInitialNickname] = useState(
-    informacionPersonal.nickname
-  );
-  const [initialProfileImage, setInitialProfileImage] = useState("/goku.jpg");
-  //Estados temporales para modificar la configuracion del peridl
-  const [tempNombre, setTempNombre] = useState(initialNombre);
-  const [tempApellido, setTempApellido] = useState(initialApellido);
-  const [tempNickname, setTempNickname] = useState(initialNickname);
-  const [tempProfileImage, setTempProfileImage] = useState(initialProfileImage);
-  useEffect(() => {
-    const fetchData = () => {
-      const dataJSON = require("@/data/chat.json"); // Cargamos el JSON local
+      const dataJSON = require("@/data/chat.json");
       setJsonData(
         Object.keys(dataJSON).map((key) => ({ key: key, info: dataJSON[key] }))
       );
@@ -125,50 +54,23 @@ export default function Home() {
     fetchData();
   }, []);
 
+  // Efecto para actualizar estados iniciales desde la URL
   useEffect(() => {
-    if (jsonData.length > 0) {
-      const datosUsuario = jsonData[2]?.info || {}; // Datos del perfil de usuario
-      setInitialNombre(datosUsuario.nombre || "");
-      setInitialApellido(datosUsuario.apellido || "");
-      setInitialNickname(datosUsuario.nickname || "");
-    }
-  }, [jsonData]);
+    setInitialPhone(phoneFromUrl || initialPhone);
+    setInitialNombre(nameFromUrl || initialNombre);
+    setInitialApellido(surnameFromUrl || initialApellido);
+    setInitialNickname(usernameFromUrl || initialNickname);
+  }, [phoneFromUrl, nameFromUrl, surnameFromUrl, usernameFromUrl]);
 
+  // Efecto para sincronizar datos del JSON
   useEffect(() => {
     if (jsonData.length > 0) {
       const datosUsuario = jsonData[2]?.info || {};
       setInitialProfileImage(datosUsuario.profileImage || "/goku.jpg");
     }
   }, [jsonData]);
-  const handleCerrarOpciones = () => {
-    setTempNombre(initialNombre);
-    setTempApellido(initialApellido);
-    setTempNickname(initialNickname);
-    setTempProfileImage(initialProfileImage);
-    handleHideOptionsVisible();
-  };
 
-  const handleGuardarCambios = () => {
-    setInitialNombre(tempNombre);
-    setInitialApellido(tempApellido);
-    setInitialNickname(tempNickname);
-    setInitialProfileImage(tempProfileImage);
-
-    handleHideOptionsVisible();
-  };
-  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    if (event.target.files && event.target.files[0]) {
-      const file = event.target.files[0];
-      const allowedTypes = ["image/jpeg", "image/png", "image/jpg"];
-
-      if (allowedTypes.includes(file.type)) {
-        const imageUrl = URL.createObjectURL(file);
-        setTempProfileImage(imageUrl);
-      } else {
-        alert("Por favor selecciona un archivo de imagen (jpg, jpeg, png)");
-      }
-    }
-  };
+  // Actualiza los estados temporales cuando se abre la configuración
   useEffect(() => {
     if (isOptionsVisible) {
       setTempNombre(initialNombre);
@@ -183,6 +85,74 @@ export default function Home() {
     initialNickname,
     initialProfileImage,
   ]);
+
+  // Handlers de visibilidad
+  const handleInfoChatVisible = () => setIsInfoChatVisible(!isInfoChatVisible);
+  const handleChatViewVisible = () => setIsChatViewVisible(true);
+  const handleMenuVisible = () => setIsMenuVisible(true);
+  const handleHideMenuVisible = () => setIsMenuVisible(false);
+  const handleShowOptionsVisible = () => setIsOptionsVisible(true);
+  const handleHideOptionsVisible = () => setIsOptionsVisible(false);
+  const handleShowContactsVisible = () => setIsContactsVisible(true);
+  const handleHideContactsVisible = () => setIsContactsVisible(false);
+
+  // Handlers para contactos y escritura
+  const handleShowContactVisible = () => {
+    if (!isAddContactVisible) setIsAddContactVisible(true);
+  };
+  const handleHideContactVisible = () => setIsAddContactVisible(false);
+
+  const handleShowWriteContact = () => {
+    if (!isWriteContactVisible) setIsWriteContactVisible(true);
+  };
+
+  const handleHideWriteContact = () => {
+    console.log("Ejecutando handleWriteContact");
+    setIsWriteContactVisible(false);
+  };
+
+  // Handlers para edición de configuración
+  const handleCerrarOpciones = () => {
+    setTempNombre(initialNombre);
+    setTempApellido(initialApellido);
+    setTempNickname(initialNickname);
+    setTempProfileImage(initialProfileImage);
+    handleHideOptionsVisible();
+  };
+
+  const handleGuardarCambios = () => {
+    setInitialNombre(tempNombre);
+    setInitialApellido(tempApellido);
+    setInitialNickname(tempNickname);
+    setInitialProfileImage(tempProfileImage);
+    handleHideOptionsVisible();
+  };
+
+  // Manejo de cambio de imagen
+  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files && event.target.files[0]) {
+      const file = event.target.files[0];
+      const allowedTypes = ["image/jpeg", "image/png", "image/jpg"];
+      if (allowedTypes.includes(file.type)) {
+        const imageUrl = URL.createObjectURL(file);
+        setTempProfileImage(imageUrl);
+      } else {
+        alert(
+          "Por favor selecciona un archivo de imagen válido (jpg, jpeg, png)."
+        );
+      }
+    }
+  };
+
+  // Lista de amigos desde el JSON
+  const listaAmigos = jsonData[0]?.info || [];
+  const informacionPersonal = jsonData[2]?.info || {
+    nombre: "",
+    apellido: "",
+    telefono: "",
+    nickname: "",
+    idUsuario: "",
+  };
   return (
     //Father es el componente padre de todo el index
     <div className={styles.father}>
@@ -274,7 +244,7 @@ export default function Home() {
                   {initialNombre} {initialApellido}
                 </p>
                 <p className={styles.MenuOptionsDivOneUserPhonenumber}>
-                  {informacionPersonal.telefono}
+                  {initialPhone}
                 </p>
                 <p className={styles.MenuOptionsDivOneUserNickname}>
                   @{initialNickname}
