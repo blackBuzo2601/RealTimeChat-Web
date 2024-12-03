@@ -10,6 +10,7 @@ interface MenuProps {
   onHandleShowContactsVisible: () => void;
   personalVisibleNombre: string;
   personalVisibleApellido: string;
+  personalVisibleImage: string;
 }
 
 const Menu: React.FC<MenuProps> = ({
@@ -19,6 +20,7 @@ const Menu: React.FC<MenuProps> = ({
   onHandleShowContactsVisible,
   personalVisibleNombre,
   personalVisibleApellido,
+  personalVisibleImage,
 }) => {
   return (
     <>
@@ -27,7 +29,7 @@ const Menu: React.FC<MenuProps> = ({
           <section className={styles.nameAndPicture}>
             <Image
               alt="fotoperfil"
-              src={"/goku.jpg"}
+              src={personalVisibleImage}
               width={960}
               height={960}
               className={styles.profilePicture}

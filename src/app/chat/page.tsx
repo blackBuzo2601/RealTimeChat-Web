@@ -169,6 +169,20 @@ export default function Home() {
       }
     }
   };
+  useEffect(() => {
+    if (isOptionsVisible) {
+      setTempNombre(initialNombre);
+      setTempApellido(initialApellido);
+      setTempNickname(initialNickname);
+      setTempProfileImage(initialProfileImage);
+    }
+  }, [
+    isOptionsVisible,
+    initialNombre,
+    initialApellido,
+    initialNickname,
+    initialProfileImage,
+  ]);
   return (
     //Father es el componente padre de todo el index
     <div className={styles.father}>
@@ -176,8 +190,8 @@ export default function Home() {
       <section
         className={styles.conversationslist}
         onClick={() => {
-          handleHideOptionsVisible();
-          if (isContactsVisible == true) {
+          handleCerrarOpciones();
+          if (isContactsVisible) {
             handleHideContactsVisible();
           }
         }}
@@ -203,6 +217,7 @@ export default function Home() {
           <SingleChat onHandleChatView={handleChatViewVisible}></SingleChat>
         </article>
         <Menu
+          personalVisibleImage={initialProfileImage}
           personalVisibleNombre={initialNombre}
           personalVisibleApellido={initialApellido}
           onhandleHideMenuVisible={handleHideMenuVisible}
@@ -214,7 +229,7 @@ export default function Home() {
       </section>
 
       {/*///////////////////////////////////////////////////////////*/}
-      <section onClick={handleHideMenuVisible} className={styles.chatContainer}>
+      <section onClick={handleCerrarOpciones} className={styles.chatContainer}>
         <ChatView
           onHandleHideMenuVisible={handleHideMenuVisible}
           onhandleInfoChatVisible={handleInfoChatVisible}
@@ -304,10 +319,9 @@ export default function Home() {
                 onChange={handleImageChange}
                 className={styles.hiddenInput}
               />
-              <label
-                htmlFor="fileinput"
-                className={styles.MenuOptionSingleOptionInput}
-              ></label>
+              <label htmlFor="fileinput" className={styles.AddFileOptionInput}>
+                <p className={styles.AddFileOptionText}>Adjuntar Archivo</p>
+              </label>
             </div>
 
             <input

@@ -221,6 +221,37 @@
   background-color: #484848;
 }
 
+.AddFileOptionInput {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+
+  padding-left: 5.26%;
+
+  border-radius: 15px;
+
+  background-color: #333333;
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  border: none;
+}
+.AddFileOptionInput {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}
+.AddFileOptionInput:hover {
+  background-color: #484848;
+}
+
 .MenuOptionsSingleOptionContainer {
   width: 62.08%;
   height: 15.23%;
