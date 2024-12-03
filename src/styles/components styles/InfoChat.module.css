@@ -143,6 +143,9 @@
   background-color: #333333;
   margin-bottom: 12px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 .multimediasubcontainer {
   width: 100%;

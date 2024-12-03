@@ -4,19 +4,25 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 
 interface InfoChatProps {
+  chat: any;
   onhandleInfoChatVisible: () => void;
   onHandleHideMenuVisible: () => void;
 }
 
 const InfoChat: React.FC<InfoChatProps> = ({
+  chat,
   onhandleInfoChatVisible,
   onHandleHideMenuVisible,
 }) => {
   const [isMultimediaVisible, setIsMultimediaVisible] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null); //definimos que el estado
   const [isFilesVisible, setIsFilesVisible] = useState(false);
   const [isAudiosVisible, setIsAudiosVisible] = useState(false);
-  const [selectedImage, setSelectedImage] = useState<string | null>(null); //definimos que el estado
   //puede ser tanto un string, como un nulo y asignamos nulo inucialmente como el estado.
+
+  const multimediaCount = chat?.MensajesMultimedia?.length || 0;
+  const membersCount = chat?.miembros?.length || 0;
+  const members = chat?.miembros || [];
 
   const handleShowImage = (src: string) => {
     setSelectedImage(src);
@@ -50,11 +56,22 @@ const InfoChat: React.FC<InfoChatProps> = ({
     setIsAudiosVisible(false);
   };
 
+  const infoFullName =
+    chat.miembros.length === 2
+      ? chat.miembros.find((m: any) => m.IDMiembro !== 100)?.Nombre
+      : `Grupo de ${
+          chat.mensajes.length > 0 ? chat.mensajes[0].Usuario : "desconocido"
+        }`;
+
+  const infoUsername =
+    chat.miembros.length === 2
+      ? `@${chat.miembros.find((m: any) => m.IDMiembro !== 100)?.nickname}`
+      : null;
   return (
     <div onClick={onHandleHideMenuVisible} className={styles.father}>
       <section className={styles.infouser}>
         <article className={styles.infouserrow}>
-          <p className={styles.infouserheading}>Información de usuario</p>
+          <p className={styles.infouserheading}>Información del chat</p>
           <div className={styles.close} onClick={onhandleInfoChatVisible}></div>
         </article>
         <article className={styles.infoname}>
@@ -66,8 +83,10 @@ const InfoChat: React.FC<InfoChatProps> = ({
             height={960}
           ></Image>
           <div className={styles.namecolumn}>
-            <p className={styles.infofullname}>Elian Buzo</p>
-            <p className={styles.infoUsername}>@buzopro2002</p>
+            <p className={styles.infofullname}>{infoFullName}</p>
+            {infoUsername && (
+              <p className={styles.infoUsername}>{infoUsername}</p>
+            )}
           </div>
         </article>
       </section>
@@ -96,7 +115,9 @@ const InfoChat: React.FC<InfoChatProps> = ({
             width={40}
             height={40}
           ></Image>
-          <p className={styles.multimediasubcontainertext}>50 fotos</p>
+          <p className={styles.multimediasubcontainertext}>
+            {multimediaCount} Fotos
+          </p>
         </article>
         <article
           onClick={handleShowFiles}
@@ -109,18 +130,6 @@ const InfoChat: React.FC<InfoChatProps> = ({
             height={40}
           ></Image>
           <p className={styles.multimediasubcontainertext}>4 archivos</p>
-        </article>
-        <article
-          onClick={handleShowAudiosVisible}
-          className={styles.multimediasubcontainer}
-        >
-          <Image
-            alt="iconoNotifications"
-            src={"/microphone.png"}
-            width={40}
-            height={40}
-          ></Image>
-          <p className={styles.multimediasubcontainertext}>1 mensaje de voz</p>
         </article>
       </section>
       <section className={styles.optionscontainer}>
@@ -145,7 +154,7 @@ const InfoChat: React.FC<InfoChatProps> = ({
             width={50}
             height={50}
           ></Image>
-          <p className={styles.notificationstext}>5 Miembros</p>
+          <p className={styles.notificationstext}>{membersCount} Miembros</p>
           <Image
             alt="iconoAgregarMiembros"
             src={"/addcontactscreen.png"}
@@ -154,76 +163,24 @@ const InfoChat: React.FC<InfoChatProps> = ({
           ></Image>
         </article>
         <article className={styles.membersListContainer}>
-          <div className={styles.singleMember}>
-            <Image
-              alt="fotoDeMiembro"
-              src={"/goku.jpg"}
-              width={50}
-              height={50}
-            ></Image>
-            <div className={styles.singleMemberInfo}>
-              <p className={styles.singleMemberFullname}>Elian Buzo</p>
-              <p className={styles.singleMemberLastSeen}>
-                Ultima Conexión: Hoy 18:40
-              </p>
+          {members.map((member: any) => (
+            <div key={member.IDMiembro} className={styles.singleMember}>
+              <Image
+                alt="fotoDeMiembro"
+                src={"/goku.jpg"} // Puedes reemplazar con imágenes dinámicas
+                width={50}
+                height={50}
+              ></Image>
+              <div className={styles.singleMemberInfo}>
+                <p className={styles.singleMemberFullname}>{member.Nombre}</p>
+                <p className={styles.singleMemberLastSeen}>
+                  {member.ultimaConexion
+                    ? `Última conexión: ${member.ultimaConexion}`
+                    : member.estadoConexion || ""}
+                </p>
+              </div>
             </div>
-          </div>
-          <div className={styles.singleMember}>
-            <Image
-              alt="fotoDeMiembro"
-              src={"/goku.jpg"}
-              width={50}
-              height={50}
-            ></Image>
-            <div className={styles.singleMemberInfo}>
-              <p className={styles.singleMemberFullname}>Elian Buzo</p>
-              <p className={styles.singleMemberLastSeen}>
-                Ultima Conexión: Hoy 18:40
-              </p>
-            </div>
-          </div>
-          <div className={styles.singleMember}>
-            <Image
-              alt="fotoDeMiembro"
-              src={"/goku.jpg"}
-              width={50}
-              height={50}
-            ></Image>
-            <div className={styles.singleMemberInfo}>
-              <p className={styles.singleMemberFullname}>Elian Buzo</p>
-              <p className={styles.singleMemberLastSeen}>
-                Ultima Conexión: Hoy 18:40
-              </p>
-            </div>
-          </div>
-          <div className={styles.singleMember}>
-            <Image
-              alt="fotoDeMiembro"
-              src={"/goku.jpg"}
-              width={50}
-              height={50}
-            ></Image>
-            <div className={styles.singleMemberInfo}>
-              <p className={styles.singleMemberFullname}>Elian Buzo</p>
-              <p className={styles.singleMemberLastSeen}>
-                Ultima Conexión: Hoy 18:40
-              </p>
-            </div>
-          </div>
-          <div className={styles.singleMember}>
-            <Image
-              alt="fotoDeMiembro"
-              src={"/goku.jpg"}
-              width={50}
-              height={50}
-            ></Image>
-            <div className={styles.singleMemberInfo}>
-              <p className={styles.singleMemberFullname}>Elian Buzo</p>
-              <p className={styles.singleMemberLastSeen}>
-                Ultima Conexión: Hoy 18:40
-              </p>
-            </div>
-          </div>
+          ))}
         </article>
       </section>
       {isMultimediaVisible && (
@@ -240,50 +197,30 @@ const InfoChat: React.FC<InfoChatProps> = ({
             <p>Fotos</p>
           </section>
           <section className={styles.allPhotos}>
-            <div className={styles.photosRow}>
-              <Image
-                alt="iconoReturn"
-                src={"/burguer.jpg"}
-                width={600}
-                height={600}
-                className={styles.singleMultimediaPhoto}
-                onClick={() => handleShowImage("/burguer.jpg")}
-              ></Image>
-              <Image
-                alt="iconoReturn"
-                src={"/burguer.jpg"}
-                width={600}
-                height={600}
-                className={styles.singleMultimediaPhoto}
-                onClick={() => handleShowImage("/burguer.jpg")}
-              ></Image>
-              <Image
-                alt="iconoReturn"
-                src={"/goku.jpg"}
-                width={600}
-                height={600}
-                className={styles.singleMultimediaPhoto}
-                onClick={() => handleShowImage("/goku.jpg")}
-              ></Image>
-            </div>
-            <div className={styles.photosRow}>
-              <Image
-                alt="iconoReturn"
-                src={"/blackgoku.jpg"}
-                width={600}
-                height={600}
-                className={styles.singleMultimediaPhoto}
-                onClick={() => handleShowImage("/blackgoku.jpg")}
-              ></Image>
-              <Image
-                alt="iconoReturn"
-                src={"/zelda.jpg"}
-                width={600}
-                height={600}
-                className={styles.singleMultimediaPhoto}
-                onClick={() => handleShowImage("/zelda.jpg")}
-              ></Image>
-            </div>
+            {chat.MensajesMultimedia.reduce(
+              (rows: any[], multimedia: any, index: number) => {
+                if (index % 3 === 0) {
+                  rows.push([]); // Cada 3 elementos, iniciamos un nuevo row
+                }
+                rows[rows.length - 1].push(multimedia); // Agregamos la imagen al row actual
+                return rows;
+              },
+              []
+            ).map((row: any[], rowIndex: number) => (
+              <div key={rowIndex} className={styles.photosRow}>
+                {row.map((multimedia: any, index: number) => (
+                  <Image
+                    key={index}
+                    alt={`multimedia ${index + 1}`}
+                    src={`/${multimedia.ruta}`}
+                    width={600}
+                    height={600}
+                    className={styles.singleMultimediaPhoto}
+                    onClick={() => handleShowImage(`/${multimedia.ruta}`)}
+                  />
+                ))}
+              </div>
+            ))}
           </section>
         </div>
       )}

@@ -245,9 +245,10 @@ export default function Home() {
         )}
       </section>
       {/*///////////////////////////////////////////////////////////////*/}
-      {isInfoChatVisible && (
+      {isInfoChatVisible && activeChat && (
         <section className={styles.infochat}>
           <InfoChat
+            chat={activeChat}
             onHandleHideMenuVisible={handleHideMenuVisible}
             onhandleInfoChatVisible={handleInfoChatVisible}
           ></InfoChat>

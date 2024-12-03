@@ -90,23 +90,27 @@
           "Nombre": "Juan Lopez",
           "IDMiembro": 1,
           "estadoConexion": "En linea",
-          "ultimaConexion": null
+          "ultimaConexion": null,
+          "nickname": "juan777"
         },
         {
           "Nombre": "Maria Gomez",
           "IDMiembro": 2,
           "estadoConexion": "En linea",
-          "ultimaConexion": null
+          "ultimaConexion": null,
+          "nickname": "maria123"
         },
         {
           "Nombre": "Pedro Hernandez",
           "IDMiembro": 3,
           "estadoConexion": "En linea",
-          "ultimaConexion": null
+          "ultimaConexion": null,
+          "nickname": "pedro99"
         },
         {
           "Nombre": "Elian Buzo",
-          "IDMiembro": 100
+          "IDMiembro": 100,
+          "nickname": "blackBuzoSSJ"
         }
       ],
       "mensajes": [
@@ -436,11 +440,13 @@
           "Nombre": "Pedro Hernandez",
           "IDMiembro": 3,
           "estadoConexion": "En linea",
-          "ultimaConexion": null
+          "ultimaConexion": null,
+          "nickname": "pedro99"
         },
         {
           "Nombre": "Elian Buzo",
-          "IDMiembro": 100
+          "IDMiembro": 100,
+          "nickname": "blackBuzoSSJ"
         }
       ],
       "mensajes": [
@@ -570,7 +576,8 @@
           "fecha": "23-11-24",
           "multimedia": null
         }
-      ]
+      ],
+      "MensajesMultimedia": []
     },
     {
       "ChatID": 1002,
@@ -579,11 +586,13 @@
           "Nombre": "Sofia Morales",
           "IDMiembro": 8,
           "estadoConexion": "Desconectado",
-          "ultimaConexion": "2024-11-23T14:00:00Z"
+          "ultimaConexion": "2024-11-23T14:00:00Z",
+          "nickname": "sofia2023"
         },
         {
           "Nombre": "Elian Buzo",
-          "IDMiembro": 100
+          "IDMiembro": 100,
+          "nickname": "blackBuzoSSJ"
         }
       ],
       "mensajes": [
@@ -767,7 +776,8 @@
           "fecha": "23-11-24",
           "multimedia": null
         }
-      ]
+      ],
+      "MensajesMultimedia": []
     },
     {
       "ChatID": 1003,
@@ -776,29 +786,34 @@
           "Nombre": "Ana Martinez",
           "IDMiembro": 4,
           "estadoConexion": "Desconectado",
-          "ultimaConexion": "2024-11-23T18:30:00Z"
+          "ultimaConexion": "2024-11-23T18:30:00Z",
+          "nickname": "EsLaAnaMartinez"
         },
         {
           "Nombre": "Luis Garcia",
           "IDMiembro": 5,
           "estadoConexion": "Desconectado",
-          "ultimaConexion": "2024-11-23T14:00:00Z"
+          "ultimaConexion": "2024-11-23T14:00:00Z",
+          "nickname": "yosoyLuis777"
         },
         {
           "Nombre": "Carla Diaz",
           "IDMiembro": 6,
           "estadoConexion": "En linea",
-          "ultimaConexion": null
+          "ultimaConexion": null,
+          "nickname": "carlaProPlayer"
         },
         {
           "Nombre": "David Fernandez",
           "IDMiembro": 7,
           "estadoConexion": "En linea",
-          "ultimaConexion": null
+          "ultimaConexion": null,
+          "nickname": "elProgramadorDeOtroUniverso"
         },
         {
           "Nombre": "Elian Buzo",
-          "IDMiembro": 100
+          "IDMiembro": 100,
+          "nickname": "blackBuzoSSJ"
         }
       ],
       "mensajes": [
@@ -982,7 +997,8 @@
           "fecha": "23-11-24",
           "multimedia": null
         }
-      ]
+      ],
+      "MensajesMultimedia": []
     }
   ],
 
