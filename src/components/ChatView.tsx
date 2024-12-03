@@ -15,6 +15,22 @@ const ChatView: React.FC<ChatViewProps> = ({
   onhandleInfoChatVisible,
   onHandleHideMenuVisible,
 }) => {
+  const chatName =
+    chat.miembros.length === 2
+      ? chat.miembros.find((m: any) => m.IDMiembro !== 100)?.Nombre
+      : `Grupo de ${chat.miembros[0]?.Nombre || "desconocido"}`;
+
+  // Determinamos el estado de conexión si es un chat de uno a uno
+  let connectionStatus = "";
+  if (chat.miembros.length === 2) {
+    const otherMember = chat.miembros.find((m: any) => m.IDMiembro !== 100);
+    if (otherMember) {
+      connectionStatus =
+        otherMember.ultimaConexion === null
+          ? "En Línea"
+          : `Última conexión: ${otherMember.ultimaConexion}`;
+    }
+  }
   return (
     <div onClick={onHandleHideMenuVisible} className={styles.father}>
       <article className={styles.chatuserconnection}>
@@ -27,18 +43,9 @@ const ChatView: React.FC<ChatViewProps> = ({
             className={styles.chatuserconnectionimg}
           ></Image>
           <div className={styles.chatUsernameNameStateColumn}>
-            <p className={styles.chatUsernameText}>
-              {chat.miembros.length === 2
-                ? chat.miembros.find((m: any) => m.IDMiembro !== 100)?.Nombre
-                : `Grupo de ${chat.miembros[0]?.Nombre || "desconocido"}`}
-            </p>
+            <p className={styles.chatUsernameText}>{chatName}</p>
             <p className={styles.chatStateText}>
-              {" "}
-              Última conexión:{" "}
-              {chat.miembros.length === 2
-                ? chat.miembros.find((m: any) => m.IDMiembro !== 100)
-                    ?.estadoConexion || "Desconocida"
-                : "Desconocida"}
+              {chat.miembros.length === 2 ? connectionStatus : ""}
             </p>
           </div>
         </div>

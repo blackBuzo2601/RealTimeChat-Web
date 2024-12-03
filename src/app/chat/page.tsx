@@ -239,7 +239,7 @@ export default function Home() {
         {activeChat && (
           <ChatView
             chat={activeChat}
-            onHandleHideMenuVisible={() => {}}
+            onHandleHideMenuVisible={handleHideMenuVisible}
             onhandleInfoChatVisible={handleInfoChatVisible}
           />
         )}
