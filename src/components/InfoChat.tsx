@@ -7,12 +7,15 @@ interface InfoChatProps {
   chat: any;
   onhandleInfoChatVisible: () => void;
   onHandleHideMenuVisible: () => void;
+
+  personalVisibleImage: string;
 }
 
 const InfoChat: React.FC<InfoChatProps> = ({
   chat,
   onhandleInfoChatVisible,
   onHandleHideMenuVisible,
+  personalVisibleImage,
 }) => {
   const [isMultimediaVisible, setIsMultimediaVisible] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null); //definimos que el estado
@@ -167,7 +170,11 @@ const InfoChat: React.FC<InfoChatProps> = ({
             <div key={member.IDMiembro} className={styles.singleMember}>
               <Image
                 alt="fotoDeMiembro"
-                src={"/goku.jpg"} // Puedes reemplazar con imágenes dinámicas
+                src={
+                  member.IDMiembro === 100
+                    ? personalVisibleImage // Ruta de la imagen de la configuración o menú
+                    : member.fotoMiembro || "/zelda.jpg" // Imagen dinámica o avatar por defecto
+                }
                 width={50}
                 height={50}
               ></Image>

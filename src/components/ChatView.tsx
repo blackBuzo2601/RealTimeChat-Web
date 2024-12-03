@@ -37,7 +37,7 @@ const ChatView: React.FC<ChatViewProps> = ({
         <div className={styles.chatuserconnectiondivone}>
           <Image
             alt="imageprofile"
-            src={"/goku.jpg"}
+            src={"/goku.jpg"} //aqui va la imagen del usuario seleccionado
             width={960}
             height={960}
             className={styles.chatuserconnectionimg}

@@ -6,7 +6,8 @@
       "nombre": "Juan",
       "apellido": "Lopez",
       "estadoConexion": "En linea",
-      "ultimaConexion": null
+      "ultimaConexion": null,
+      "fotoPerfil": "/avatars/avatar1.jpg"
     },
     {
       "idUsuario": 2,
@@ -14,7 +15,8 @@
       "nombre": "Maria",
       "apellido": "Gomez",
       "estadoConexion": "En linea",
-      "ultimaConexion": null
+      "ultimaConexion": null,
+      "fotoPerfil": "/avatars/avatar2.jpg"
     },
     {
       "idUsuario": 3,
@@ -22,7 +24,8 @@
       "nombre": "Pedro",
       "apellido": "Hernandez",
       "estadoConexion": "En linea",
-      "ultimaConexion": null
+      "ultimaConexion": null,
+      "fotoPerfil": "/avatars/avatar3.jpg"
     },
     {
       "idUsuario": 4,
@@ -30,7 +33,8 @@
       "nombre": "Ana",
       "apellido": "Martinez",
       "estadoConexion": "Desconectado",
-      "ultimaConexion": "2024-11-23T18:30:00Z"
+      "ultimaConexion": "2024-11-23T18:30:00Z",
+      "fotoPerfil": "/avatars/avatar4.jpg"
     },
     {
       "idUsuario": 5,
@@ -38,7 +42,8 @@
       "nombre": "Luis",
       "apellido": "Garcia",
       "estadoConexion": "Desconectado",
-      "ultimaConexion": "2024-11-23T14:00:00Z"
+      "ultimaConexion": "2024-11-23T14:00:00Z",
+      "fotoPerfil": "/avatars/avatar5.jpg"
     },
     {
       "idUsuario": 6,
@@ -46,7 +51,8 @@
       "nombre": "Carla",
       "apellido": "Diaz",
       "estadoConexion": "En linea",
-      "ultimaConexion": null
+      "ultimaConexion": null,
+      "fotoPerfil": "/avatars/avatar6.jpg"
     },
     {
       "idUsuario": 7,
@@ -54,7 +60,8 @@
       "nombre": "David",
       "apellido": "Fernandez",
       "estadoConexion": "En linea",
-      "ultimaConexion": null
+      "ultimaConexion": null,
+      "fotoPerfil": "/avatars/avatar7.jpg"
     },
     {
       "idUsuario": 8,
@@ -62,7 +69,8 @@
       "nombre": "Sofia",
       "apellido": "Morales",
       "estadoConexion": "Desconectado",
-      "ultimaConexion": "2024-11-23T14:00:00Z"
+      "ultimaConexion": "2024-11-23T14:00:00Z",
+      "fotoPerfil": "/avatars/avatar8.jpg"
     },
     {
       "idUsuario": 9,
@@ -70,7 +78,8 @@
       "nombre": "Andres",
       "apellido": "",
       "estadoConexion": "Desconectado",
-      "ultimaConexion": "2024-11-23T14:00:00Z"
+      "ultimaConexion": "2024-11-23T14:00:00Z",
+      "fotoPerfil": "/avatars/avatar9.jpg"
     },
     {
       "idUsuario": 10,
@@ -78,7 +87,8 @@
       "nombre": "Paula",
       "apellido": "Rodriguez",
       "estadoConexion": "En linea",
-      "ultimaConexion": null
+      "ultimaConexion": null,
+      "fotoPerfil": "/avatars/avatar10.jpg"
     }
   ],
 
@@ -91,26 +101,30 @@
           "IDMiembro": 1,
           "estadoConexion": "En linea",
           "ultimaConexion": null,
-          "nickname": "juan777"
+          "nickname": "juan777",
+          "fotoMiembro": "/avatars/avatar1.jpg"
         },
         {
           "Nombre": "Maria Gomez",
           "IDMiembro": 2,
           "estadoConexion": "En linea",
           "ultimaConexion": null,
-          "nickname": "maria123"
+          "nickname": "maria123",
+          "fotoMiembro": "/avatars/avatar2.jpg"
         },
         {
           "Nombre": "Pedro Hernandez",
           "IDMiembro": 3,
           "estadoConexion": "En linea",
           "ultimaConexion": null,
-          "nickname": "pedro99"
+          "nickname": "pedro99",
+          "fotoMiembro": "/avatars/avatar3.jpg"
         },
         {
           "Nombre": "Elian Buzo",
           "IDMiembro": 100,
-          "nickname": "blackBuzoSSJ"
+          "nickname": "blackBuzoSSJ",
+          "fotoMiembro": null
         }
       ],
       "mensajes": [
@@ -441,12 +455,14 @@
           "IDMiembro": 3,
           "estadoConexion": "En linea",
           "ultimaConexion": null,
-          "nickname": "pedro99"
+          "nickname": "pedro99",
+          "fotoMiembro": "/avatars/avatar3.jpg"
         },
         {
           "Nombre": "Elian Buzo",
           "IDMiembro": 100,
-          "nickname": "blackBuzoSSJ"
+          "nickname": "blackBuzoSSJ",
+          "fotoMiembro": null
         }
       ],
       "mensajes": [
@@ -587,12 +603,14 @@
           "IDMiembro": 8,
           "estadoConexion": "Desconectado",
           "ultimaConexion": "2024-11-23T14:00:00Z",
-          "nickname": "sofia2023"
+          "nickname": "sofia2023",
+          "fotoMiembro": "/avatars/avatar8.jpg"
         },
         {
           "Nombre": "Elian Buzo",
           "IDMiembro": 100,
-          "nickname": "blackBuzoSSJ"
+          "nickname": "blackBuzoSSJ",
+          "fotoMiembro": null
         }
       ],
       "mensajes": [
@@ -787,33 +805,38 @@
           "IDMiembro": 4,
           "estadoConexion": "Desconectado",
           "ultimaConexion": "2024-11-23T18:30:00Z",
-          "nickname": "EsLaAnaMartinez"
+          "nickname": "EsLaAnaMartinez",
+          "fotoMiembro": "/avatars/avatar4.jpg"
         },
         {
           "Nombre": "Luis Garcia",
           "IDMiembro": 5,
           "estadoConexion": "Desconectado",
           "ultimaConexion": "2024-11-23T14:00:00Z",
-          "nickname": "yosoyLuis777"
+          "nickname": "yosoyLuis777",
+          "fotoMiembro": "/avatars/avatar5.jpg"
         },
         {
           "Nombre": "Carla Diaz",
           "IDMiembro": 6,
           "estadoConexion": "En linea",
           "ultimaConexion": null,
-          "nickname": "carlaProPlayer"
+          "nickname": "carlaProPlayer",
+          "fotoMiembro": "/avatars/avatar6.jpg"
         },
         {
           "Nombre": "David Fernandez",
           "IDMiembro": 7,
           "estadoConexion": "En linea",
           "ultimaConexion": null,
-          "nickname": "elProgramadorDeOtroUniverso"
+          "nickname": "elProgramadorDeOtroUniverso",
+          "fotoMiembro": "/avatars/avatar7.jpg"
         },
         {
           "Nombre": "Elian Buzo",
           "IDMiembro": 100,
-          "nickname": "blackBuzoSSJ"
+          "nickname": "blackBuzoSSJ",
+          "fotoMiembro": null
         }
       ],
       "mensajes": [

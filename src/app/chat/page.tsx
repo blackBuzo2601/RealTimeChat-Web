@@ -251,6 +251,7 @@ export default function Home() {
             chat={activeChat}
             onHandleHideMenuVisible={handleHideMenuVisible}
             onhandleInfoChatVisible={handleInfoChatVisible}
+            personalVisibleImage={initialProfileImage}
           ></InfoChat>
         </section>
       )}
@@ -375,7 +376,7 @@ export default function Home() {
                 >
                   <Image
                     alt="fotoContacto"
-                    src={"/blackgoku.jpg"}
+                    src={objetoAmigo.fotoPerfil}
                     width={800}
                     height={800}
                     className={styles.singleContactAvatar}
