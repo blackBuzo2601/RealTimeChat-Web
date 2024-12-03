@@ -125,7 +125,7 @@ export default function Home() {
     setInitialApellido(tempApellido);
     setInitialNickname(tempNickname);
     setInitialProfileImage(tempProfileImage);
-    handleHideOptionsVisible();
+    //handleHideOptionsVisible();
   };
 
   // Manejo de cambio de imagen
@@ -235,8 +235,8 @@ export default function Home() {
               <Image
                 alt="fotoDePerfilEnOpciones"
                 src={initialProfileImage}
-                width={800}
-                height={800}
+                width={736}
+                height={736}
                 className={styles.MenuOptionsIcon}
               ></Image>
               <div className={styles.MenuOptionsDivOneUserInfoColumn}>
