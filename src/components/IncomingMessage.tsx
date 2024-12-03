@@ -3,13 +3,15 @@ import styles from "../styles/components styles/IncomingMessage.module.css";
 import Image from "next/image";
 
 interface IncomingMessageProps {
-  incomingText: string;
+  incomingText: string | null;
+  multimedia: string | null;
   senderName: string;
   hour: string;
 }
 
 const IncomingMessage: React.FC<IncomingMessageProps> = ({
   incomingText,
+  multimedia,
   senderName,
   hour,
 }) => {
@@ -24,7 +26,17 @@ const IncomingMessage: React.FC<IncomingMessageProps> = ({
       ></Image>
       <div className={styles.father}>
         <p className={styles.incomingMessageName}>{senderName}</p>
-        <p className={styles.incomingText}>{incomingText}</p>
+        {multimedia ? (
+          <Image
+            alt="imagenRecibida"
+            src={`/${multimedia}`} // Asegúrate de que la ruta sea válida
+            width={200}
+            height={200}
+            className={styles.incomingImage}
+          />
+        ) : (
+          <p className={styles.incomingText}>{incomingText}</p>
+        )}
         <p className={styles.incomingHour}>{hour}</p>
       </div>
     </div>

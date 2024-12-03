@@ -72,12 +72,14 @@ const ChatView: React.FC<ChatViewProps> = ({
         {chat.mensajes.map((mensaje: any) =>
           mensaje.idUsuario === 100 ? (
             <OutgoingMessage
+              multimedia={mensaje.multimedia}
               key={mensaje.IDMensaje}
               outGoingText={mensaje.contenido}
               hour={mensaje.hora}
             />
           ) : (
             <IncomingMessage
+              multimedia={mensaje.multimedia}
               key={mensaje.IDMensaje}
               senderName={mensaje.Usuario}
               incomingText={mensaje.contenido}

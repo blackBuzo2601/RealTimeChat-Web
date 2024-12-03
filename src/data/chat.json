@@ -116,7 +116,8 @@
           "idUsuario": 1,
           "contenido": "Hola a todos, ¿cómo están? loreasdfasdbfuoagdsufg ausdgfuasdiufvasduifgasudifgasduifg uiasdgfui absduifabdsuf gasuidgfuaisdgfuiasdf uaisdgf auisdgfui",
           "hora": "01:31",
-          "fecha": "23-11-24"
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
           "IDMensaje": "mensaje000002",
@@ -124,7 +125,8 @@
           "idUsuario": 2,
           "contenido": "¡Hola! Todo bien, gracias. ¿Y tú?",
           "hora": "01:32",
-          "fecha": "23-11-24"
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
           "IDMensaje": "mensaje000003",
@@ -132,7 +134,8 @@
           "idUsuario": 3,
           "contenido": "Hola, aquí trabajando como siempre.",
           "hora": "01:33",
-          "fecha": "23-11-24"
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
           "IDMensaje": "mensaje000004",
@@ -140,7 +143,8 @@
           "idUsuario": 100,
           "contenido": "Hola a todos, ¡qué gusto verlos aquí! akdsfhausdhfui ahdsfuahdsfuiagsduifavdsyufgasudfg iuagsduifgauisdgfuaisd",
           "hora": "01:33",
-          "fecha": "23-11-24"
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
           "IDMensaje": "mensaje000005",
@@ -148,7 +152,8 @@
           "idUsuario": 2,
           "contenido": "Me alegra saber que están bien. ¿Qué tal sus planes para el fin de semana?",
           "hora": "01:34",
-          "fecha": "23-11-24"
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
           "IDMensaje": "mensaje000006",
@@ -156,7 +161,8 @@
           "idUsuario": 2,
           "contenido": "Voy a salir con mi familia al parque. ¿Y ustedes?",
           "hora": "01:34",
-          "fecha": "23-11-24"
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
           "IDMensaje": "mensaje000007",
@@ -164,7 +170,8 @@
           "idUsuario": 3,
           "contenido": "Yo creo que descansaré en casa, ha sido una semana pesada.",
           "hora": "01:35",
-          "fecha": "23-11-24"
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
           "IDMensaje": "mensaje000008",
@@ -172,7 +179,8 @@
           "idUsuario": 100,
           "contenido": "Yo tengo una reunión con unos amigos, ¡pero puedo unirme más tarde si hay algo planeado!",
           "hora": "01:36",
-          "fecha": "23-11-24"
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
           "IDMensaje": "mensaje000009",
@@ -180,7 +188,8 @@
           "idUsuario": 1,
           "contenido": "Podríamos hacer una videollamada para ponernos al día. ¿Qué opinan?",
           "hora": "01:36",
-          "fecha": "23-11-24"
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
           "IDMensaje": "mensaje000010",
@@ -188,7 +197,8 @@
           "idUsuario": 100,
           "contenido": "Me parece buena idea. ¿Qué hora les viene bien?",
           "hora": "01:37",
-          "fecha": "23-11-24"
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
           "IDMensaje": "mensaje000011",
@@ -196,7 +206,8 @@
           "idUsuario": 2,
           "contenido": "Después de las 7 pm estaría perfecto para mí.",
           "hora": "01:38",
-          "fecha": "23-11-24"
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
           "IDMensaje": "mensaje000012",
@@ -204,14 +215,216 @@
           "idUsuario": 1,
           "contenido": "A esa hora está bien. Avísenme por aquí cuando estén listos.",
           "hora": "01:39",
-          "fecha": "23-11-24"
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
           "IDMensaje": "mensaje000013",
+          "Usuario": "Juan Lopez",
+          "idUsuario": 1,
+          "contenido": "hola k ase",
+          "hora": "01:40",
+          "fecha": "23-11-24",
+          "multimedia": "multimedia1.jpg"
+        },
+        {
+          "IDMensaje": "mensaje000014",
           "Usuario": "Elian Buzo",
           "idUsuario": 100,
           "contenido": "Perfecto, entonces queda a las 7. ¡Nos hablamos más tarde!",
-          "hora": "01:40",
+          "hora": "01:41",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000015",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "Ahh perro, te gusta dragon ball?",
+          "hora": "01:41",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000016",
+          "Usuario": "Juan Lopez",
+          "idUsuario": 1,
+          "contenido": "Si pa ahuevo, ira la sig imagen.",
+          "hora": "01:42",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000017",
+          "Usuario": "Juan Lopez",
+          "idUsuario": 1,
+          "contenido": "ola k ase",
+          "hora": "01:42",
+          "fecha": "23-11-24",
+          "multimedia": "multimedia2.jpg"
+        },
+        {
+          "IDMensaje": "mensaje000018",
+          "Usuario": "Juan Lopez",
+          "idUsuario": 1,
+          "contenido": "o tambien esta wacha",
+          "hora": "01:42",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000019",
+          "Usuario": "Juan Lopez",
+          "idUsuario": 1,
+          "contenido": "ola k ase",
+          "hora": "01:42",
+          "fecha": "23-11-24",
+          "multimedia": "multimedia3.jpg"
+        },
+        {
+          "IDMensaje": "mensaje000020",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "tienes alguna del ultra instinto?",
+          "hora": "01:42",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000021",
+          "Usuario": "Juan Lopez",
+          "idUsuario": 1,
+          "contenido": "no se pero te voy a mandar otras que tengo wacha. he sido un fan de dragon ball desde hace mucho tiempo",
+          "hora": "01:43",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000022",
+          "Usuario": "Juan Lopez",
+          "idUsuario": 1,
+          "contenido": "ola k ase",
+          "hora": "01:44",
+          "fecha": "23-11-24",
+          "multimedia": "multimedia4.jpg"
+        },
+        {
+          "IDMensaje": "mensaje000023",
+          "Usuario": "Juan Lopez",
+          "idUsuario": 1,
+          "contenido": "ola k ase",
+          "hora": "01:45",
+          "fecha": "23-11-24",
+          "multimedia": "multimedia6.jpg"
+        },
+        {
+          "IDMensaje": "mensaje000024",
+          "Usuario": "Juan Lopez",
+          "idUsuario": 1,
+          "contenido": "ola k ase",
+          "hora": "01:46",
+          "fecha": "23-11-24",
+          "multimedia": "multimedia7.jpg"
+        },
+        {
+          "IDMensaje": "mensaje000025",
+          "Usuario": "Juan Lopez",
+          "idUsuario": 1,
+          "contenido": "ola k ase",
+          "hora": "01:47",
+          "fecha": "23-11-24",
+          "multimedia": "multimedia8.jpg"
+        },
+        {
+          "IDMensaje": "mensaje000026",
+          "Usuario": "Juan Lopez",
+          "idUsuario": 1,
+          "contenido": "ola k ase",
+          "hora": "01:47",
+          "fecha": "23-11-24",
+          "multimedia": "multimedia9.jpg"
+        },
+        {
+          "IDMensaje": "mensaje000027",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "ola k ase",
+          "hora": "01:47",
+          "fecha": "23-11-24",
+          "multimedia": "multimedia10.jpg"
+        },
+        {
+          "IDMensaje": "mensaje000028",
+          "Usuario": "Juan Lopez",
+          "idUsuario": 1,
+          "contenido": "Ah perro",
+          "hora": "01:48",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000029",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "Wacha pa, no es por nada pero si te pego un baile",
+          "hora": "01:47",
+          "fecha": "23-11-24",
+          "multimedia": null
+        }
+      ],
+      "MensajesMultimedia": [
+        {
+          "IdMensajeOriginal": "mensaje000013",
+          "ruta": "multimedia1.jpg",
+          "fecha": "23-11-24",
+          "hora": "01:40"
+        },
+        {
+          "IdMensajeOriginal": "mensaje000017",
+          "ruta": "multimedia2.jpg",
+          "fecha": "23-11-24",
+          "hora": "01:42"
+        },
+        {
+          "IdMensajeOriginal": "mensaje000019",
+          "ruta": "multimedia3.jpg",
+          "hora": "01:42",
+          "fecha": "23-11-24"
+        },
+        {
+          "IdMensajeOriginal": "mensaje000022",
+          "ruta": "multimedia4.jpg",
+          "hora": "01:44",
+          "fecha": "23-11-24"
+        },
+        {
+          "IdMensajeOriginal": "mensaje000023",
+          "ruta": "multimedia6.jpg",
+          "hora": "01:45",
+          "fecha": "23-11-24"
+        },
+        {
+          "IdMensajeOriginal": "mensaje000024",
+          "ruta": "multimedia7.jpg",
+          "hora": "01:46",
+          "fecha": "23-11-24"
+        },
+        {
+          "IdMensajeOriginal": "mensaje000025",
+          "ruta": "multimedia8.jpg",
+          "hora": "01:47",
+          "fecha": "23-11-24"
+        },
+        {
+          "IdMensajeOriginal": "mensaje000026",
+          "ruta": "multimedia9.jpg",
+          "hora": "01:47",
+          "fecha": "23-11-24"
+        },
+        {
+          "IdMensajeOriginal": "mensaje000027",
+          "ruta": "multimedia10.jpg",
+          "hora": "01:47",
           "fecha": "23-11-24"
         }
       ]
@@ -232,36 +445,130 @@
       ],
       "mensajes": [
         {
-          "IDMensaje": "mensaje000014",
+          "IDMensaje": "mensaje000018",
           "Usuario": "Elian Buzo",
           "idUsuario": 100,
-          "contenido": "Hola",
-          "hora": "01:31",
-          "fecha": "23-11-24"
+          "contenido": "Oye, hablando de trabajar y de cosas pendientes... ¿has jugado Zelda Majora's Mask? Es como una metáfora perfecta para la vida de un estudiante universitario.",
+          "hora": "01:32",
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
-          "IDMensaje": "mensaje000015",
+          "IDMensaje": "mensaje000019",
           "Usuario": "Pedro Hernandez",
           "idUsuario": 3,
-          "contenido": "Hola mijo que tal",
-          "hora": "01:31",
-          "fecha": "23-11-24"
+          "contenido": "Sí, claro que lo he jugado. De hecho, es uno de mis juegos favoritos. Lo de las 72 horas para salvar el mundo se parece a las 72 horas que tienes para entregar un proyecto final.",
+          "hora": "01:33",
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
-          "IDMensaje": "mensaje000016",
+          "IDMensaje": "mensaje000020",
           "Usuario": "Elian Buzo",
           "idUsuario": 100,
-          "contenido": "Aqui trabajando",
-          "hora": "01:31",
-          "fecha": "23-11-24"
+          "contenido": "Exactamente, y lo peor es que las tareas pendientes siempre se sienten como la Luna que está a punto de caer. Cada día es como correr para intentar hacer todo a tiempo.",
+          "hora": "01:33",
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
-          "IDMensaje": "mensaje000017",
+          "IDMensaje": "mensaje000021",
           "Usuario": "Pedro Hernandez",
           "idUsuario": 3,
-          "contenido": "Que bueno niño",
-          "hora": "01:31",
-          "fecha": "23-11-24"
+          "contenido": "Jajaja, totalmente. Aunque creo que los jefes de los templos representan a los profesores: difíciles de derrotar y siempre te exigen más esfuerzo del que creías posible.",
+          "hora": "01:34",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000022",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "Y ni hablar de los cuadernos de notas, que serían como el cuaderno de Bomber: intentas llevar registro de todo, pero al final siempre se te olvida algo importante.",
+          "hora": "01:34",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000023",
+          "Usuario": "Pedro Hernandez",
+          "idUsuario": 3,
+          "contenido": "¡Exacto! Y los compañeros de equipo son como los NPCs que te dan misiones secundarias. A veces útiles, pero otras veces te retrasan más de lo que ayudan.",
+          "hora": "01:35",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000024",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "Jajaja, me imagino. Aunque, ¿sabes qué es lo peor? La sensación de reiniciar el día. Como cuando entregas algo y ya tienes otro deadline encima. No hay descanso.",
+          "hora": "01:36",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000025",
+          "Usuario": "Pedro Hernandez",
+          "idUsuario": 3,
+          "contenido": "Eso sí, pero al menos Majora's Mask te da herramientas para ralentizar el tiempo. En la universidad no hay ni una canción del tiempo para eso.",
+          "hora": "01:37",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000026",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "Tal vez los cafés sean nuestra 'Canción del Tiempo Invertida'. Te dan más horas despierto, pero igual el estrés sigue acumulándose.",
+          "hora": "01:38",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000027",
+          "Usuario": "Pedro Hernandez",
+          "idUsuario": 3,
+          "contenido": "Jajaja, totalmente. Aunque no importa cuánto café tomes, siempre llega el momento de quedarte sin energía, como cuando Link se queda sin magia.",
+          "hora": "01:39",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000028",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "¡Exacto! Y al final, igual que en el juego, siempre hay una sensación de logro cuando terminas todo. Aunque estés agotado, sabes que salvaste el semestre.",
+          "hora": "01:40",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000029",
+          "Usuario": "Pedro Hernandez",
+          "idUsuario": 3,
+          "contenido": "Eso sí. Aunque nunca falta el 'profesor Majora' que complica todo más de lo necesario. Esos son los verdaderos villanos de la universidad.",
+          "hora": "01:41",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000030",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "Jajaja, justo así. Bueno, creo que necesitamos nuestra propia canción para calmarnos. Después de todo, aún tenemos cosas que entregar.",
+          "hora": "01:42",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000031",
+          "Usuario": "Pedro Hernandez",
+          "idUsuario": 3,
+          "contenido": "Cierto. ¡Ánimo con tus tareas, compañero! Y si necesitas ayuda, aquí estoy, como siempre.",
+          "hora": "01:43",
+          "fecha": "23-11-24",
+          "multimedia": null
         }
       ]
     },
@@ -286,7 +593,8 @@
           "idUsuario": 100,
           "contenido": "Hola Sofia, ¿cómo estás?",
           "hora": "08:15",
-          "fecha": "23-11-24"
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
           "IDMensaje": "mensaje000019",
@@ -294,7 +602,8 @@
           "idUsuario": 8,
           "contenido": "¡Hola Elian! Estoy bien, gracias. ¿Y tú?",
           "hora": "08:16",
-          "fecha": "23-11-24"
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
           "IDMensaje": "mensaje000020",
@@ -302,7 +611,8 @@
           "idUsuario": 100,
           "contenido": "Bien también, un poco ocupado con el trabajo.",
           "hora": "08:17",
-          "fecha": "23-11-24"
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
           "IDMensaje": "mensaje000021",
@@ -310,7 +620,8 @@
           "idUsuario": 8,
           "contenido": "Entiendo, espero que puedas descansar pronto.",
           "hora": "08:18",
-          "fecha": "23-11-24"
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
           "IDMensaje": "mensaje000022",
@@ -318,7 +629,8 @@
           "idUsuario": 100,
           "contenido": "Gracias, ¡eso espero! ¿Y tú, cómo va tu día?",
           "hora": "08:19",
-          "fecha": "23-11-24"
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
           "IDMensaje": "mensaje000023",
@@ -326,7 +638,8 @@
           "idUsuario": 8,
           "contenido": "Bien, estoy preparando algunas cosas para una reunión.",
           "hora": "08:20",
-          "fecha": "23-11-24"
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
           "IDMensaje": "mensaje000024",
@@ -334,7 +647,125 @@
           "idUsuario": 100,
           "contenido": "¡Qué bien! Suerte con eso, Sofia.",
           "hora": "08:21",
-          "fecha": "23-11-24"
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000025",
+          "Usuario": "Sofia Morales",
+          "idUsuario": 8,
+          "contenido": "Gracias, Elian. Por cierto, me acordé de ti ayer viendo un capítulo de Dragon Ball Z. Es curioso cómo se parece a la vida en la escuela.",
+          "hora": "08:22",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000026",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "¿De verdad? ¿Cómo así? Ahora me dejaste intrigado. ¿Qué tiene que ver Dragon Ball Z con la escuela?",
+          "hora": "08:23",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000027",
+          "Usuario": "Sofia Morales",
+          "idUsuario": 8,
+          "contenido": "Pues mira, ¿te acuerdas de cuando Goku y Vegeta entrenan en la Sala del Tiempo? Es igual a cuando estudias para un examen. Pasas horas encerrado, sientes que envejeces, y al final, sales medio destruido.",
+          "hora": "08:24",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000028",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "¡Tienes toda la razón! Y los exámenes serían como los torneos de artes marciales: te enfrentas a un montón de obstáculos y siempre hay un rival inesperado que complica las cosas.",
+          "hora": "08:25",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000029",
+          "Usuario": "Sofia Morales",
+          "idUsuario": 8,
+          "contenido": "Jajaja, exacto. Y los maestros serían como Freezer o Cell: siempre tienen una transformación más difícil de enfrentar cuando crees que ya superaste todo.",
+          "hora": "08:26",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000030",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "¡O Majin Buu! Siempre hay uno que parece inofensivo, pero termina siendo el más complicado. Y ni hablar de los proyectos grupales, son como las fusiones: a veces salen bien, pero otras son un desastre.",
+          "hora": "08:27",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000031",
+          "Usuario": "Sofia Morales",
+          "idUsuario": 8,
+          "contenido": "¡Exacto! Y cuando logras una buena fusión, te sientes como Gogeta. Pero cuando sale mal, es más como Veku: un desastre que no puede hacer nada útil.",
+          "hora": "08:28",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000032",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "Jajaja, lo peor es que, al igual que en Dragon Ball, siempre aparece un 'nuevo arco' en la escuela: otro semestre, más tareas, y más villanos por enfrentar.",
+          "hora": "08:29",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000033",
+          "Usuario": "Sofia Morales",
+          "idUsuario": 8,
+          "contenido": "Definitivamente. Aunque, como Goku, siempre encuentras fuerzas de donde no sabes para seguir adelante. Es como desbloquear un nuevo nivel de Super Saiyan con cada reto.",
+          "hora": "08:30",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000034",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "Eso sí. Al final, todo se trata de superar tus propios límites. Aunque, honestamente, preferiría entrenar en la Cámara del Tiempo que hacer tesis. Sería más épico.",
+          "hora": "08:31",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000035",
+          "Usuario": "Sofia Morales",
+          "idUsuario": 8,
+          "contenido": "Jajaja, lo mismo digo. Pero bueno, al menos siempre nos queda el consuelo de que somos más fuertes que antes. ¡Como buenos guerreros Z!",
+          "hora": "08:32",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000036",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "¡Eso es! Bueno, Sofi, suerte con tus cosas de la reunión. ¡Si necesitas un compañero para entrenar, ya sabes dónde encontrarme!",
+          "hora": "08:33",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000037",
+          "Usuario": "Sofia Morales",
+          "idUsuario": 8,
+          "contenido": "Gracias, Elian. ¡Que tengas un buen día y sigue entrenando duro! Hasta luego.",
+          "hora": "08:34",
+          "fecha": "23-11-24",
+          "multimedia": null
         }
       ]
     },
@@ -377,7 +808,8 @@
           "idUsuario": 4,
           "contenido": "Hola a todos, ¿cómo están?",
           "hora": "02:00",
-          "fecha": "23-11-24"
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
           "IDMensaje": "mensaje000026",
@@ -385,7 +817,8 @@
           "idUsuario": 5,
           "contenido": "¡Hola! Estoy bien, ¿y ustedes?",
           "hora": "02:01",
-          "fecha": "23-11-24"
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
           "IDMensaje": "mensaje000027",
@@ -393,7 +826,8 @@
           "idUsuario": 6,
           "contenido": "Hola, aquí todo tranquilo. ¿Qué cuentan?",
           "hora": "02:02",
-          "fecha": "23-11-24"
+          "fecha": "23-11-24",
+          "multimedia": null
         },
         {
           "IDMensaje": "mensaje000028",
@@ -401,7 +835,152 @@
           "idUsuario": 7,
           "contenido": "Hola a todos, ¡qué gusto verlos conectados!",
           "hora": "02:03",
-          "fecha": "23-11-24"
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000029",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "Que tranza perrillos.",
+          "hora": "02:03",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000030",
+          "Usuario": "Ana Martinez",
+          "idUsuario": 4,
+          "contenido": "La neta, ya estuvo bueno con tanta tarea, ¿no creen? Parece que los profes piensan que solo llevamos su materia.",
+          "hora": "02:04",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000031",
+          "Usuario": "Luis Garcia",
+          "idUsuario": 5,
+          "contenido": "No manches, Ana, ayer me aventé como 6 horas con la tarea de cálculo, y todavía me faltan dos proyectos. ¡Ni tiempo de comer tranquilo tuve!",
+          "hora": "02:05",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000032",
+          "Usuario": "Carla Diaz",
+          "idUsuario": 6,
+          "contenido": "Jajaja, ni me digas. Yo apenas terminé el ensayo de filosofía y ya nos dejaron otro. ¿Qué les cuesta darnos chance de respirar tantito?",
+          "hora": "02:06",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000033",
+          "Usuario": "David Fernandez",
+          "idUsuario": 7,
+          "contenido": "Lo peor es cuando te dejan tarea grupal y nadie coopera. Ayer me tocó hacer todo el trabajo porque uno dijo que 'se le cayó el internet'.",
+          "hora": "02:07",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000034",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "Ya sé, banda. ¿Y qué tal cuando dicen 'es poquito'? Te dejan tres hojas de problemas y todavía se ríen. ¡Qué culeis!",
+          "hora": "02:08",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000035",
+          "Usuario": "Ana Martinez",
+          "idUsuario": 4,
+          "contenido": "Jajaja, Elian, ¡esos profes son unos cracks! Pero no de los buenos, eh. Ya de plano nos quieren ver llorar.",
+          "hora": "02:09",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000036",
+          "Usuario": "Luis Garcia",
+          "idUsuario": 5,
+          "contenido": "Aparte, ¿ya vieron que la tarea de física se entrega hoy a las 11:59 pm? Apenas me voy enterando. ¡Qué gandalla ese profe!",
+          "hora": "02:10",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000037",
+          "Usuario": "Carla Diaz",
+          "idUsuario": 6,
+          "contenido": "No puede ser, Luis. ¿Otra tarea sorpresa? Ya estoy harta, de verdad. Mejor que nos pongan exámenes y ya, pero esto es tortura.",
+          "hora": "02:11",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000038",
+          "Usuario": "David Fernandez",
+          "idUsuario": 7,
+          "contenido": "Totalmente. Y luego quieren que llegues fresco a las clases. Apenas duermo cuatro horas y eso si bien me va.",
+          "hora": "02:12",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000039",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "La verdad, profe que deja tareas sorpresa debería ser baneado. Propongo que hagamos un sindicato estudiantil, ¿quién se une? Jajaja.",
+          "hora": "02:13",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000040",
+          "Usuario": "Ana Martinez",
+          "idUsuario": 4,
+          "contenido": "¡De una, Elian! Lo primero sería exigir menos tareas y más descansos. Aunque dudo que eso pase, los profes se creen dioses.",
+          "hora": "02:14",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000041",
+          "Usuario": "Luis Garcia",
+          "idUsuario": 5,
+          "contenido": "Pues sí, pero mientras tanto nos queda aguantar. Ya mejor me pongo a hacer física porque si no, sí me va a cargar la fregada.",
+          "hora": "02:15",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000042",
+          "Usuario": "Carla Diaz",
+          "idUsuario": 6,
+          "contenido": "Igual, banda. Me desconecto un rato. Si alguien termina antes, pase tips, ¿va? ¡Ánimo con las tareas!",
+          "hora": "02:16",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000043",
+          "Usuario": "David Fernandez",
+          "idUsuario": 7,
+          "contenido": "Dale, Carla. Ánimo a todos. Recuerden que al final del semestre siempre hay una luz al final del túnel. Aunque sea muy tenue, jaja.",
+          "hora": "02:17",
+          "fecha": "23-11-24",
+          "multimedia": null
+        },
+        {
+          "IDMensaje": "mensaje000044",
+          "Usuario": "Elian Buzo",
+          "idUsuario": 100,
+          "contenido": "Claro que sí. ¡Nos vemos en la próxima, cracks! A darle con todo.",
+          "hora": "02:18",
+          "fecha": "23-11-24",
+          "multimedia": null
         }
       ]
     }

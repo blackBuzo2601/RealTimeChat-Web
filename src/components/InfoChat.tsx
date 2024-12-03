@@ -157,7 +157,7 @@ const InfoChat: React.FC<InfoChatProps> = ({
           <div className={styles.singleMember}>
             <Image
               alt="fotoDeMiembro"
-              src={"/blackgoku.jpg"}
+              src={"/goku.jpg"}
               width={50}
               height={50}
             ></Image>
@@ -171,7 +171,7 @@ const InfoChat: React.FC<InfoChatProps> = ({
           <div className={styles.singleMember}>
             <Image
               alt="fotoDeMiembro"
-              src={"/blackgoku.jpg"}
+              src={"/goku.jpg"}
               width={50}
               height={50}
             ></Image>
@@ -185,7 +185,7 @@ const InfoChat: React.FC<InfoChatProps> = ({
           <div className={styles.singleMember}>
             <Image
               alt="fotoDeMiembro"
-              src={"/blackgoku.jpg"}
+              src={"/goku.jpg"}
               width={50}
               height={50}
             ></Image>
@@ -199,7 +199,7 @@ const InfoChat: React.FC<InfoChatProps> = ({
           <div className={styles.singleMember}>
             <Image
               alt="fotoDeMiembro"
-              src={"/blackgoku.jpg"}
+              src={"/goku.jpg"}
               width={50}
               height={50}
             ></Image>
@@ -213,7 +213,7 @@ const InfoChat: React.FC<InfoChatProps> = ({
           <div className={styles.singleMember}>
             <Image
               alt="fotoDeMiembro"
-              src={"/blackgoku.jpg"}
+              src={"/goku.jpg"}
               width={50}
               height={50}
             ></Image>
