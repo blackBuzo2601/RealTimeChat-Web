@@ -3,26 +3,34 @@ import styles from "../styles/components styles/SingleChat.module.css";
 import Image from "next/image";
 
 interface SingleChatProps {
+  name: string;
+  lastMessage: string;
+  lastMessageTime: string;
   onHandleChatView: () => void;
 }
 
-const SingleChat: React.FC<SingleChatProps> = ({ onHandleChatView }) => {
+const SingleChat: React.FC<SingleChatProps> = ({
+  onHandleChatView,
+  lastMessage,
+  lastMessageTime,
+  name,
+}) => {
   return (
     <div onClick={onHandleChatView} className={styles.fatherDiv}>
       <Image
         alt="imageprofile"
-        src={"/blackgoku.jpg"}
+        src={"/goku.jpg"}
         width={736}
         height={736}
         className={styles.chatAvatarImage}
       ></Image>
       <section className={styles.chatMessageColumn}>
         <section className={styles.chatMessageRow}>
-          <p className={styles.chatName}>Nombre del chat</p>
+          <p className={styles.chatName}>{name}</p>
 
-          <p className={styles.lastMessageHour}>12:10</p>
+          <p className={styles.lastMessageHour}>{lastMessageTime}</p>
         </section>
-        <p className={styles.chatMessageContent}>Hola perrillo</p>
+        <p className={styles.chatMessageContent}>{lastMessage}</p>
       </section>
     </div>
   );

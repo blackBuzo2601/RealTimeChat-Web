@@ -19,6 +19,7 @@ export default function Home() {
   const usernameFromUrl = searchParams.get("username") || "";
 
   // Estados iniciales
+  const [activeChat, setActiveChat] = useState<any>(null);
   const [initialPhone, setInitialPhone] = useState(phoneFromUrl);
   const [initialNombre, setInitialNombre] = useState(nameFromUrl);
   const [initialApellido, setInitialApellido] = useState(surnameFromUrl);
@@ -87,7 +88,7 @@ export default function Home() {
   ]);
 
   // Handlers de visibilidad
-  const handleInfoChatVisible = () => setIsInfoChatVisible(!isInfoChatVisible);
+  const handleInfoChatVisible = () => setIsInfoChatVisible((prev) => !prev);
   const handleChatViewVisible = () => setIsChatViewVisible(true);
   const handleMenuVisible = () => setIsMenuVisible(true);
   const handleHideMenuVisible = () => setIsMenuVisible(false);
@@ -153,6 +154,10 @@ export default function Home() {
     nickname: "",
     idUsuario: "",
   };
+  const handleSelectChat = (chat: any) => {
+    setActiveChat(chat);
+  };
+
   return (
     //Father es el componente padre de todo el index
     <div className={styles.father}>
@@ -181,11 +186,42 @@ export default function Home() {
             className={styles.conversationsSearchInput}
           />
         </article>
+
         <article className={styles.allChatsList}>
-          <SingleChat onHandleChatView={handleChatViewVisible}></SingleChat>
-          <SingleChat onHandleChatView={handleChatViewVisible}></SingleChat>
-          <SingleChat onHandleChatView={handleChatViewVisible}></SingleChat>
+          {jsonData[1]?.info.map((chat: any) => {
+            const firstMessage = chat.mensajes[0];
+            const lastMessage =
+              chat.mensajes.length > 0
+                ? chat.mensajes[chat.mensajes.length - 1]
+                : null; // Obtenemos el último mensaje si existe
+
+            // Determinar el nombre a mostrar
+            let chatName = "";
+            if (chat.miembros.length === 2) {
+              const otherMember = chat.miembros.find(
+                (member: any) => member.IDMiembro !== 100
+              );
+              chatName = otherMember?.Nombre || "Usuario desconocido";
+            } else {
+              chatName = `Grupo de ${firstMessage?.Usuario || "desconocido"}`;
+            }
+
+            // Aseguramos el retorno del componente SingleChat
+            return (
+              <SingleChat
+                key={chat.ChatID} // Usamos ChatID como clave única
+                name={chatName}
+                lastMessage={lastMessage?.contenido || "No hay mensajes"}
+                lastMessageTime={lastMessage?.hora || ""}
+                onHandleChatView={() => {
+                  handleSelectChat(chat);
+                  handleChatViewVisible();
+                }} // Callback para manejar la vista del chat
+              />
+            );
+          })}
         </article>
+
         <Menu
           personalVisibleImage={initialProfileImage}
           personalVisibleNombre={initialNombre}
@@ -200,10 +236,13 @@ export default function Home() {
 
       {/*///////////////////////////////////////////////////////////*/}
       <section onClick={handleCerrarOpciones} className={styles.chatContainer}>
-        <ChatView
-          onHandleHideMenuVisible={handleHideMenuVisible}
-          onhandleInfoChatVisible={handleInfoChatVisible}
-        ></ChatView>
+        {activeChat && (
+          <ChatView
+            chat={activeChat}
+            onHandleHideMenuVisible={() => {}}
+            onhandleInfoChatVisible={handleInfoChatVisible}
+          />
+        )}
       </section>
       {/*///////////////////////////////////////////////////////////////*/}
       {isInfoChatVisible && (

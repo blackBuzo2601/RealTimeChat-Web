@@ -4,9 +4,15 @@ import Image from "next/image";
 
 interface IncomingMessageProps {
   incomingText: string;
+  senderName: string;
+  hour: string;
 }
 
-const IncomingMessage: React.FC<IncomingMessageProps> = ({ incomingText }) => {
+const IncomingMessage: React.FC<IncomingMessageProps> = ({
+  incomingText,
+  senderName,
+  hour,
+}) => {
   return (
     <div className={styles.otherFather}>
       <Image
@@ -17,9 +23,9 @@ const IncomingMessage: React.FC<IncomingMessageProps> = ({ incomingText }) => {
         className={styles.incomingMessageAvatar}
       ></Image>
       <div className={styles.father}>
-        <p className={styles.incomingMessageName}>Mario</p>
+        <p className={styles.incomingMessageName}>{senderName}</p>
         <p className={styles.incomingText}>{incomingText}</p>
-        <p className={styles.incomingHour}>19:12</p>
+        <p className={styles.incomingHour}>{hour}</p>
       </div>
     </div>
   );

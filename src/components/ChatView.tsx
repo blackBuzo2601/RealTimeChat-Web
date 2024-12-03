@@ -5,11 +5,13 @@ import OutgoingMessage from "./OutgoingMessage";
 import IncomingMessage from "./IncomingMessage";
 
 interface ChatViewProps {
+  chat: any;
   onhandleInfoChatVisible: () => void;
   onHandleHideMenuVisible: () => void;
 }
 
 const ChatView: React.FC<ChatViewProps> = ({
+  chat,
   onhandleInfoChatVisible,
   onHandleHideMenuVisible,
 }) => {
@@ -25,8 +27,19 @@ const ChatView: React.FC<ChatViewProps> = ({
             className={styles.chatuserconnectionimg}
           ></Image>
           <div className={styles.chatUsernameNameStateColumn}>
-            <p className={styles.chatUsernameText}>Diego Lopez</p>
-            <p className={styles.chatStateText}>Última conexión: Hoy 18:20</p>
+            <p className={styles.chatUsernameText}>
+              {chat.miembros.length === 2
+                ? chat.miembros.find((m: any) => m.IDMiembro !== 100)?.Nombre
+                : `Grupo de ${chat.miembros[0]?.Nombre || "desconocido"}`}
+            </p>
+            <p className={styles.chatStateText}>
+              {" "}
+              Última conexión:{" "}
+              {chat.miembros.length === 2
+                ? chat.miembros.find((m: any) => m.IDMiembro !== 100)
+                    ?.estadoConexion || "Desconocida"
+                : "Desconocida"}
+            </p>
           </div>
         </div>
         <div className={styles.chatuserconnectiondivtwo}>
@@ -49,17 +62,22 @@ const ChatView: React.FC<ChatViewProps> = ({
       </article>
 
       <article className={styles.chatAllMessages}>
-        <IncomingMessage incomingText="Hola que tal?"></IncomingMessage>
-        <OutgoingMessage outGoingText="Que onda morro"></OutgoingMessage>
-        <IncomingMessage incomingText="Quiers jugar?"></IncomingMessage>
-        <OutgoingMessage outGoingText="Tengo tarea we"></OutgoingMessage>
-        <IncomingMessage incomingText="un warzone"></IncomingMessage>
-        <IncomingMessage incomingText="un warzone"></IncomingMessage>
-        <IncomingMessage incomingText="un warzone"></IncomingMessage>
-        <IncomingMessage incomingText="un warzone"></IncomingMessage>
-        <IncomingMessage incomingText="un warzone"></IncomingMessage>
-        <IncomingMessage incomingText="un warzone"></IncomingMessage>
-        <IncomingMessage incomingText="un warzone"></IncomingMessage>
+        {chat.mensajes.map((mensaje: any) =>
+          mensaje.idUsuario === 100 ? (
+            <OutgoingMessage
+              key={mensaje.IDMensaje}
+              outGoingText={mensaje.contenido}
+              hour={mensaje.hora}
+            />
+          ) : (
+            <IncomingMessage
+              key={mensaje.IDMensaje}
+              senderName={mensaje.Usuario}
+              incomingText={mensaje.contenido}
+              hour={mensaje.hora}
+            />
+          )
+        )}
       </article>
       <article className={styles.sendMessageContainer}>
         <Image

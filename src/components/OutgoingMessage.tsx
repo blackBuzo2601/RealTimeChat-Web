@@ -3,13 +3,19 @@ import styles from "../styles/components styles/OutgoingMessage.module.css";
 
 interface OutgoingMessageProps {
   outGoingText: string;
+  hour: string;
 }
 
-const OutgoingMessage: React.FC<OutgoingMessageProps> = ({ outGoingText }) => {
+const OutgoingMessage: React.FC<OutgoingMessageProps> = ({
+  outGoingText,
+  hour,
+}) => {
   return (
-    <div className={styles.father}>
-      <p className={styles.outGoingText}>{outGoingText}</p>
-      <p className={styles.outGoingHour}>19:12</p>
+    <div className={styles.otherFather}>
+      <div className={styles.father}>
+        <p className={styles.outGoingText}>{outGoingText}</p>
+        <p className={styles.outGoingHour}>{hour}</p>
+      </div>
     </div>
   );
 };
