@@ -100,9 +100,75 @@ export default function Home() {
     nickname: "",
     idUsuario: "",
   };
-  //nota: informacionPersonal es un objeto, aqui ya podemos acceder usando
-  //por ejemplo informacionPersonal.idUsuario, informacionPersonal.nickname etc
+  const [initialNombre, setInitialNombre] = useState(
+    informacionPersonal.nombre
+  );
+  const [initialApellido, setInitialApellido] = useState(
+    informacionPersonal.apellido
+  );
+  const [initialNickname, setInitialNickname] = useState(
+    informacionPersonal.nickname
+  );
+  const [initialProfileImage, setInitialProfileImage] = useState("/goku.jpg");
+  //Estados temporales para modificar la configuracion del peridl
+  const [tempNombre, setTempNombre] = useState(initialNombre);
+  const [tempApellido, setTempApellido] = useState(initialApellido);
+  const [tempNickname, setTempNickname] = useState(initialNickname);
+  const [tempProfileImage, setTempProfileImage] = useState(initialProfileImage);
+  useEffect(() => {
+    const fetchData = () => {
+      const dataJSON = require("@/data/chat.json"); // Cargamos el JSON local
+      setJsonData(
+        Object.keys(dataJSON).map((key) => ({ key: key, info: dataJSON[key] }))
+      );
+    };
+    fetchData();
+  }, []);
 
+  useEffect(() => {
+    if (jsonData.length > 0) {
+      const datosUsuario = jsonData[2]?.info || {}; // Datos del perfil de usuario
+      setInitialNombre(datosUsuario.nombre || "");
+      setInitialApellido(datosUsuario.apellido || "");
+      setInitialNickname(datosUsuario.nickname || "");
+    }
+  }, [jsonData]);
+
+  useEffect(() => {
+    if (jsonData.length > 0) {
+      const datosUsuario = jsonData[2]?.info || {};
+      setInitialProfileImage(datosUsuario.profileImage || "/goku.jpg");
+    }
+  }, [jsonData]);
+  const handleCerrarOpciones = () => {
+    setTempNombre(initialNombre);
+    setTempApellido(initialApellido);
+    setTempNickname(initialNickname);
+    setTempProfileImage(initialProfileImage);
+    handleHideOptionsVisible();
+  };
+
+  const handleGuardarCambios = () => {
+    setInitialNombre(tempNombre);
+    setInitialApellido(tempApellido);
+    setInitialNickname(tempNickname);
+    setInitialProfileImage(tempProfileImage);
+
+    handleHideOptionsVisible();
+  };
+  const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files && event.target.files[0]) {
+      const file = event.target.files[0];
+      const allowedTypes = ["image/jpeg", "image/png", "image/jpg"];
+
+      if (allowedTypes.includes(file.type)) {
+        const imageUrl = URL.createObjectURL(file);
+        setTempProfileImage(imageUrl);
+      } else {
+        alert("Por favor selecciona un archivo de imagen (jpg, jpeg, png)");
+      }
+    }
+  };
   return (
     //Father es el componente padre de todo el index
     <div className={styles.father}>
@@ -137,8 +203,8 @@ export default function Home() {
           <SingleChat onHandleChatView={handleChatViewVisible}></SingleChat>
         </article>
         <Menu
-          personalVisibleNombre={informacionPersonal.nombre}
-          personalVisibleApellido={informacionPersonal.apellido}
+          personalVisibleNombre={initialNombre}
+          personalVisibleApellido={initialApellido}
           onhandleHideMenuVisible={handleHideMenuVisible}
           isMenuVisible={isMenuVisible}
           onhandleShowOptionsVisible={handleShowOptionsVisible}
@@ -183,20 +249,20 @@ export default function Home() {
             <div className={styles.MenuOptionsDivOneUserInfo}>
               <Image
                 alt="fotoDePerfilEnOpciones"
-                src={"/goku.jpg"}
+                src={initialProfileImage}
                 width={800}
                 height={800}
                 className={styles.MenuOptionsIcon}
               ></Image>
               <div className={styles.MenuOptionsDivOneUserInfoColumn}>
                 <p className={styles.MenuOptionsDivOneUserInfoFullName}>
-                  {informacionPersonal.nombre} {informacionPersonal.apellido}
+                  {initialNombre} {initialApellido}
                 </p>
                 <p className={styles.MenuOptionsDivOneUserPhonenumber}>
                   {informacionPersonal.telefono}
                 </p>
                 <p className={styles.MenuOptionsDivOneUserNickname}>
-                  @{informacionPersonal.nickname}
+                  @{initialNickname}
                 </p>
               </div>
             </div>
@@ -206,7 +272,8 @@ export default function Home() {
               <p>Modificar nombre: </p>
               <input
                 type="text"
-                value="Elian"
+                value={tempNombre}
+                onChange={(e) => setTempNombre(e.target.value)}
                 className={styles.MenuOptionSingleOptionInput}
               />
             </div>
@@ -214,7 +281,8 @@ export default function Home() {
               <p>Modificar apellido: </p>
               <input
                 type="text"
-                value="Buzo"
+                value={tempApellido}
+                onChange={(e) => setTempApellido(e.target.value)}
                 className={styles.MenuOptionSingleOptionInput}
               />
             </div>
@@ -222,22 +290,30 @@ export default function Home() {
               <p>Modificar nombre de usuario: </p>
               <input
                 type="text"
-                value="buzopro2002"
+                value={tempNickname}
+                onChange={(e) => setTempNickname(e.target.value)}
                 className={styles.MenuOptionSingleOptionInput}
               />
             </div>
             <div className={styles.MenuOptionsSingleOptionContainer}>
               <p>Cambiar foto de perfil: </p>
               <input
-                type="button"
-                value="Adjuntar archivo"
-                className={styles.MenuOptionUploadPhotoInput}
+                id="fileinput"
+                type="file"
+                accept="image/jpeg, image/png, image/jpg"
+                onChange={handleImageChange}
+                className={styles.hiddenInput}
               />
+              <label
+                htmlFor="fileinput"
+                className={styles.MenuOptionSingleOptionInput}
+              ></label>
             </div>
 
             <input
               type="button"
               value="Guardar cambios"
+              onClick={handleGuardarCambios}
               className={styles.MenuOptionUploadPhotoInputDeleteAccount}
             />
 
@@ -249,7 +325,7 @@ export default function Home() {
 
             <div className={styles.MenuOptionsCloseContainer}>
               <p
-                onClick={handleHideOptionsVisible}
+                onClick={handleCerrarOpciones}
                 className={styles.MenuOptionClose}
               >
                 Cerrar

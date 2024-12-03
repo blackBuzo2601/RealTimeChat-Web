@@ -224,7 +224,6 @@
 .MenuOptionsSingleOptionContainer {
   width: 62.08%;
   height: 15.23%;
-
   display: flex;
   flex-direction: column;
   margin-bottom: 2.46%;
@@ -523,4 +522,8 @@
 
 .NewContactAddContainer p:hover {
   background-color: #484848;
+}
+
+.hiddenInput {
+  display: none;
 }
