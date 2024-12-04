@@ -197,13 +197,16 @@ export default function Home() {
 
             // Determinar el nombre a mostrar
             let chatName = "";
+            let avatarSrc = "";
             if (chat.miembros.length === 2) {
               const otherMember = chat.miembros.find(
                 (member: any) => member.IDMiembro !== 100
               );
               chatName = otherMember?.Nombre || "Usuario desconocido";
+              avatarSrc = otherMember?.fotoMiembro || "/default-avatar.jpg";
             } else {
               chatName = `Grupo de ${firstMessage?.Usuario || "desconocido"}`;
+              avatarSrc = "/group-avatar.jpg"; // Avatar predeterminado para grupos
             }
 
             // Aseguramos el retorno del componente SingleChat
@@ -216,7 +219,14 @@ export default function Home() {
                 onHandleChatView={() => {
                   handleSelectChat(chat);
                   handleChatViewVisible();
-                }} // Callback para manejar la vista del chat
+                }}
+                isGroup={chat.miembros.length > 2} // Indica si es un grupo
+                avatarSrc={
+                  chat.miembros.length > 2
+                    ? "/avatargroup.jpg" // Imagen predeterminada para grupos
+                    : chat.miembros.find((m: any) => m.IDMiembro !== 100)
+                        ?.fotoMiembro || "/default-avatar.jpg" // Imagen dinámica o predeterminada para uno a uno
+                }
               />
             );
           })}

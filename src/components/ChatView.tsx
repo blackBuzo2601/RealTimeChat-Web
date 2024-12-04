@@ -37,7 +37,12 @@ const ChatView: React.FC<ChatViewProps> = ({
         <div className={styles.chatuserconnectiondivone}>
           <Image
             alt="imageprofile"
-            src={"/goku.jpg"} //aqui va la imagen del usuario seleccionado
+            src={
+              chat.miembros.length > 2
+                ? "/avatargroup.jpg" // Imagen predeterminada para grupos
+                : chat.miembros.find((m: any) => m.IDMiembro !== 100)
+                    ?.fotoMiembro || "goku.jpg" // Imagen dinámica o predeterminada para uno a uno
+            }
             width={960}
             height={960}
             className={styles.chatuserconnectionimg}

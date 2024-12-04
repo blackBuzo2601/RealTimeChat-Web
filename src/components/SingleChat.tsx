@@ -7,6 +7,8 @@ interface SingleChatProps {
   lastMessage: string;
   lastMessageTime: string;
   onHandleChatView: () => void;
+  isGroup: boolean;
+  avatarSrc: string;
 }
 
 const SingleChat: React.FC<SingleChatProps> = ({
@@ -14,12 +16,14 @@ const SingleChat: React.FC<SingleChatProps> = ({
   lastMessage,
   lastMessageTime,
   name,
+  avatarSrc,
+  isGroup,
 }) => {
   return (
     <div onClick={onHandleChatView} className={styles.fatherDiv}>
       <Image
         alt="imageprofile"
-        src={"/goku.jpg"}
+        src={avatarSrc}
         width={736}
         height={736}
         className={styles.chatAvatarImage}

@@ -80,7 +80,12 @@ const InfoChat: React.FC<InfoChatProps> = ({
         <article className={styles.infoname}>
           <Image
             className={styles.avatarimg}
-            src="/goku.jpg"
+            src={
+              chat.miembros.length > 2
+                ? "/avatargroup.jpg" // Imagen predeterminada para grupos
+                : chat.miembros.find((m: any) => m.IDMiembro !== 100)
+                    ?.fotoMiembro || "/default-avatar.jpg" // Imagen dinámica o predeterminada para uno a uno
+            }
             alt="Avatar"
             width={960}
             height={960}
