@@ -1025,6 +1025,61 @@
     }
   ],
 
+  "ChatPrivado": {
+    "mensajes": [
+      {
+        "IDMensaje": "mensajeprivado000001",
+        "Usuario": "Elian Buzo",
+        "idUsuario": 100,
+        "contenido": "Hola, este es mi propio chat",
+        "hora": "01:31",
+        "fecha": "23-11-24",
+        "multimedia": null
+      },
+      {
+        "IDMensaje": "mensajeprivado000002",
+        "Usuario": "Elian Buzo",
+        "idUsuario": 100,
+        "contenido": "blablabla",
+        "hora": "01:32",
+        "fecha": "23-11-24",
+        "multimedia": null
+      },
+      {
+        "IDMensaje": "mensajeprivado000003",
+        "Usuario": "Elian Buzo",
+        "idUsuario": 100,
+        "contenido": "ola k ase",
+        "hora": "01:31",
+        "fecha": "23-11-24",
+        "multimedia": "multimedia1.jpg"
+      },
+      {
+        "IDMensaje": "mensajeprivado000004",
+        "Usuario": "Elian Buzo",
+        "idUsuario": 100,
+        "contenido": "ola k ase",
+        "hora": "01:32",
+        "fecha": "23-11-24",
+        "multimedia": "multimedia2.jpg"
+      }
+    ],
+    "MensajesMultimedia": [
+      {
+        "IdMensajeOriginal": "mensajeprivado000003",
+        "ruta": "multimedia1.jpg",
+        "fecha": "23-11-24",
+        "hora": "01:31"
+      },
+      {
+        "IdMensajeOriginal": "mensajeprivado000004",
+        "ruta": "multimedia2.jpg",
+        "fecha": "23-11-24",
+        "hora": "01:32"
+      }
+    ]
+  },
+
   "DatosPerfilUsuario": {
     "idUsuario": 100,
     "nickname": "blackBuzoSSJ",

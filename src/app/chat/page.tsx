@@ -126,7 +126,7 @@ export default function Home() {
     setInitialApellido(tempApellido);
     setInitialNickname(tempNickname);
     setInitialProfileImage(tempProfileImage);
-    //handleHideOptionsVisible();
+    alert("Cambios aplicados");
   };
 
   // Manejo de cambio de imagen

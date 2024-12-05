@@ -6,7 +6,13 @@ const page = () => {
   const router = useRouter();
 
   const handleDeleteAccountDefinitely = () => {
-    router.push("/");
+    const confirmacionRespuesta = confirm(
+      "¿Confirmas que quieres eliminar tu cuenta? Perderás toda la información de tus converesaciones."
+    );
+    if (confirmacionRespuesta) {
+      router.push("/");
+    } else {
+    }
   };
   return (
     <div className={styles.father}>
