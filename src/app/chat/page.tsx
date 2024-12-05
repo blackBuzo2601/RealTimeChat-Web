@@ -265,6 +265,8 @@ export default function Home() {
             onHandleHideMenuVisible={handleHideMenuVisible}
             onhandleInfoChatVisible={handleInfoChatVisible}
             personalVisibleImage={initialProfileImage}
+            personalVisibleNombre={initialNombre}
+            personalVisibleApellido={initialApellido}
           ></InfoChat>
         </section>
       )}

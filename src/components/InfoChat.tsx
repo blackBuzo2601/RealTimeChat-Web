@@ -9,6 +9,8 @@ interface InfoChatProps {
   onHandleHideMenuVisible: () => void;
 
   personalVisibleImage: string;
+  personalVisibleNombre: string;
+  personalVisibleApellido: string;
 }
 
 const InfoChat: React.FC<InfoChatProps> = ({
@@ -16,6 +18,8 @@ const InfoChat: React.FC<InfoChatProps> = ({
   onhandleInfoChatVisible,
   onHandleHideMenuVisible,
   personalVisibleImage,
+  personalVisibleApellido,
+  personalVisibleNombre,
 }) => {
   const [isMultimediaVisible, setIsMultimediaVisible] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null); //definimos que el estado
@@ -177,16 +181,22 @@ const InfoChat: React.FC<InfoChatProps> = ({
                 alt="fotoDeMiembro"
                 src={
                   member.IDMiembro === 100
-                    ? personalVisibleImage // Ruta de la imagen de la configuración o menú
-                    : member.fotoMiembro || "/zelda.jpg" // Imagen dinámica o avatar por defecto
+                    ? personalVisibleImage // Imagen del usuario actual desde configuración
+                    : member.fotoMiembro || "/default-avatar.jpg" // Imagen dinámica o avatar predeterminado
                 }
                 width={50}
                 height={50}
               ></Image>
               <div className={styles.singleMemberInfo}>
-                <p className={styles.singleMemberFullname}>{member.Nombre}</p>
+                <p className={styles.singleMemberFullname}>
+                  {member.IDMiembro === 100
+                    ? `${personalVisibleNombre} ${personalVisibleApellido}` // Mostrar el nombre desde configuración
+                    : member.Nombre}
+                </p>
                 <p className={styles.singleMemberLastSeen}>
-                  {member.ultimaConexion
+                  {member.IDMiembro === 100
+                    ? "" // Puedes agregar lógica adicional si tienes estado de conexión para el usuario
+                    : member.ultimaConexion
                     ? `Última conexión: ${member.ultimaConexion}`
                     : member.estadoConexion || ""}
                 </p>
