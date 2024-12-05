@@ -158,6 +158,9 @@ export default function Home() {
     setActiveChat(chat);
   };
 
+  const handleDeleteButton = () => {
+    router.push("/deleteaccount");
+  };
   return (
     //Father es el componente padre de todo el index
     <div className={styles.father}>
@@ -214,7 +217,7 @@ export default function Home() {
               <SingleChat
                 key={chat.ChatID} // Usamos ChatID como clave única
                 name={chatName}
-                lastMessage={lastMessage?.contenido || "No hay mensajes"}
+                lastMessage={lastMessage?.contenido || ""}
                 lastMessageTime={lastMessage?.hora || ""}
                 onHandleChatView={() => {
                   handleSelectChat(chat);
@@ -356,6 +359,7 @@ export default function Home() {
               type="button"
               value="Eliminar Cuenta"
               className={styles.MenuOptionUploadPhotoInputDeleteAccount}
+              onClick={handleDeleteButton}
             />
 
             <div className={styles.MenuOptionsCloseContainer}>
